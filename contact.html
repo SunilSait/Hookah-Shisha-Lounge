@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Velvet Lounge — reach out for enquiries, reservations, private events, or feedback. We'd love to hear from you.">
+  <title>Contact — Velvet Lounge</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- ========== 1. PAGE BANNER ========== -->
+  <section class="page-banner" style="background-image: url('assets/images/contact-lounge.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="page-banner-content fade-up">
+      <span class="hero-badge">✦ Get in Touch</span>
+      <h1 class="hero-title">Contact Us</h1>
+      <p class="hero-text">Have a question, feedback, or want to plan a special event? We'd love to hear from you.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span>Contact</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 2. CONTACT INFO + FORM ========== -->
+  <section class="section" id="contact-section">
+    <div class="container">
+      <div class="contact-grid fade-up">
+        <div class="contact-info-card">
+          <h3>Let's Connect</h3>
+          <p>Whether you want to reserve a table, book a private event, or just have a question about our menu — drop us a line and we'll get back to you within 24 hours.</p>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fa-solid fa-map-pin"></i></div>
+            <div class="contact-detail-text">
+              <h4>Visit Us</h4>
+              <p>123 Smoke Avenue, Downtown District<br>City, State 10001</p>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-detail-text">
+              <h4>Call Us</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-detail-text">
+              <h4>Email</h4>
+              <p>hello@velvetlounge.com</p>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="contact-detail-text">
+              <h4>Hours</h4>
+              <p>Sun–Thu: 4 PM – 1 AM<br>Fri–Sat: 4 PM – 3 AM</p>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="#" class="contact-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="contact-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="contact-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="contact-social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3>Send Us a Message</h3>
+          <form onsubmit="event.preventDefault(); alert('Message sent successfully! We will get back to you soon.'); this.reset();">
+            <div class="form-group">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Phone Number</label>
+              <input type="tel" id="contact-phone" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <select id="contact-subject" required>
+                <option value="">Select a topic</option>
+                <option>General Enquiry</option>
+                <option>Reservation Question</option>
+                <option>Private Event Booking</option>
+                <option>Feedback / Suggestion</option>
+                <option>Partnership / Collaboration</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3. MAP SECTION ========== -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Find Us</span>
+        <h2 class="section-heading">Our Location</h2>
+      </div>
+      <div class="fade-up">
+        <div class="map-placeholder">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </div>
+        <p style="text-align: center; margin-top: 16px; color: var(--text-muted); font-size: 0.88rem;">123 Smoke Avenue, Downtown District — <a href="#" style="color: var(--primary); font-weight: 600;">Get Directions →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4. WHY CONTACT US ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">How We Help</span>
+        <h2 class="section-heading">What Can We Help With?</h2>
+      </div>
+      <div class="features-grid fade-up">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          <h3 class="feature-title">Reservations</h3>
+          <p class="feature-desc">Book tables, VIP suites, or large group arrangements for any occasion.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <h3 class="feature-title">Private Events</h3>
+          <p class="feature-desc">Birthday parties, corporate events, bachelor nights — we handle it all.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3 class="feature-title">Partnerships</h3>
+          <p class="feature-desc">Interested in collaboration, sponsorship, or franchise opportunities? Let's talk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 5. FAQ ========== -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Quick Answers</span>
+        <h2 class="section-heading">Common Questions</h2>
+      </div>
+      <div class="faq-container fade-up">
+        <div class="faq-item">
+          <button class="faq-question"><span>How quickly will I get a response?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>We aim to respond to all enquiries within 24 hours. For urgent matters, please call us directly at +1 (555) 123-4567 and we'll be happy to assist immediately.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question"><span>Can I book a surprise event for someone?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Absolutely! We love helping plan surprise celebrations. Contact our events team and we'll coordinate every detail — from décor and setup to a surprise hookah ceremony.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question"><span>Do you offer catering or off-site hookah services?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Yes, we offer mobile hookah catering for private parties, weddings, and corporate events. Reach out with your event details for a custom quote.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question"><span>Is parking available?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>We have a dedicated parking lot behind the lounge with 30+ spaces. Street parking is also available. VIP guests enjoy complimentary valet service on weekends.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6. CTA BANNER ========== -->
+  <section class="section parallax-section" style="background-image: url('assets/images/gallery-6.jpg');">
+    <div class="parallax-overlay"></div>
+    <div class="container">
+      <div class="parallax-content fade-up">
+        <span class="section-label section-label-light">Ready to Visit?</span>
+        <h2 class="parallax-heading">Reserve Your Experience</h2>
+        <p class="parallax-text">Don't wait — book your table now and enjoy an evening of premium hookah, craft drinks, and unforgettable atmosphere.</p>
+        <a href="reservations.html" class="btn btn-primary">Make a Reservation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 7. SOCIAL FOLLOW ========== -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Follow Us</span>
+        <h2 class="section-heading">Stay Connected</h2>
+        <p class="section-subtext">@velvetlounge</p>
+      </div>
+      <div class="social-grid fade-up">
+        <a href="#" class="social-grid-item"><img src="assets/images/social-feed-1.jpg" alt="Velvet Lounge Instagram"><div class="social-grid-overlay"><i class="fa-brands fa-instagram"></i></div></a>
+        <a href="#" class="social-grid-item"><img src="assets/images/social-feed-2.jpg" alt="Velvet Lounge Instagram"><div class="social-grid-overlay"><i class="fa-brands fa-instagram"></i></div></a>
+        <a href="#" class="social-grid-item"><img src="assets/images/gallery-3.jpg" alt="Velvet Lounge Instagram"><div class="social-grid-overlay"><i class="fa-brands fa-instagram"></i></div></a>
+        <a href="#" class="social-grid-item"><img src="assets/images/gallery-5.jpg" alt="Velvet Lounge Instagram"><div class="social-grid-overlay"><i class="fa-brands fa-instagram"></i></div></a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="components.js"></script>
+</body>
+</html>
+

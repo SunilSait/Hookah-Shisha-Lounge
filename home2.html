@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velvet Lounge — Premium Experience</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ============================================================
+       HOME 2 — PREMIUM PAGE STYLES
+       ============================================================ */
+
+    /* ---------- SECTION FOUNDATIONS ---------- */
+    .section { padding: 100px 0; }
+    .section-alt { padding: 100px 0; background: var(--bg-alt, #f8f5f2); }
+    :root.dark .section-alt { background: var(--bg-alt-dark, #1a1a2e); }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--primary, #C2185B);
+      border: 1px solid var(--primary, #C2185B);
+      margin-bottom: 16px;
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--text, #1a1a2e);
+      line-height: 1.2;
+    }
+    :root.dark .section-heading { color: var(--text-dark, #f0e6f6); }
+
+    .section-subtext {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      color: var(--text-muted, #666);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+    :root.dark .section-subtext { color: var(--text-muted-dark, #aaa); }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-header .section-subtext { margin: 0 auto; }
+
+    /* ---------- 1. CINEMATIC HERO ---------- */
+    .hero2-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: #0a0a15;
+    }
+    .hero2-bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/images/hero-premium.jpg') center/cover no-repeat;
+    }
+    .hero2-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(5,5,15,0.88) 0%, rgba(15,10,30,0.72) 50%, rgba(5,5,15,0.85) 100%);
+    }
+    .hero2-content {
+      position: relative;
+      z-index: 2;
+      max-width: 620px;
+      padding: 0 24px;
+    }
+    .hero2-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 24px;
+      background: rgba(194, 24, 91, 0.15);
+      border: 1px solid rgba(194, 24, 91, 0.4);
+      border-radius: 40px;
+      color: #E91E63;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero2-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    .hero2-title span {
+      background: linear-gradient(135deg, #E91E63, #FF6090);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero2-desc {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 520px;
+    }
+    .hero2-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #E91E63, #C2185B);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 30px rgba(233, 30, 99, 0.3);
+    }
+    .hero2-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 40px rgba(233, 30, 99, 0.5);
+    }
+
+    /* Smoke canvas area */
+    .hero2-particles {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .hero2-particles canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ---------- 2. VIP EXPERIENCE INTRO ---------- */
+    .vip-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .vip-card {
+      text-align: center;
+      padding: 48px 32px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(194,24,91,0.12);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    :root.dark .vip-card {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.08);
+    }
+    .vip-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(194,24,91,0.12);
+    }
+    .vip-card-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(233,30,99,0.1), rgba(194,24,91,0.05));
+      font-size: 1.6rem;
+      color: var(--primary, #C2185B);
+    }
+    .vip-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text, #1a1a2e);
+    }
+    :root.dark .vip-card h3 { color: #f0e6f6; }
+    .vip-card p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-muted, #666);
+      line-height: 1.7;
+    }
+    :root.dark .vip-card p { color: #aaa; }
+
+    /* ---------- 3. PREMIUM COLLECTION SHOWCASE ---------- */
+    .collection-scroll {
+      display: flex;
+      gap: 28px;
+      overflow-x: auto;
+      padding: 20px 0 40px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary, #C2185B) transparent;
+    }
+    .collection-scroll::-webkit-scrollbar { height: 6px; }
+    .collection-scroll::-webkit-scrollbar-track { background: transparent; }
+    .collection-scroll::-webkit-scrollbar-thumb { background: var(--primary, #C2185B); border-radius: 10px; }
+
+    .collection-card {
+      flex: 0 0 340px;
+      min-height: 460px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      scroll-snap-align: start;
+      cursor: pointer;
+    }
+    .collection-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s;
+    }
+    .collection-card:hover img { transform: scale(1.08); }
+    .collection-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(5,5,15,0.85) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 32px;
+    }
+    .collection-card-overlay h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .collection-card-overlay p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ---------- 4. PROCESS TIMELINE ---------- */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary, #C2185B), rgba(194,24,91,0.1));
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 64px;
+      position: relative;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--primary, #C2185B);
+      border: 4px solid var(--bg, #fff);
+      z-index: 2;
+      box-shadow: 0 0 0 4px rgba(194,24,91,0.2);
+    }
+    :root.dark .timeline-dot { border-color: var(--bg-dark, #0f0f1a); }
+
+    .timeline-img {
+      width: calc(50% - 50px);
+      flex-shrink: 0;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .timeline-img img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+    .timeline-text {
+      width: calc(50% - 50px);
+      flex-shrink: 0;
+    }
+    .timeline-step {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary, #C2185B);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+    .timeline-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text, #1a1a2e);
+      margin-bottom: 12px;
+    }
+    :root.dark .timeline-text h3 { color: #f0e6f6; }
+    .timeline-text p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-muted, #666);
+      line-height: 1.7;
+    }
+    :root.dark .timeline-text p { color: #aaa; }
+
+    /* ---------- 5. AMBIANCE GALLERY (Film-Strip) ---------- */
+    .filmstrip-gallery {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 20px 0 40px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .filmstrip-gallery::-webkit-scrollbar { height: 4px; }
+    .filmstrip-gallery::-webkit-scrollbar-thumb { background: var(--primary, #C2185B); border-radius: 10px; }
+
+    .filmstrip-item {
+      flex: 0 0 300px;
+      height: 420px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      scroll-snap-align: start;
+    }
+    .filmstrip-item:nth-child(even) { margin-top: 40px; }
+    .filmstrip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .filmstrip-item:hover img { transform: scale(1.06); }
+    .filmstrip-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      transform: translateY(100%);
+      transition: transform 0.4s;
+    }
+    .filmstrip-item:hover .filmstrip-caption { transform: translateY(0); }
+    .filmstrip-caption span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    /* ---------- 6. SIGNATURE BLENDS ---------- */
+    .blends-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+    .blend-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--card-bg, #fff);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    :root.dark .blend-card { background: var(--card-bg-dark, #1a1a2e); box-shadow: 0 8px 40px rgba(0,0,0,0.3); }
+    .blend-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 50px rgba(194,24,91,0.15);
+    }
+    .blend-card-img {
+      position: relative;
+      height: 280px;
+      overflow: hidden;
+    }
+    .blend-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .blend-card:hover .blend-card-img img { transform: scale(1.08); }
+    .blend-card-body {
+      padding: 28px;
+    }
+    .blend-card-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text, #1a1a2e);
+      margin-bottom: 10px;
+    }
+    :root.dark .blend-card-body h3 { color: #f0e6f6; }
+    .blend-card-body p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.92rem;
+      color: var(--text-muted, #666);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    :root.dark .blend-card-body p { color: #aaa; }
+    .blend-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .blend-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--primary, #C2185B);
+    }
+    .blend-order-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background: linear-gradient(135deg, #E91E63, #C2185B);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .blend-order-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(233,30,99,0.3);
+    }
+
+    /* ---------- 7. EVENTS PREVIEW ---------- */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .event-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--card-bg, #fff);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.06);
+      transition: transform 0.4s;
+      position: relative;
+    }
+    :root.dark .event-card { background: var(--card-bg-dark, #1a1a2e); box-shadow: 0 6px 30px rgba(0,0,0,0.3); }
+    .event-card:hover { transform: translateY(-6px); }
+    .event-card-img {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+    .event-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .event-card:hover .event-card-img img { transform: scale(1.06); }
+    .event-date-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: linear-gradient(135deg, #E91E63, #C2185B);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 12px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.2;
+      z-index: 2;
+    }
+    .event-date-badge .day {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .event-date-badge .month {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .event-card-body {
+      padding: 24px;
+    }
+    .event-card-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text, #1a1a2e);
+      margin-bottom: 10px;
+    }
+    :root.dark .event-card-body h3 { color: #f0e6f6; }
+    .event-card-body p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted, #666);
+      line-height: 1.6;
+    }
+    :root.dark .event-card-body p { color: #aaa; }
+    .events-cta-wrap {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* ---------- 8. COUNTER / STATS SECTION ---------- */
+    .counter-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #0a0a15 0%, #1a1a2e 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .counter-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='%23C2185B' fill-opacity='0.03'/%3E%3C/svg%3E") repeat;
+      opacity: 0.5;
+    }
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .counter-item {
+      text-align: center;
+    }
+    .counter-number {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #E91E63, #FF6090);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .counter-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 1px;
+    }
+
+    /* ---------- 9. GUEST REVIEWS (2×2 Magazine) ---------- */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+    }
+    .review-card {
+      padding: 40px;
+      border-radius: 20px;
+      background: var(--card-bg, #fff);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.05);
+      position: relative;
+      transition: transform 0.3s;
+    }
+    :root.dark .review-card { background: var(--card-bg-dark, #1a1a2e); box-shadow: 0 6px 30px rgba(0,0,0,0.3); }
+    .review-card:hover { transform: translateY(-4px); }
+    .review-quote-mark {
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--primary, #C2185B);
+      opacity: 0.2;
+      position: absolute;
+      top: 20px;
+      left: 32px;
+    }
+    .review-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      color: var(--text-muted, #555);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      padding-top: 24px;
+      font-style: italic;
+    }
+    :root.dark .review-text { color: #bbb; }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .review-author-info h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text, #1a1a2e);
+      margin-bottom: 4px;
+    }
+    :root.dark .review-author-info h4 { color: #f0e6f6; }
+    .review-badge {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .review-badge.vip {
+      background: linear-gradient(135deg, rgba(233,30,99,0.12), rgba(194,24,91,0.08));
+      color: var(--primary, #C2185B);
+    }
+    .review-badge.regular {
+      background: rgba(100,100,100,0.1);
+      color: var(--text-muted, #888);
+    }
+    :root.dark .review-badge.regular { background: rgba(255,255,255,0.06); color: #aaa; }
+
+    /* ---------- 10. NEWSLETTER / MEMBERSHIP ---------- */
+    .membership-section {
+      position: relative;
+      padding: 100px 0;
+      overflow: hidden;
+    }
+    .membership-bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/images/membership-bg.jpg') center/cover no-repeat;
+    }
+    .membership-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(5,5,15,0.9), rgba(26,26,46,0.88));
+    }
+    .membership-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .membership-content .section-heading { color: #fff; }
+    .membership-content .section-subtext { color: rgba(255,255,255,0.7); margin: 0 auto 36px; }
+    .membership-form {
+      display: flex;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+    .membership-form input {
+      flex: 1;
+      padding: 14px 24px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .membership-form input::placeholder { color: rgba(255,255,255,0.4); }
+    .membership-form input:focus { border-color: var(--primary, #C2185B); }
+    .membership-form button {
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #E91E63, #C2185B);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      white-space: nowrap;
+    }
+    .membership-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(233,30,99,0.4);
+    }
+    .membership-benefits {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .benefit-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.8);
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .benefit-badge i { color: #E91E63; font-size: 1rem; }
+
+    /* ---------- 11. LOCATION & HOURS ---------- */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .location-map {
+      width: 100%;
+      height: 400px;
+      border-radius: 20px;
+      background: var(--bg-alt, #e9e5e0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted, #999);
+      font-size: 3rem;
+      overflow: hidden;
+    }
+    :root.dark .location-map { background: rgba(255,255,255,0.04); }
+    .location-info {
+      padding-top: 8px;
+    }
+    .location-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--text, #1a1a2e);
+      margin-bottom: 28px;
+    }
+    :root.dark .location-info h3 { color: #f0e6f6; }
+    .location-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .location-detail-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(233,30,99,0.1), rgba(194,24,91,0.05));
+      color: var(--primary, #C2185B);
+      font-size: 1rem;
+    }
+    .location-detail-text h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text, #1a1a2e);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    :root.dark .location-detail-text h4 { color: #f0e6f6; }
+    .location-detail-text p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-muted, #666);
+      line-height: 1.6;
+    }
+    :root.dark .location-detail-text p { color: #aaa; }
+    .location-directions-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      margin-top: 12px;
+      background: linear-gradient(135deg, #E91E63, #C2185B);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .location-directions-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(233,30,99,0.3);
+    }
+
+    /* ---------- GENERAL UTILITIES ---------- */
+    .btn-primary-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 36px;
+      background: transparent;
+      border: 2px solid var(--primary, #C2185B);
+      color: var(--primary, #C2185B);
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+    .btn-primary-outline:hover {
+      background: var(--primary, #C2185B);
+      color: #fff;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .vip-cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .blends-grid { grid-template-columns: repeat(2, 1fr); }
+      .events-grid { grid-template-columns: repeat(2, 1fr); }
+      .counter-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+      .collection-card { flex: 0 0 300px; min-height: 400px; }
+    }
+
+    @media (max-width: 768px) {
+      .section, .section-alt { padding: 70px 0; }
+
+      .hero2-content { max-width: 100%; }
+      .hero2-title { font-size: clamp(2rem, 8vw, 3rem); }
+
+      .vip-cards-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+      .blends-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+      .events-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+      .reviews-grid { grid-template-columns: 1fr; }
+
+      .timeline::before { left: 24px; }
+      .timeline-item,
+      .timeline-item:nth-child(even) {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .timeline-dot { left: 24px; top: 0; }
+      .timeline-img,
+      .timeline-text {
+        width: 100%;
+        padding-left: 56px;
+      }
+
+      .collection-card { flex: 0 0 280px; min-height: 360px; }
+      .filmstrip-item { flex: 0 0 260px; height: 360px; }
+      .filmstrip-item:nth-child(even) { margin-top: 0; }
+
+      .location-grid { grid-template-columns: 1fr; }
+      .location-map { height: 280px; }
+
+      .membership-form { flex-direction: column; }
+      .membership-benefits { flex-direction: column; align-items: center; gap: 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .counter-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .hero2-badge { font-size: 0.72rem; padding: 8px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder">
+    <header id="navbar"></header>
+  </div>
+
+  <!-- ============================================================
+       1. CINEMATIC HERO
+       ============================================================ -->
+  <section class="hero2-section hero-particles">
+    <div class="hero2-bg"></div>
+    <div class="hero2-overlay"></div>
+    <div class="hero2-particles" id="hero2-canvas-area"></div>
+    <div class="container hero2-content fade-up">
+      <div class="hero2-badge">
+        <i class="fa-solid fa-star"></i> VIP Experience
+      </div>
+      <h1 class="hero2-title">Indulge in <span>Luxurious Smoke</span></h1>
+      <p class="hero2-desc">Step into a world of opulence where hand-crafted hookah blends meet an atmosphere of refined elegance. Every visit is a masterpiece of flavor, ambiance, and unparalleled service.</p>
+      <a href="reservations.html" class="hero2-cta">
+        Book VIP Suite <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. VIP EXPERIENCE INTRODUCTION
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge"><i class="fa-solid fa-crown"></i> Premium</span>
+        <h2 class="section-heading">The Art of Premium Hookah</h2>
+        <p class="section-subtext">We curate every element of your experience — from the finest imported tobaccos to our hand-blown glass hookahs and bespoke cocktail pairings.</p>
+      </div>
+      <div class="vip-cards-grid">
+        <div class="vip-card fade-up">
+          <div class="vip-card-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Premium Tobacco</h3>
+          <p>Exclusively imported shisha from the world's finest plantations, featuring rare single-origin leaves and artisan blends unavailable anywhere else.</p>
+        </div>
+        <div class="vip-card fade-up">
+          <div class="vip-card-icon"><i class="fa-solid fa-crown"></i></div>
+          <h3>VIP Suites</h3>
+          <p>Immerse yourself in our private VIP enclaves — plush seating, ambient lighting, dedicated service, and a curated selection for an intimate gathering.</p>
+        </div>
+        <div class="vip-card fade-up">
+          <div class="vip-card-icon"><i class="fa-solid fa-martini-glass"></i></div>
+          <h3>Craft Cocktails</h3>
+          <p>Our mixologists pair each hookah flavor with bespoke cocktails, mocktails, and premium beverages that elevate the entire tasting journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. PREMIUM COLLECTION SHOWCASE
+       ============================================================ -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge"><i class="fa-solid fa-gem"></i> Curated</span>
+        <h2 class="section-heading">The Collection</h2>
+        <p class="section-subtext">Explore our exquisite range of hookah pieces — from hand-forged traditional brass to sleek modern designs, each one a work of art.</p>
+      </div>
+      <div class="collection-scroll fade-up">
+        <div class="collection-card">
+          <img src="assets/images/hookah-traditional.jpg" alt="Traditional Hookah" loading="lazy" />
+          <div class="collection-card-overlay">
+            <h3>Royal Heritage</h3>
+            <p>Hand-crafted brass with intricate arabesque engravings</p>
+          </div>
+        </div>
+        <div class="collection-card">
+          <img src="assets/images/hookah-modern.jpg" alt="Modern Hookah" loading="lazy" />
+          <div class="collection-card-overlay">
+            <h3>Noir Eclipse</h3>
+            <p>Matte black stainless steel with LED crystal base</p>
+          </div>
+        </div>
+        <div class="collection-card">
+          <img src="assets/images/hookah-collection.jpg" alt="Hookah Collection" loading="lazy" />
+          <div class="collection-card-overlay">
+            <h3>Sultan's Choice</h3>
+            <p>Premium multi-hose with gold-plated accents</p>
+          </div>
+        </div>
+        <div class="collection-card">
+          <img src="assets/images/vip-experience.jpg" alt="VIP Experience Hookah" loading="lazy" />
+          <div class="collection-card-overlay">
+            <h3>Crystal Majesty</h3>
+            <p>Bohemian crystal vase with diamond-cut patterns</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. THE ART OF HOOKAH — PROCESS TIMELINE
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge"><i class="fa-solid fa-fire"></i> Process</span>
+        <h2 class="section-heading">Crafted to Perfection</h2>
+        <p class="section-subtext">Every session begins with a ritual — a meticulous four-step process that transforms premium ingredients into an unforgettable experience.</p>
+      </div>
+      <div class="timeline">
+        <!-- Step 1 -->
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-img">
+            <img src="assets/images/process-1.jpg" alt="Select Your Blend" loading="lazy" />
+          </div>
+          <div class="timeline-text">
+            <span class="timeline-step">Step 01</span>
+            <h3>Select Your Blend</h3>
+            <p>Browse our extensive library of over 50 premium flavors. Our hookah sommeliers guide you through tasting notes and help you discover your perfect blend.</p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-img">
+            <img src="assets/images/process-2.jpg" alt="Expert Preparation" loading="lazy" />
+          </div>
+          <div class="timeline-text">
+            <span class="timeline-step">Step 02</span>
+            <h3>Expert Preparation</h3>
+            <p>Our master artisans pack each bowl with precision — the ideal density, moisture level, and layering technique ensure a smooth, consistent draw from first puff to last.</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-img">
+            <img src="assets/images/process-3.jpg" alt="Natural Charcoal" loading="lazy" />
+          </div>
+          <div class="timeline-text">
+            <span class="timeline-step">Step 03</span>
+            <h3>Natural Charcoal</h3>
+            <p>We use only 100% natural coconut shell charcoal, slowly ignited to the perfect temperature — delivering pure, clean heat without any chemical aftertaste.</p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-img">
+            <img src="assets/images/process-4.jpg" alt="Pure Enjoyment" loading="lazy" />
+          </div>
+          <div class="timeline-text">
+            <span class="timeline-step">Step 04</span>
+            <h3>Pure Enjoyment</h3>
+            <p>Sit back, exhale, and let the rich, velvety clouds envelop you. Each session is a journey of flavor, relaxation, and the timeless art of hookah.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. AMBIANCE GALLERY (Film-Strip)
+       ============================================================ -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge"><i class="fa-solid fa-eye"></i> Ambiance</span>
+        <h2 class="section-heading">Step Into Our World</h2>
+        <p class="section-subtext">A visual journey through our lounge — where moody lighting, plush interiors, and curated design create an unforgettable atmosphere.</p>
+      </div>
+      <div class="filmstrip-gallery fade-up">
+        <div class="filmstrip-item">
+          <img src="assets/images/lounge-interior.jpg" alt="Lounge Interior" loading="lazy" />
+          <div class="filmstrip-caption"><span>The Grand Lounge</span></div>
+        </div>
+        <div class="filmstrip-item">
+          <img src="assets/images/lounge-group.jpg" alt="Group Enjoying Hookah" loading="lazy" />
+          <div class="filmstrip-caption"><span>Friends & Flavors</span></div>
+        </div>
+        <div class="filmstrip-item">
+          <img src="assets/images/gallery-2.jpg" alt="Ambient Lighting" loading="lazy" />
+          <div class="filmstrip-caption"><span>Moody Ambiance</span></div>
+        </div>
+        <div class="filmstrip-item">
+          <img src="assets/images/gallery-3.jpg" alt="VIP Corner" loading="lazy" />
+          <div class="filmstrip-caption"><span>VIP Corner</span></div>
+        </div>
+        <div class="filmstrip-item">
+          <img src="assets/images/gallery-5.jpg" alt="Bar Area" loading="lazy" />
+          <div class="filmstrip-caption"><span>The Bar</span></div>
+        </div>
+        <div class="filmstrip-item">
+          <img src="assets/images/gallery-6.jpg" alt="Outdoor Terrace" loading="lazy" />
+          <div class="filmstrip-caption"><span>Rooftop Terrace</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. SIGNATURE BLENDS
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge"><i class="fa-solid fa-sparkles"></i> Exclusive</span>
+        <h2 class="section-heading">Signature Blends</h2>
+        <p class="section-subtext">Curated by our master blenders — three extraordinary flavor experiences you won't find anywhere else.</p>
+      </div>
+      <div class="blends-grid">
+        <div class="blend-card fade-up">
+          <div class="blend-card-img">
+            <img src="assets/images/flavor-exotic.jpg" alt="Midnight Rose" loading="lazy" />
+          </div>
+          <div class="blend-card-body">
+            <h3>Midnight Rose</h3>
+            <p>A hauntingly beautiful blend of Bulgarian rose petals, warm cardamom, and smooth Madagascan vanilla. Romantic, aromatic, and utterly unforgettable.</p>
+            <div class="blend-card-footer">
+              <span class="blend-price">$28</span>
+              <button class="blend-order-btn">Order Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="blend-card fade-up">
+          <div class="blend-card-img">
+            <img src="assets/images/flavor-mint.jpg" alt="Arctic Thunder" loading="lazy" />
+          </div>
+          <div class="blend-card-body">
+            <h3>Arctic Thunder</h3>
+            <p>An electrifying fusion of crushed menthol crystals and eucalyptus, delivering an ice-cold exhale that awakens every sense. Bold, crisp, and refreshing.</p>
+            <div class="blend-card-footer">
+              <span class="blend-price">$26</span>
+              <button class="blend-order-btn">Order Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="blend-card fade-up">
+          <div class="blend-card-img">
+            <img src="assets/images/flavor-fruit.jpg" alt="Golden Hour" loading="lazy" />
+          </div>
+          <div class="blend-card-body">
+            <h3>Golden Hour</h3>
+            <p>Sun-ripened Alphonso mango meets tangy passion fruit in a tropical paradise of flavor. Sweet, vibrant, and impossibly smooth on every draw.</p>
+            <div class="blend-card-footer">
+              <span class="blend-price">$27</span>
+              <button class="blend-order-btn">Order Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. EVENTS & LIVE MUSIC PREVIEW
+       ============================================================ -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge"><i class="fa-solid fa-calendar-days"></i> Events</span>
+        <h2 class="section-heading">Upcoming Events</h2>
+        <p class="section-subtext">Live music, themed nights, and exclusive gatherings — there's always something extraordinary happening at Velvet Lounge.</p>
+      </div>
+      <div class="events-grid">
+        <div class="event-card fade-up">
+          <div class="event-card-img">
+            <img src="assets/images/events-live-music.jpg" alt="Jazz & Smoke Night" loading="lazy" />
+            <div class="event-date-badge">
+              <span class="day">15</span>
+              <span class="month">Nov</span>
+            </div>
+          </div>
+          <div class="event-card-body">
+            <h3>Jazz & Smoke Night</h3>
+            <p>Live jazz quartet, premium hookah pairings, and craft cocktails in an intimate candlelit setting. A night of smooth melodies and smoother smoke.</p>
+          </div>
+        </div>
+        <div class="event-card fade-up">
+          <div class="event-card-img">
+            <img src="assets/images/events-dj-night.jpg" alt="DJ Night" loading="lazy" />
+            <div class="event-date-badge">
+              <span class="day">22</span>
+              <span class="month">Nov</span>
+            </div>
+          </div>
+          <div class="event-card-body">
+            <h3>DJ Night — Electronic Vibes</h3>
+            <p>Internationally renowned DJs spin deep house and ambient electronica while our mixologists pour exclusive limited-edition cocktails.</p>
+          </div>
+        </div>
+        <div class="event-card fade-up">
+          <div class="event-card-img">
+            <img src="assets/images/events-themed.jpg" alt="Arabian Nights" loading="lazy" />
+            <div class="event-date-badge">
+              <span class="day">29</span>
+              <span class="month">Nov</span>
+            </div>
+          </div>
+          <div class="event-card-body">
+            <h3>Arabian Nights Theme Party</h3>
+            <p>Transport yourself to a 1001 Nights fantasy — belly dancers, traditional oud music, exotic flavors, and opulent décor under a starlit ceiling.</p>
+          </div>
+        </div>
+      </div>
+      <div class="events-cta-wrap fade-up">
+        <a href="events.html" class="btn-primary-outline">View All Events <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. LOUNGE STATS / COUNTER SECTION
+       ============================================================ -->
+  <section class="counter-section">
+    <div class="container">
+      <div class="counter-grid fade-up">
+        <div class="counter-item">
+          <div class="counter-number" data-target="50">0</div>
+          <div class="counter-label">Premium Flavors</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number" data-target="10000" data-suffix="+">0</div>
+          <div class="counter-label">Happy Guests</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number" data-target="8">0</div>
+          <div class="counter-label">Years of Excellence</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number" data-target="25">0</div>
+          <div class="counter-label">Signature Mixes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. GUEST REVIEWS (2×2 Magazine Layout)
+       ============================================================ -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge"><i class="fa-solid fa-quote-left"></i> Testimonials</span>
+        <h2 class="section-heading">Guest Experiences</h2>
+        <p class="section-subtext">Hear from our community of hookah connoisseurs — every visit tells a story worth sharing.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-up">
+          <div class="review-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">"The ambiance at Velvet Lounge is simply unmatched. From the moment you walk in, you're enveloped in luxury. The Midnight Rose blend is my absolute favorite — it's like inhaling a garden at dusk."</p>
+          <div class="review-author">
+            <div class="review-author-info">
+              <h4>Sophia Martinez</h4>
+              <span class="review-badge vip">VIP Member</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card fade-up">
+          <div class="review-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">"I've visited hookah lounges across Europe and the Middle East, and Velvet Lounge stands among the best. The private suites, impeccable service, and premium tobacco — pure class."</p>
+          <div class="review-author">
+            <div class="review-author-info">
+              <h4>James Richardson</h4>
+              <span class="review-badge vip">VIP Member</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card fade-up">
+          <div class="review-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">"My friends and I come here every weekend. The cocktail pairings are genius — they actually enhance the hookah flavors. The DJ nights are legendary. Five stars, every single time."</p>
+          <div class="review-author">
+            <div class="review-author-info">
+              <h4>Aisha Patel</h4>
+              <span class="review-badge regular">Regular Guest</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card fade-up">
+          <div class="review-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">"Hosted my birthday here and it was unforgettable. The staff went above and beyond — custom decorations, reserved the best suite, and even created a special hookah blend for the occasion."</p>
+          <div class="review-author">
+            <div class="review-author-info">
+              <h4>Daniel Kim</h4>
+              <span class="review-badge regular">Regular Guest</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       10. NEWSLETTER / MEMBERSHIP
+       ============================================================ -->
+  <section class="membership-section">
+    <div class="membership-bg"></div>
+    <div class="membership-overlay"></div>
+    <div class="container membership-content fade-up">
+      <span class="section-badge" style="color:#fff;border-color:rgba(255,255,255,0.3);"><i class="fa-solid fa-gem"></i> Members</span>
+      <h2 class="section-heading">Join the Velvet Circle</h2>
+      <p class="section-subtext">Become an insider and unlock exclusive perks — early access to events, members-only blends, priority VIP booking, and special discounts all year round.</p>
+      <form class="membership-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; this.querySelector('button').disabled=true;">
+        <input type="email" placeholder="Enter your email address" required aria-label="Email address" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="membership-benefits">
+        <div class="benefit-badge"><i class="fa-solid fa-calendar-days"></i> Exclusive Events</div>
+        <div class="benefit-badge"><i class="fa-solid fa-crown"></i> Priority Booking</div>
+        <div class="benefit-badge"><i class="fa-solid fa-gift"></i> Member Discounts</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       11. LOCATION & HOURS
+       ============================================================ -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge"><i class="fa-solid fa-map-pin"></i> Location</span>
+        <h2 class="section-heading">Visit Us</h2>
+      </div>
+      <div class="location-grid fade-up">
+        <div class="location-map">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </div>
+        <div class="location-info">
+          <h3>Find Your Way to Velvet</h3>
+          <div class="location-detail">
+            <div class="location-detail-icon"><i class="fa-solid fa-map-pin"></i></div>
+            <div class="location-detail-text">
+              <h4>Address</h4>
+              <p>123 Smoke Avenue, Downtown District</p>
+            </div>
+          </div>
+          <div class="location-detail">
+            <div class="location-detail-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="location-detail-text">
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="location-detail">
+            <div class="location-detail-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="location-detail-text">
+              <h4>Hours</h4>
+              <p>Sun – Thu: 4:00 PM – 1:00 AM</p>
+              <p>Fri – Sat: 4:00 PM – 3:00 AM</p>
+            </div>
+          </div>
+          <div class="location-detail">
+            <div class="location-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="location-detail-text">
+              <h4>Email</h4>
+              <p>hello@velvetlounge.com</p>
+            </div>
+          </div>
+          <a href="#" class="location-directions-btn">
+            Get Directions <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder">
+    <div id="footer"></div>
+  </div>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script src="components.js"></script>
+  <script>
+    /* ============================================================
+       COUNTER ANIMATION
+       ============================================================ */
+    (function initCounters() {
+      const counters = document.querySelectorAll('.counter-number[data-target]');
+      if (!counters.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.getAttribute('data-target'), 10);
+            const suffix = el.getAttribute('data-suffix') || '';
+            const duration = 2000;
+            const startTime = performance.now();
+
+            function formatNum(n) {
+              if (n >= 10000) return Math.floor(n / 1000) + 'K+';
+              if (n >= 1000) return n.toLocaleString();
+              return n + (suffix ? '+' : '');
+            }
+
+            function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+
+            function animate(currentTime) {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = easeOutQuart(progress);
+              const current = Math.floor(eased * target);
+              el.textContent = formatNum(current);
+              if (progress < 1) requestAnimationFrame(animate);
+              else el.textContent = formatNum(target);
+            }
+
+            requestAnimationFrame(animate);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      counters.forEach(c => observer.observe(c));
+    })();
+
+    /* ============================================================
+       HERO2 SMOKE PARTICLES (Cinematic variant)
+       ============================================================ */
+    (function initHero2Particles() {
+      const hero = document.querySelector('.hero2-section');
+      const area = document.getElementById('hero2-canvas-area');
+      if (!hero || !area) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const canvas = document.createElement('canvas');
+      canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;';
+      canvas.setAttribute('aria-hidden', 'true');
+      area.appendChild(canvas);
+
+      const ctx = canvas.getContext('2d');
+      let w, h, dpr, particles = [];
+      const COUNT = Math.min(45, Math.floor(window.innerWidth / 30));
+
+      function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const r = hero.getBoundingClientRect();
+        w = r.width; h = r.height;
+        canvas.width = w * dpr; canvas.height = h * dpr;
+        canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      function create(y) {
+        return {
+          x: Math.random() * w,
+          y: y !== undefined ? y : Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.25,
+          vy: -(Math.random() * 0.4 + 0.08),
+          size: Math.random() * 40 + 12,
+          alpha: 0,
+          maxAlpha: Math.random() * 0.06 + 0.02,
+          life: 0,
+          maxLife: Math.random() * 500 + 350,
+          wobble: Math.random() * Math.PI * 2,
+          wobbleSpd: Math.random() * 0.015 + 0.004,
+        };
+      }
+
+      function init() {
+        particles = [];
+        for (let i = 0; i < COUNT; i++) {
+          const p = create();
+          p.life = Math.random() * p.maxLife;
+          particles.push(p);
+        }
+      }
+
+      let vis = true;
+      const vObs = new IntersectionObserver(e => { vis = e[0].isIntersecting; }, { threshold: 0.05 });
+      vObs.observe(hero);
+
+      function loop() {
+        requestAnimationFrame(loop);
+        if (!vis) return;
+        ctx.clearRect(0, 0, w, h);
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          p.life++;
+          const fi = Math.min(p.life / 50, 1);
+          const fo = Math.max(1 - p.life / p.maxLife, 0);
+          p.alpha = p.maxAlpha * fi * fo;
+          p.wobble += p.wobbleSpd;
+          p.x += p.vx + Math.sin(p.wobble) * 0.25;
+          p.y += p.vy;
+          if (p.life >= p.maxLife || p.y < -p.size) { particles[i] = create(h + p.size); continue; }
+          if (p.alpha <= 0.001) continue;
+          ctx.globalAlpha = p.alpha;
+          const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size);
+          g.addColorStop(0, 'rgba(255,255,255,0.5)');
+          g.addColorStop(0.5, 'rgba(255,255,255,0.15)');
+          g.addColorStop(1, 'rgba(255,255,255,0)');
+          ctx.fillStyle = g;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+      }
+
+      resize();
+      init();
+      loop();
+      window.addEventListener('resize', () => { resize(); init(); });
+    })();
+  </script>
+
+</body>
+</html>

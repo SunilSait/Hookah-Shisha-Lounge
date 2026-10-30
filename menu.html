@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our premium hookah menu — signature flavors, traditional and modern hookahs, craft drinks, and Middle Eastern small bites at Velvet Lounge.">
+  <title>Menu — Velvet Lounge</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- ========== 1. PAGE BANNER ========== -->
+  <section class="page-banner" style="background-image: url('assets/images/about-craft.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="page-banner-content fade-up">
+      <span class="hero-badge">✦ Our Menu</span>
+      <h1 class="hero-title">Discover Your Perfect Blend</h1>
+      <p class="hero-text">From timeless classics to bold new creations, explore our curated collection of premium hookah flavors, artisan drinks, and Mediterranean-inspired bites.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Menu</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 2. HOOKAH FLAVORS WITH TABS ========== -->
+  <section class="section" id="hookah-flavors">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Flavors</span>
+        <h2 class="section-heading">Premium Hookah Selection</h2>
+        <p class="section-subtext">Filter by category to find your perfect blend</p>
+      </div>
+
+      <div class="menu-tabs fade-up">
+        <button class="menu-tab active" data-category="all">All Flavors</button>
+        <button class="menu-tab" data-category="fruity">Fruity</button>
+        <button class="menu-tab" data-category="mint">Mint & Cool</button>
+        <button class="menu-tab" data-category="classic">Classic</button>
+        <button class="menu-tab" data-category="exotic">Exotic</button>
+        <button class="menu-tab" data-category="signature">Signature</button>
+      </div>
+
+      <div class="menu-grid fade-up">
+        <!-- FRUITY -->
+        <div class="menu-card" data-category="fruity">
+          <div class="menu-card-img"><img src="assets/images/flavor-fruit.jpg" alt="Tropical Fusion hookah flavor"></div>
+          <span class="menu-card-tag popular">Popular</span>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Tropical Fusion</h3><span class="menu-card-price">$25</span></div>
+            <p class="menu-card-desc">A sun-drenched medley of mango, passion fruit, and pineapple that transports you to island paradise.</p>
+          </div>
+        </div>
+        <div class="menu-card" data-category="fruity">
+          <div class="menu-card-img"><img src="assets/images/gallery-5.jpg" alt="Berry Blast hookah flavor"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Berry Blast</h3><span class="menu-card-price">$22</span></div>
+            <p class="menu-card-desc">Mixed berries and pomegranate create a juicy, sweet cloud with a tangy finish.</p>
+          </div>
+        </div>
+        <div class="menu-card" data-category="fruity">
+          <div class="menu-card-img"><img src="assets/images/social-feed-2.jpg" alt="Citrus Sunrise hookah flavor"></div>
+          <span class="menu-card-tag new">New</span>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Citrus Sunrise</h3><span class="menu-card-price">$22</span></div>
+            <p class="menu-card-desc">Zesty orange, lemon, and grapefruit with a subtle sweetness — bright and refreshing.</p>
+          </div>
+        </div>
+
+        <!-- MINT & COOL -->
+        <div class="menu-card" data-category="mint">
+          <div class="menu-card-img"><img src="assets/images/flavor-mint.jpg" alt="Arctic Mint hookah flavor"></div>
+          <span class="menu-card-tag popular">Popular</span>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Arctic Mint</h3><span class="menu-card-price">$20</span></div>
+            <p class="menu-card-desc">Pure spearmint with a glacial ice finish that cleanses the palate and refreshes every draw.</p>
+          </div>
+        </div>
+        <div class="menu-card" data-category="mint">
+          <div class="menu-card-img"><img src="assets/images/gallery-3.jpg" alt="Menthol Breeze hookah flavor"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Menthol Breeze</h3><span class="menu-card-price">$20</span></div>
+            <p class="menu-card-desc">Eucalyptus and menthol fusion for an invigorating, cooling sensation from start to finish.</p>
+          </div>
+        </div>
+        <div class="menu-card" data-category="mint">
+          <div class="menu-card-img"><img src="assets/images/social-feed-1.jpg" alt="Mint Lemonade hookah flavor"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Mint Lemonade</h3><span class="menu-card-price">$23</span></div>
+            <p class="menu-card-desc">Fresh mint meets tangy lemon twist — the perfect summer sessionin a bowl.</p>
+          </div>
+        </div>
+
+        <!-- CLASSIC -->
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-img"><img src="assets/images/flavor-classic.jpg" alt="Double Apple hookah flavor"></div>
+          <span class="menu-card-tag popular">Popular</span>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Double Apple</h3><span class="menu-card-price">$20</span></div>
+            <p class="menu-card-desc">The timeless favourite — bold red and green apple with a hint of anise that defines the authentic hookah experience.</p>
+          </div>
+        </div>
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-img"><img src="assets/images/gallery-4.jpg" alt="Grape Royale hookah flavor"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Grape Royale</h3><span class="menu-card-price">$22</span></div>
+            <p class="menu-card-desc">Rich, sweet grape with a subtle mint undertone for a smooth, velvety draw.</p>
+          </div>
+        </div>
+        <div class="menu-card" data-category="classic">
+          <div class="menu-card-img"><img src="assets/images/gallery-6.jpg" alt="Watermelon Classic hookah flavor"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Watermelon Classic</h3><span class="menu-card-price">$20</span></div>
+            <p class="menu-card-desc">Sweet, juicy watermelon — light and refreshing for a laid-back session.</p>
+          </div>
+        </div>
+
+        <!-- EXOTIC -->
+        <div class="menu-card" data-category="exotic">
+          <div class="menu-card-img"><img src="assets/images/flavor-exotic.jpg" alt="Arabian Nights hookah flavor"></div>
+          <span class="menu-card-tag signature">Signature</span>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Arabian Nights</h3><span class="menu-card-price">$28</span></div>
+            <p class="menu-card-desc">Mysterious and complex — rose, cardamom, and saffron inspired by ancient traditions.</p>
+          </div>
+        </div>
+        <div class="menu-card" data-category="exotic">
+          <div class="menu-card-img"><img src="assets/images/about-history.jpg" alt="Turkish Delight hookah flavor"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Turkish Delight</h3><span class="menu-card-price">$26</span></div>
+            <p class="menu-card-desc">Pistachio and rose water create a luxurious, dessert-like smoking experience.</p>
+          </div>
+        </div>
+        <div class="menu-card" data-category="exotic">
+          <div class="menu-card-img"><img src="assets/images/process-1.jpg" alt="Spiced Chai hookah flavor"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Spiced Chai</h3><span class="menu-card-price">$25</span></div>
+            <p class="menu-card-desc">Warm cinnamon, clove, and ginger with a creamy finish — comfort in every cloud.</p>
+          </div>
+        </div>
+
+        <!-- SIGNATURE -->
+        <div class="menu-card" data-category="signature">
+          <div class="menu-card-img"><img src="assets/images/process-2.jpg" alt="Midnight Rose hookah flavor"></div>
+          <span class="menu-card-tag signature">Signature</span>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Midnight Rose</h3><span class="menu-card-price">$30</span></div>
+            <p class="menu-card-desc">Our house special — Bulgarian rose, cardamom, and vanilla in a velvety, romantic blend.</p>
+          </div>
+        </div>
+        <div class="menu-card" data-category="signature">
+          <div class="menu-card-img"><img src="assets/images/process-3.jpg" alt="Velvet Cloud hookah flavor"></div>
+          <span class="menu-card-tag signature">Signature</span>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Velvet Cloud</h3><span class="menu-card-price">$30</span></div>
+            <p class="menu-card-desc">Creamy vanilla, raw honey, and toasted almond — impossibly smooth and indulgent.</p>
+          </div>
+        </div>
+        <div class="menu-card" data-category="signature">
+          <div class="menu-card-img"><img src="assets/images/process-4.jpg" alt="Golden Dragon hookah flavor"></div>
+          <span class="menu-card-tag new">New</span>
+          <div class="menu-card-body">
+            <div class="menu-card-title"><h3>Golden Dragon</h3><span class="menu-card-price">$32</span></div>
+            <p class="menu-card-desc">Exotic dragon fruit, lychee, and a whisper of jasmine — our boldest creation yet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3. HOOKAH TYPES ========== -->
+  <section class="section-alt" id="hookah-types">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Equipment</span>
+        <h2 class="section-heading">Choose Your Hookah</h2>
+        <p class="section-subtext">Select from our range of traditional and modern hookahs</p>
+      </div>
+      <div class="hookah-types-grid fade-up">
+        <div class="hookah-type-card">
+          <div class="hookah-type-img"><img src="assets/images/hookah-traditional.jpg" alt="Classic Hookah"></div>
+          <div class="hookah-type-body">
+            <h3>Classic Hookah</h3>
+            <p>Traditional brass and glass craftsmanship sourced from master artisans. Perfect for 1–2 guests seeking an authentic experience.</p>
+            <span class="hookah-type-price">Starting $35/session</span>
+            <a href="reservations.html" class="btn btn-secondary btn-sm">Reserve</a>
+          </div>
+        </div>
+        <div class="hookah-type-card">
+          <div class="hookah-type-img"><img src="assets/images/hookah-modern.jpg" alt="Modern Hookah"></div>
+          <div class="hookah-type-body">
+            <h3>Modern Hookah</h3>
+            <p>Sleek contemporary design with diffuser downstem and LED accents. Ideal for groups of 2–4 looking for premium cloud production.</p>
+            <span class="hookah-type-price">Starting $45/session</span>
+            <a href="reservations.html" class="btn btn-secondary btn-sm">Reserve</a>
+          </div>
+        </div>
+        <div class="hookah-type-card">
+          <div class="hookah-type-img"><img src="assets/images/vip-experience.jpg" alt="Premium VIP Hookah"></div>
+          <div class="hookah-type-body">
+            <h3>Premium VIP Hookah</h3>
+            <p>Exclusive crystal hookah with private setup, dedicated attendant, and premium coconut charcoal service. The ultimate experience.</p>
+            <span class="hookah-type-price">Starting $75/session</span>
+            <a href="reservations.html" class="btn btn-primary btn-sm">Reserve VIP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4. DRINKS & BEVERAGES ========== -->
+  <section class="section" id="drinks">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Beverages</span>
+        <h2 class="section-heading">Pair Your Session</h2>
+        <p class="section-subtext">Complement your hookah with our handcrafted beverages</p>
+      </div>
+      <div class="drinks-split fade-up">
+        <div class="drinks-column">
+          <div class="drinks-column-img"><img src="assets/images/menu-drinks-1.jpg" alt="Hot Beverages at Velvet Lounge"></div>
+          <h3>Hot Beverages</h3>
+          <div class="drink-item"><span class="drink-name">Turkish Coffee</span><span class="drink-price">$6</span></div>
+          <div class="drink-item"><span class="drink-name">Moroccan Mint Tea</span><span class="drink-price">$5</span></div>
+          <div class="drink-item"><span class="drink-name">Masala Chai</span><span class="drink-price">$5</span></div>
+          <div class="drink-item"><span class="drink-name">Hot Chocolate</span><span class="drink-price">$5</span></div>
+        </div>
+        <div class="drinks-column">
+          <div class="drinks-column-img"><img src="assets/images/menu-drinks-2.jpg" alt="Cold Drinks and Cocktails"></div>
+          <h3>Cold Drinks & Cocktails</h3>
+          <div class="drink-item"><span class="drink-name">Mango Lassi</span><span class="drink-price">$7</span></div>
+          <div class="drink-item"><span class="drink-name">Rose Lemonade</span><span class="drink-price">$6</span></div>
+          <div class="drink-item"><span class="drink-name">Velvet Sunset <small>(Mocktail)</small></span><span class="drink-price">$9</span></div>
+          <div class="drink-item"><span class="drink-name">Berry Hookah Cooler</span><span class="drink-price">$8</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 5. FOOD MENU ========== -->
+  <section class="section-alt" id="food-menu">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Kitchen</span>
+        <h2 class="section-heading">Small Bites & Platters</h2>
+        <p class="section-subtext">Mediterranean-inspired dishes to complement your session</p>
+      </div>
+      <div class="food-grid fade-up">
+        <div class="food-card">
+          <div class="food-card-img"><img src="assets/images/menu-food-1.jpg" alt="Mezze Platter"></div>
+          <div class="food-card-body">
+            <h3>Mezze Platter</h3>
+            <p>Hummus, falafel, warm pita, marinated olives, and pickled vegetables.</p>
+            <span class="menu-card-price">$18</span>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-card-img"><img src="assets/images/menu-food-2.jpg" alt="Baklava Selection"></div>
+          <div class="food-card-body">
+            <h3>Baklava Selection</h3>
+            <p>Assorted Middle Eastern pastries with honey, pistachios, and walnuts.</p>
+            <span class="menu-card-price">$12</span>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-card-img"><img src="assets/images/gallery-2.jpg" alt="Loaded Nachos"></div>
+          <div class="food-card-body">
+            <h3>Loaded Nachos</h3>
+            <p>Melted cheese, jalapeños, guacamole, sour cream, and salsa.</p>
+            <span class="menu-card-price">$14</span>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-card-img"><img src="assets/images/lounge-group.jpg" alt="Chicken Shawarma Wrap"></div>
+          <div class="food-card-body">
+            <h3>Chicken Shawarma Wrap</h3>
+            <p>Grilled marinated chicken, garlic sauce, pickles, and fresh herbs.</p>
+            <span class="menu-card-price">$15</span>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-card-img"><img src="assets/images/about-craft.jpg" alt="Fruit Platter"></div>
+          <div class="food-card-body">
+            <h3>Fruit Platter</h3>
+            <p>Seasonal fresh fruits beautifully arranged — the perfect palate cleanser.</p>
+            <span class="menu-card-price">$10</span>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-card-img"><img src="assets/images/events-themed.jpg" alt="Dessert Sampler"></div>
+          <div class="food-card-body">
+            <h3>Dessert Sampler</h3>
+            <p>Turkish delight, kunafa bites, and Medjool dates with tahini drizzle.</p>
+            <span class="menu-card-price">$14</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6. GROUP PACKAGES ========== -->
+  <section class="section" id="packages">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Packages</span>
+        <h2 class="section-heading">Group Packages</h2>
+        <p class="section-subtext">Curated experiences for every occasion</p>
+      </div>
+      <div class="packages-grid fade-up">
+        <div class="package-card">
+          <h3 class="package-name">Solo Session</h3>
+          <div class="package-price">$35</div>
+          <p class="package-desc">For individuals</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> 1 Premium Hookah</li>
+            <li><i class="fa-solid fa-check"></i> 1 Beverage of Choice</li>
+            <li><i class="fa-solid fa-check"></i> 90-Minute Session</li>
+            <li><i class="fa-solid fa-check"></i> Lounge Seating</li>
+          </ul>
+          <a href="reservations.html" class="btn btn-secondary w-full">Book Now</a>
+        </div>
+        <div class="package-card popular">
+          <span class="package-badge">Most Popular</span>
+          <h3 class="package-name">Friends Circle</h3>
+          <div class="package-price">$120</div>
+          <p class="package-desc">For groups of 4–6</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> 2 Premium Hookahs</li>
+            <li><i class="fa-solid fa-check"></i> 4 Beverages Included</li>
+            <li><i class="fa-solid fa-check"></i> Mezze Platter</li>
+            <li><i class="fa-solid fa-check"></i> 2-Hour Session</li>
+            <li><i class="fa-solid fa-check"></i> Booth Seating</li>
+          </ul>
+          <a href="reservations.html" class="btn btn-primary w-full">Book Now</a>
+        </div>
+        <div class="package-card">
+          <h3 class="package-name">VIP Party</h3>
+          <div class="package-price">$250</div>
+          <p class="package-desc">For groups of 8–12</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> 3 Premium VIP Hookahs</li>
+            <li><i class="fa-solid fa-check"></i> Unlimited Beverages</li>
+            <li><i class="fa-solid fa-check"></i> Full Food Platter</li>
+            <li><i class="fa-solid fa-check"></i> Private Lounge Area</li>
+            <li><i class="fa-solid fa-check"></i> Dedicated Attendant</li>
+          </ul>
+          <a href="reservations.html" class="btn btn-secondary w-full">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 7. RESERVATION CTA ========== -->
+  <section class="section parallax-section" style="background-image: url('assets/images/reservation-ambiance.jpg');">
+    <div class="parallax-overlay"></div>
+    <div class="container">
+      <div class="parallax-content fade-up">
+        <span class="section-label section-label-light">Ready?</span>
+        <h2 class="parallax-heading">Ready to Experience?</h2>
+        <p class="parallax-text">Reserve your table and let us craft the perfect hookah session for you and your guests.</p>
+        <a href="reservations.html" class="btn btn-primary">Reserve Now</a>
+        <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 16px;">
+          <i class="fa-solid fa-clock" style="margin-right: 6px;"></i> Open Sun–Thu 4 PM – 1 AM &nbsp;|&nbsp; Fri–Sat 4 PM – 3 AM
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="components.js"></script>
+</body>
+</html>
+

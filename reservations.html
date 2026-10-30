@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserve your hookah lounge experience at Velvet Lounge — book a table, VIP suite, or group event online.">
+  <title>Reservations — Velvet Lounge</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- ========== 1. PAGE BANNER ========== -->
+  <section class="page-banner" style="background-image: url('assets/images/reservation-ambiance.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="page-banner-content fade-up">
+      <span class="hero-badge">✦ Book Your Visit</span>
+      <h1 class="hero-title">Make a Reservation</h1>
+      <p class="hero-text">Secure your table and let us prepare the perfect hookah experience for your evening.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span>Reservations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 2. RESERVATION FORM ========== -->
+  <section class="section" id="reservation-form-section">
+    <div class="container">
+      <div class="reservation-form-container fade-up">
+        <div class="reservation-info">
+          <h3>Why Reserve?</h3>
+          <p>Walk-ins are always welcome, but reservations guarantee your preferred seating, hookah setup, and ensure our team is ready to deliver a tailored experience from the moment you arrive.</p>
+          <div class="reservation-detail-item">
+            <div class="reservation-detail-icon"><i class="fa-solid fa-map-pin"></i></div>
+            <div class="reservation-detail-text">
+              <h4>Location</h4>
+              <p>123 Smoke Avenue, Downtown District</p>
+            </div>
+          </div>
+          <div class="reservation-detail-item">
+            <div class="reservation-detail-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="reservation-detail-text">
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="reservation-detail-item">
+            <div class="reservation-detail-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="reservation-detail-text">
+              <h4>Operating Hours</h4>
+              <p>Sun–Thu: 4 PM – 1 AM<br>Fri–Sat: 4 PM – 3 AM</p>
+            </div>
+          </div>
+          <div class="reservation-detail-item">
+            <div class="reservation-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="reservation-detail-text">
+              <h4>Email</h4>
+              <p>reservations@velvetlounge.com</p>
+            </div>
+          </div>
+          <div class="reservation-detail-item">
+            <div class="reservation-detail-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="reservation-detail-text">
+              <h4>Group Bookings</h4>
+              <p>For parties of 10+ guests, please call us directly for special arrangements.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reservation-form">
+          <h3>Book Your Table</h3>
+          <form onsubmit="event.preventDefault(); alert('Reservation submitted successfully! We will confirm via email shortly.'); this.reset();">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-fname">First Name</label>
+                <input type="text" id="res-fname" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label for="res-lname">Last Name</label>
+                <input type="text" id="res-lname" placeholder="Doe" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="res-email">Email</label>
+              <input type="email" id="res-email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="res-phone">Phone Number</label>
+              <input type="tel" id="res-phone" placeholder="+1 (555) 000-0000" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-date">Date</label>
+                <input type="date" id="res-date" required>
+              </div>
+              <div class="form-group">
+                <label for="res-time">Time</label>
+                <input type="time" id="res-time" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-guests">Number of Guests</label>
+                <select id="res-guests" required>
+                  <option value="">Select</option>
+                  <option>1–2 Guests</option>
+                  <option>3–4 Guests</option>
+                  <option>5–6 Guests</option>
+                  <option>7–8 Guests</option>
+                  <option>9–12 Guests</option>
+                  <option>12+ Guests</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="res-area">Seating Preference</label>
+                <select id="res-area">
+                  <option value="">No Preference</option>
+                  <option>Main Lounge</option>
+                  <option>VIP Suite</option>
+                  <option>Outdoor Terrace</option>
+                  <option>Private Room</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="res-hookah">Hookah Preference</label>
+              <select id="res-hookah">
+                <option value="">Decide on Arrival</option>
+                <option>Classic Hookah ($35)</option>
+                <option>Modern Hookah ($45)</option>
+                <option>Premium VIP Hookah ($75)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="res-notes">Special Requests</label>
+              <textarea id="res-notes" rows="3" placeholder="Birthday setup, specific flavors, dietary requirements..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full">Confirm Reservation</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3. WHAT TO EXPECT ========== -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Your Visit</span>
+        <h2 class="section-heading">What to Expect</h2>
+      </div>
+      <div class="features-grid fade-up">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-couch"></i></div>
+          <h3 class="feature-title">Reserved Seating</h3>
+          <p class="feature-desc">Your booth or table is set up and waiting when you arrive — no queues, no waiting.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3 class="feature-title">Premium Setup</h3>
+          <p class="feature-desc">Your chosen hookah is prepared with fresh tobacco, natural coals, and a clean hose before you sit down.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-user"></i></div>
+          <h3 class="feature-title">Personal Attendant</h3>
+          <p class="feature-desc">A dedicated hookah attendant manages your coals, checks your session, and ensures peak flavour throughout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4. LOUNGE AREAS ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Spaces</span>
+        <h2 class="section-heading">Our Lounge Areas</h2>
+      </div>
+      <div class="hookah-types-grid fade-up">
+        <div class="hookah-type-card">
+          <div class="hookah-type-img"><img src="assets/images/lounge-interior.jpg" alt="Main Lounge"></div>
+          <div class="hookah-type-body">
+            <h3>Main Lounge</h3>
+            <p>Open-plan seating with ambient lighting, perfect for casual sessions and socialising with friends.</p>
+            <span class="hookah-type-price">Walk-in Welcome</span>
+          </div>
+        </div>
+        <div class="hookah-type-card">
+          <div class="hookah-type-img"><img src="assets/images/vip-experience.jpg" alt="VIP Suites"></div>
+          <div class="hookah-type-body">
+            <h3>VIP Suites</h3>
+            <p>Private rooms with dedicated sound system, premium hookah setup, and bottle service. Ideal for celebrations.</p>
+            <span class="hookah-type-price">Reservation Required</span>
+          </div>
+        </div>
+        <div class="hookah-type-card">
+          <div class="hookah-type-img"><img src="assets/images/social-feed-2.jpg" alt="Outdoor Terrace"></div>
+          <div class="hookah-type-body">
+            <h3>Outdoor Terrace</h3>
+            <p>Al fresco seating under the stars with panoramic views. Perfect for warm evenings and sunset sessions.</p>
+            <span class="hookah-type-price">Seasonal Availability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 5. GROUP PACKAGES PREVIEW ========== -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Packages</span>
+        <h2 class="section-heading">Group Packages</h2>
+        <p class="section-subtext">Pre-set packages for a hassle-free experience</p>
+      </div>
+      <div class="packages-grid fade-up">
+        <div class="package-card">
+          <h3 class="package-name">Solo Session</h3>
+          <div class="package-price">$35</div>
+          <p class="package-desc">For individuals</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> 1 Premium Hookah</li>
+            <li><i class="fa-solid fa-check"></i> 1 Beverage</li>
+            <li><i class="fa-solid fa-check"></i> 90-Minute Session</li>
+          </ul>
+          <button type="button" class="btn btn-secondary w-full" onclick="document.getElementById('reservation-form-section').scrollIntoView({behavior:'smooth'})">Select</button>
+        </div>
+        <div class="package-card popular">
+          <span class="package-badge">Most Popular</span>
+          <h3 class="package-name">Friends Circle</h3>
+          <div class="package-price">$120</div>
+          <p class="package-desc">For groups of 4–6</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> 2 Premium Hookahs</li>
+            <li><i class="fa-solid fa-check"></i> 4 Beverages</li>
+            <li><i class="fa-solid fa-check"></i> Mezze Platter</li>
+            <li><i class="fa-solid fa-check"></i> 2-Hour Session</li>
+          </ul>
+          <button type="button" class="btn btn-primary w-full" onclick="document.getElementById('reservation-form-section').scrollIntoView({behavior:'smooth'})">Select</button>
+        </div>
+        <div class="package-card">
+          <h3 class="package-name">VIP Party</h3>
+          <div class="package-price">$250</div>
+          <p class="package-desc">For groups of 8–12</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> 3 VIP Hookahs</li>
+            <li><i class="fa-solid fa-check"></i> Unlimited Drinks</li>
+            <li><i class="fa-solid fa-check"></i> Full Food Platter</li>
+            <li><i class="fa-solid fa-check"></i> Private Area</li>
+          </ul>
+          <button type="button" class="btn btn-secondary w-full" onclick="document.getElementById('reservation-form-section').scrollIntoView({behavior:'smooth'})">Select</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6. POLICIES ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Policies</span>
+        <h2 class="section-heading">Reservation Policies</h2>
+      </div>
+      <div class="faq-container fade-up">
+        <div class="faq-item">
+          <button class="faq-question"><span>Cancellation Policy</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Reservations can be cancelled or modified free of charge up to 2 hours before your scheduled time. Late cancellations or no-shows may incur a $25 fee for standard bookings and $50 for VIP suites.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question"><span>Arrival & Grace Period</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>We hold reservations for 15 minutes past the scheduled time. After 15 minutes, your table may be released to walk-in guests. Please call us if you're running late and we'll do our best to accommodate you.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question"><span>Age Requirement</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>All guests must be at least 21 years of age. Valid government-issued photo ID is required at the door. We cannot make exceptions to this policy.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question"><span>Dress Code</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Smart casual attire is recommended. We reserve the right to deny entry to guests wearing athletic wear, flip-flops, or excessively casual clothing. Themed event nights may have specific dress code requirements.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 7. CTA BANNER ========== -->
+  <section class="section parallax-section" style="background-image: url('assets/images/lounge-interior.jpg');">
+    <div class="parallax-overlay"></div>
+    <div class="container">
+      <div class="parallax-content fade-up">
+        <span class="section-label section-label-light">Questions?</span>
+        <h2 class="parallax-heading">Need Help With Your Booking?</h2>
+        <p class="parallax-text">Our team is happy to assist with any special requests, large group arrangements, or event planning.</p>
+        <div class="reservation-cta-actions">
+          <a href="contact.html" class="btn btn-primary">Contact Us</a>
+          <a href="tel:+15551234567" class="reservation-phone"><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="components.js"></script>
+</body>
+</html>
+

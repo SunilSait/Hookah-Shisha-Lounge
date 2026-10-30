@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Something exciting is coming soon to Velvet Lounge. Stay tuned and be the first to know.">
+  <title>Coming Soon — Velvet Lounge</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="components.js" defer></script>
+</head>
+<body class="fullscreen-page" onload="initAuthPage(); initCountdown();">
+
+  <!-- Top-right Theme & Direction Controls -->
+  <div class="coming-soon-corner-icons">
+    <button onclick="toggleDir(event)" class="nav-icon-btn" title="Toggle Direction" aria-label="Toggle direction">
+      <span class="dir-label" style="font-size:0.625rem;font-weight:600;">RTL</span>
+    </button>
+    <button onclick="toggleTheme(event)" class="nav-icon-btn" title="Toggle Theme" aria-label="Toggle dark mode">
+      <span class="theme-icon-wrap"><i class="fa-solid fa-moon"></i></span>
+    </button>
+  </div>
+
+  <div class="coming-soon-page">
+    <div class="coming-soon-content">
+      <!-- Logo linking to home -->
+      <div class="auth-logo">
+        <a href="index.html" aria-label="Velvet Lounge Home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 100 100" fill="none">
+            <defs>
+              <linearGradient id="lgBrandCS" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#E91E63"/>
+                <stop offset="100%" stop-color="#C2185B"/>
+              </linearGradient>
+            </defs>
+            <path d="M50 8 C44 16, 56 20, 50 28 C44 36, 42 30, 46 22 C50 14, 56 10, 50 8Z" fill="url(#lgBrandCS)" opacity="0.5"/>
+            <path d="M58 12 C54 18, 62 22, 56 28" fill="none" stroke="url(#lgBrandCS)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+            <path d="M40 34 L42 30 C44 28, 56 28, 58 30 L60 34 C60 38, 40 38, 40 34Z" fill="url(#lgBrandCS)"/>
+            <rect x="47" y="38" width="6" height="22" rx="2" fill="url(#lgBrandCS)"/>
+            <path d="M32 72 C32 58, 38 56, 44 58 L44 60 L56 60 L56 58 C62 56, 68 58, 68 72 C68 82, 60 90, 50 90 C40 90, 32 82, 32 72Z" fill="url(#lgBrandCS)"/>
+            <path d="M36 76 C40 72, 60 72, 64 76 C64 82, 58 88, 50 88 C42 88, 36 82, 36 76Z" fill="rgba(255,255,255,0.15)"/>
+            <line x1="38" y1="60" x2="26" y2="50" stroke="url(#lgBrandCS)" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="24" cy="48" r="4" fill="url(#lgBrandCS)" opacity="0.6"/>
+          </svg>
+        </a>
+      </div>
+
+      <h1 class="coming-soon-title">Something Exciting is Brewing</h1>
+      <p class="coming-soon-text">We're crafting something special behind the scenes. Stay tuned — it'll be worth the wait.</p>
+
+      <!-- Countdown Timer -->
+      <div class="countdown-grid">
+        <div class="countdown-item">
+          <span class="countdown-value" id="cd-days">30</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="cd-hours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="cd-mins">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="cd-secs">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+
+      <!-- Notify Me Form -->
+      <form class="coming-soon-form" onsubmit="event.preventDefault(); alert('You\'ll be the first to know! Thank you for subscribing.'); this.reset();">
+        <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary">Notify Me</button>
+      </form>
+
+      <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 8px;">
+        <a href="index.html" style="color: var(--primary-light); font-weight: 600;">← Back to Home</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
+
