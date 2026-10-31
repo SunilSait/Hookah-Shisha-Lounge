@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,7 +19,8 @@
   <!-- ========== 1. PAGE BANNER ========== -->
   <section class="page-banner" style="background-image: url('assets/images/about-craft.jpg');">
     <div class="hero-overlay"></div>
-    <div class="page-banner-content fade-up">
+    <div class="container">
+      <div class="page-banner-content fade-up">
       <span class="hero-badge">✦ Our Menu</span>
       <h1 class="hero-title">Discover Your Perfect Blend</h1>
       <p class="hero-text">From timeless classics to bold new creations, explore our curated collection of premium hookah flavors, artisan drinks, and Mediterranean-inspired bites.</p>
@@ -28,6 +29,7 @@
         <span>/</span>
         <span>Menu</span>
       </div>
+    </div>
     </div>
   </section>
 
@@ -245,131 +247,24 @@
     </div>
   </section>
 
-  <!-- ========== 5. FOOD MENU ========== -->
-  <section class="section-alt" id="food-menu">
+  <!-- ========== 5. RESERVATION CTA ========== -->
+  <section class="cta-normal-section section-alt" id="reservation-cta">
     <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-label">Kitchen</span>
-        <h2 class="section-heading">Small Bites & Platters</h2>
-        <p class="section-subtext">Mediterranean-inspired dishes to complement your session</p>
-      </div>
-      <div class="food-grid fade-up">
-        <div class="food-card">
-          <div class="food-card-img"><img src="assets/images/menu-food-1.jpg" alt="Mezze Platter"></div>
-          <div class="food-card-body">
-            <h3>Mezze Platter</h3>
-            <p>Hummus, falafel, warm pita, marinated olives, and pickled vegetables.</p>
-            <span class="menu-card-price">$18</span>
-          </div>
+      <div class="cta-normal-card fade-up">
+        <div class="cta-normal-badge">
+          <i class="fa-solid fa-sparkles"></i>
+          <span>Taste The Experience</span>
         </div>
-        <div class="food-card">
-          <div class="food-card-img"><img src="assets/images/menu-food-2.jpg" alt="Baklava Selection"></div>
-          <div class="food-card-body">
-            <h3>Baklava Selection</h3>
-            <p>Assorted Middle Eastern pastries with honey, pistachios, and walnuts.</p>
-            <span class="menu-card-price">$12</span>
-          </div>
+        <h2 class="cta-normal-title">Ready to Savor the <span class="text-gold">Velvet Experience?</span></h2>
+        <p class="cta-normal-desc">From artisan shisha clouds to hand-crafted cocktails and authentic Mediterranean bites, reserve your table and let our master flavor curators treat you to an extraordinary evening.</p>
+        <div class="cta-normal-actions">
+          <a href="reservations.html" class="btn btn-primary btn-lg">
+            <i class="fa-regular fa-calendar-check"></i> Reserve a Table
+          </a>
+          <a href="tel:+15551234567" class="btn btn-cta-outline btn-lg">
+            <i class="fa-solid fa-phone"></i> +1 (555) 123-4567
+          </a>
         </div>
-        <div class="food-card">
-          <div class="food-card-img"><img src="assets/images/gallery-2.jpg" alt="Loaded Nachos"></div>
-          <div class="food-card-body">
-            <h3>Loaded Nachos</h3>
-            <p>Melted cheese, jalapeños, guacamole, sour cream, and salsa.</p>
-            <span class="menu-card-price">$14</span>
-          </div>
-        </div>
-        <div class="food-card">
-          <div class="food-card-img"><img src="assets/images/lounge-group.jpg" alt="Chicken Shawarma Wrap"></div>
-          <div class="food-card-body">
-            <h3>Chicken Shawarma Wrap</h3>
-            <p>Grilled marinated chicken, garlic sauce, pickles, and fresh herbs.</p>
-            <span class="menu-card-price">$15</span>
-          </div>
-        </div>
-        <div class="food-card">
-          <div class="food-card-img"><img src="assets/images/about-craft.jpg" alt="Fruit Platter"></div>
-          <div class="food-card-body">
-            <h3>Fruit Platter</h3>
-            <p>Seasonal fresh fruits beautifully arranged — the perfect palate cleanser.</p>
-            <span class="menu-card-price">$10</span>
-          </div>
-        </div>
-        <div class="food-card">
-          <div class="food-card-img"><img src="assets/images/events-themed.jpg" alt="Dessert Sampler"></div>
-          <div class="food-card-body">
-            <h3>Dessert Sampler</h3>
-            <p>Turkish delight, kunafa bites, and Medjool dates with tahini drizzle.</p>
-            <span class="menu-card-price">$14</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 6. GROUP PACKAGES ========== -->
-  <section class="section" id="packages">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-label">Packages</span>
-        <h2 class="section-heading">Group Packages</h2>
-        <p class="section-subtext">Curated experiences for every occasion</p>
-      </div>
-      <div class="packages-grid fade-up">
-        <div class="package-card">
-          <h3 class="package-name">Solo Session</h3>
-          <div class="package-price">$35</div>
-          <p class="package-desc">For individuals</p>
-          <ul class="package-features">
-            <li><i class="fa-solid fa-check"></i> 1 Premium Hookah</li>
-            <li><i class="fa-solid fa-check"></i> 1 Beverage of Choice</li>
-            <li><i class="fa-solid fa-check"></i> 90-Minute Session</li>
-            <li><i class="fa-solid fa-check"></i> Lounge Seating</li>
-          </ul>
-          <a href="reservations.html" class="btn btn-secondary w-full">Book Now</a>
-        </div>
-        <div class="package-card popular">
-          <span class="package-badge">Most Popular</span>
-          <h3 class="package-name">Friends Circle</h3>
-          <div class="package-price">$120</div>
-          <p class="package-desc">For groups of 4–6</p>
-          <ul class="package-features">
-            <li><i class="fa-solid fa-check"></i> 2 Premium Hookahs</li>
-            <li><i class="fa-solid fa-check"></i> 4 Beverages Included</li>
-            <li><i class="fa-solid fa-check"></i> Mezze Platter</li>
-            <li><i class="fa-solid fa-check"></i> 2-Hour Session</li>
-            <li><i class="fa-solid fa-check"></i> Booth Seating</li>
-          </ul>
-          <a href="reservations.html" class="btn btn-primary w-full">Book Now</a>
-        </div>
-        <div class="package-card">
-          <h3 class="package-name">VIP Party</h3>
-          <div class="package-price">$250</div>
-          <p class="package-desc">For groups of 8–12</p>
-          <ul class="package-features">
-            <li><i class="fa-solid fa-check"></i> 3 Premium VIP Hookahs</li>
-            <li><i class="fa-solid fa-check"></i> Unlimited Beverages</li>
-            <li><i class="fa-solid fa-check"></i> Full Food Platter</li>
-            <li><i class="fa-solid fa-check"></i> Private Lounge Area</li>
-            <li><i class="fa-solid fa-check"></i> Dedicated Attendant</li>
-          </ul>
-          <a href="reservations.html" class="btn btn-secondary w-full">Book Now</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 7. RESERVATION CTA ========== -->
-  <section class="section parallax-section" style="background-image: url('assets/images/reservation-ambiance.jpg');">
-    <div class="parallax-overlay"></div>
-    <div class="container">
-      <div class="parallax-content fade-up">
-        <span class="section-label section-label-light">Ready?</span>
-        <h2 class="parallax-heading">Ready to Experience?</h2>
-        <p class="parallax-text">Reserve your table and let us craft the perfect hookah session for you and your guests.</p>
-        <a href="reservations.html" class="btn btn-primary">Reserve Now</a>
-        <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 16px;">
-          <i class="fa-solid fa-clock" style="margin-right: 6px;"></i> Open Sun–Thu 4 PM – 1 AM &nbsp;|&nbsp; Fri–Sat 4 PM – 3 AM
-        </p>
       </div>
     </div>
   </section>

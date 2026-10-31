@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,15 +18,89 @@
   <div id="navbar-placeholder"></div>
 
   <!-- ========== 1. HERO SECTION ========== -->
-  <section class="hero-section" style="background-image: url('assets/images/hero-main.jpg');">
-    <div class="hero-overlay"></div>
-    <div class="hero-content fade-up">
-      <span class="hero-badge">✦ Premium Hookah Experience</span>
-      <h1 class="hero-title">Where Smoke Meets<br>Sophistication</h1>
-      <p class="hero-text">Step into a world of rich aromas, plush seating, and handcrafted hookah blends. Velvet Lounge redefines your evening with an atmosphere that lingers long after the last exhale.</p>
-      <div class="hero-ctas">
-        <a href="reservations.html" class="btn btn-primary">Reserve Your Spot</a>
-        <a href="menu.html" class="btn btn-secondary">Explore Menu</a>
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-layer" style="background-image: url('assets/images/hero-main.jpg');"></div>
+    <div class="hero-overlay-gradient"></div>
+
+    <div class="container">
+      <div class="hero-split-grid">
+        
+        <!-- Left Column: Narrative, CTAs & Social Proof -->
+        <div class="hero-col-content fade-up">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Premier Hookah &amp; Cocktail Lounge</span>
+          </div>
+
+          <h1 class="hero-title">
+            Where Smoke Meets<br>
+            <span class="text-gold">Sophistication.</span>
+          </h1>
+
+          <p class="hero-lead-text">
+            Step into an ambiance of rich aromas, plush velvet seating, and artisanal single-origin blends. Velvet Lounge redefines your evening with an atmosphere that lingers long after the last exhale.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="reservations.html" class="btn btn-primary btn-lg">
+              <i class="fa-regular fa-calendar-check"></i> Reserve Your Spot
+            </a>
+            <a href="menu.html" class="btn btn-hero-glass btn-lg">
+              <i class="fa-solid fa-utensils"></i> Explore Menu
+            </a>
+          </div>
+
+          <!-- Hero Highlights / Social Proof Strip -->
+          <div class="hero-highlights">
+            <div class="hero-highlight-item">
+              <span class="highlight-val">50+</span>
+              <span class="highlight-lbl">Artisan Blends</span>
+            </div>
+            <div class="hero-highlight-sep"></div>
+            <div class="hero-highlight-item">
+              <span class="highlight-val">4.9★</span>
+              <span class="highlight-lbl">2,500+ Reviews</span>
+            </div>
+            <div class="hero-highlight-sep"></div>
+            <div class="hero-highlight-item">
+              <span class="highlight-val">VIP</span>
+              <span class="highlight-lbl">Private Suites</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Stage with Floating Luxury Cards -->
+        <div class="hero-col-visual fade-up">
+          <div class="hero-visual-card">
+            <div class="hero-visual-img-wrap">
+              <img src="assets/images/hero-premium.jpg" alt="Velvet Lounge Luxury Ambiance">
+              <div class="hero-img-gradient"></div>
+            </div>
+
+            <!-- Floating Card Top: Tonight's Status -->
+            <div class="hero-floating-card float-top">
+              <div class="float-icon gold-icon">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <div class="float-info">
+                <strong>Open Tonight · 4 PM – Late</strong>
+                <span>Master Sommeliers on Deck</span>
+              </div>
+            </div>
+
+            <!-- Floating Card Bottom: VIP Table Hold -->
+            <div class="hero-floating-card float-bottom">
+              <div class="float-icon">
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <div class="float-info">
+                <strong>VIP Suites &amp; Booths</strong>
+                <span>Instant Confirmation Online</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -35,17 +109,98 @@
   <section class="section" id="about-intro">
     <div class="container">
       <div class="about-intro-grid">
-        <div class="about-intro-image fade-up slide-left">
-          <img src="assets/images/lounge-interior.jpg" alt="Velvet Lounge Interior — atmospheric seating and ambient lighting">
+        
+        <!-- Left: Layered Interactive Visual Frame -->
+        <div class="welcome-visual-wrap fade-up slide-left">
+          <!-- Top Floating Rating Pill -->
+          <div class="welcome-float-rating">
+            <i class="fa-solid fa-star"></i>
+            <strong>4.9 / 5</strong>
+            <span class="rating-sub">&bull; 2,500+ Reviews</span>
+          </div>
+
+          <!-- Main Image Card with Glass Border & Shine Effect -->
+          <div class="welcome-img-card">
+            <img src="assets/images/lounge-interior.jpg" alt="Velvet Lounge Interior — atmospheric seating and ambient lighting">
+          </div>
+
+          <!-- Bottom Floating Craft Badge -->
+          <div class="welcome-float-craft">
+            <div class="craft-badge-icon">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <div class="craft-badge-text">
+              <strong>Artisanal Shisha Craft</strong>
+              <span>24K Gold-Plated Bohemian Crystal</span>
+            </div>
+          </div>
         </div>
-        <div class="about-intro-text fade-up slide-right">
-          <span class="section-label">Welcome to Velvet</span>
-          <h2 class="section-heading">A Sanctuary of Flavor &amp; Relaxation</h2>
-          <p>Born from a passion for the art of hookah, Velvet Lounge opened its doors to create a space where tradition and modern luxury coexist. Every detail — from the hand-selected tobaccos to the ambient lighting — has been curated to awaken your senses.</p>
-          <p>Our philosophy is simple: slow down, savour the moment, and let the world outside fade away. Whether you're a seasoned enthusiast or exploring hookah for the first time, our expert mixologists craft each session to your personal taste.</p>
-          <p>With plush velvet seating, curated music, and an ever-evolving menu of premium blends, Velvet Lounge is more than a destination — it's a ritual.</p>
-          <a href="contact.html" class="btn btn-primary">Learn More</a>
+
+        <!-- Right: Narrative, Micro-Perk Highlights & Dual CTAs -->
+        <div class="welcome-intro-text fade-up slide-right">
+          <div class="welcome-pill-badge">
+            <span class="welcome-pulse-dot"></span>
+            <span>Welcome to Velvet</span>
+          </div>
+
+          <h2 class="welcome-heading">
+            A Sanctuary of <span class="text-gold-gradient">Flavor &amp; Relaxation</span>
+          </h2>
+
+          <p class="welcome-lead-text">
+            Born from a passion for the art of shisha, Velvet Lounge elevates social smoking into an exquisite modern ritual. Every detail — from single-origin leaves to ambient lighting — is curated to awaken your senses.
+          </p>
+
+          <!-- 3 Interactive Perk Cards -->
+          <div class="welcome-perks-stack">
+            <!-- Perk 1 -->
+            <div class="welcome-perk-item">
+              <div class="welcome-perk-icon">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div class="welcome-perk-content">
+                <h4>100% Organic Coconut Coals</h4>
+                <p>Zero chemical additives for pure, clean, velvety smoke sessions.</p>
+              </div>
+            </div>
+
+            <!-- Perk 2 -->
+            <div class="welcome-perk-item">
+              <div class="welcome-perk-icon">
+                <i class="fa-solid fa-martini-glass"></i>
+              </div>
+              <div class="welcome-perk-content">
+                <h4>Botanical Mixology Pairings</h4>
+                <p>Master sommeliers craft signature mocktails tailored to your flavor profile.</p>
+              </div>
+            </div>
+
+            <!-- Perk 3 -->
+            <div class="welcome-perk-item">
+              <div class="welcome-perk-icon">
+                <i class="fa-solid fa-couch"></i>
+              </div>
+              <div class="welcome-perk-content">
+                <h4>Private Acoustic Sanctuary</h4>
+                <p>Acoustically tuned plush velvet suites designed for effortless intimacy.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action CTAs -->
+          <div class="welcome-actions-row">
+            <a href="about.html" class="btn-welcome-primary">
+              <span>Explore Our Story</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="reservations.html" class="btn-welcome-outline">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Reserve a Table</span>
+            </a>
+          </div>
+
         </div>
+
       </div>
     </div>
   </section>
@@ -205,49 +360,61 @@
         <span class="section-label">Our Space</span>
         <h2 class="section-heading">Experience the Atmosphere</h2>
       </div>
-      <div class="gallery-bento fade-up">
-        <div class="gallery-item gallery-item-wide">
-          <img src="assets/images/gallery-1.jpg" alt="Lounge seating area with mood lighting">
-          <div class="gallery-overlay"><span>Lounge Vibes</span></div>
+      <div class="gallery-strips-grid fade-up">
+        
+        <!-- Strip 1: VIP Sanctuary -->
+        <div class="gallery-strip-card">
+          <img src="assets/images/vip-experience.jpg" alt="VIP Velvet Lounge Sanctuary" class="gallery-strip-img" loading="lazy">
+          <div class="gallery-strip-gradient"></div>
+          <span class="gallery-strip-tag">VIP Sanctuary</span>
+          <div class="gallery-strip-content">
+            <h3 class="gallery-strip-title">The Sultan Suite</h3>
+            <p class="gallery-strip-desc">Private velvet booth enclave with 24K crystal stems.</p>
+            <span class="gallery-strip-arrow">Explore Suite <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
         </div>
-        <div class="gallery-item gallery-item-tall">
-          <img src="assets/images/gallery-2.jpg" alt="Close-up of hookah smoke art">
-          <div class="gallery-overlay"><span>Smoke Art</span></div>
+
+        <!-- Strip 2: Main Atelier -->
+        <div class="gallery-strip-card">
+          <img src="assets/images/lounge-interior.jpg" alt="Grand Lounge Interior" class="gallery-strip-img" loading="lazy">
+          <div class="gallery-strip-gradient"></div>
+          <span class="gallery-strip-tag">The Sanctuary</span>
+          <div class="gallery-strip-content">
+            <h3 class="gallery-strip-title">The Grand Salon</h3>
+            <p class="gallery-strip-desc">Ambient Moroccan lanterns and acoustically tuned lounge seating.</p>
+            <span class="gallery-strip-arrow">View Gallery <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="assets/images/gallery-3.jpg" alt="Exotic flavor bowls on display">
-          <div class="gallery-overlay"><span>Flavor Bar</span></div>
+
+        <!-- Strip 3: Exclusive Pairings -->
+        <div class="gallery-strip-card">
+          <img src="assets/images/hero-premium.jpg" alt="Sommelier Pairings and Hookah" class="gallery-strip-img" loading="lazy">
+          <div class="gallery-strip-gradient"></div>
+          <span class="gallery-strip-tag">Curated Blends</span>
+          <div class="gallery-strip-content">
+            <h3 class="gallery-strip-title">Sommelier Lounge</h3>
+            <p class="gallery-strip-desc">Single-origin leaves paired with botanical mocktail essences.</p>
+            <span class="gallery-strip-arrow">Explore Menu <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="assets/images/gallery-4.jpg" alt="VIP private lounge room">
-          <div class="gallery-overlay"><span>VIP Room</span></div>
+
+        <!-- Strip 4: Artisan Craft -->
+        <div class="gallery-strip-card">
+          <img src="assets/images/hookah-traditional.jpg" alt="Bohemian Handcrafted Crystal Hookah" class="gallery-strip-img" loading="lazy">
+          <div class="gallery-strip-gradient"></div>
+          <span class="gallery-strip-tag">Artisan Stems</span>
+          <div class="gallery-strip-content">
+            <h3 class="gallery-strip-title">Bohemian Crystal</h3>
+            <p class="gallery-strip-desc">Hand-blown glass decanters with 100% natural coconut heat.</p>
+            <span class="gallery-strip-arrow">Learn Craft <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
         </div>
-        <div class="gallery-item gallery-item-wide">
-          <img src="assets/images/gallery-5.jpg" alt="Live DJ entertainment night">
-          <div class="gallery-overlay"><span>Live Nights</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/gallery-6.jpg" alt="Outdoor terrace seating">
-          <div class="gallery-overlay"><span>Terrace</span></div>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ========== 7. LIVE ENTERTAINMENT BANNER ========== -->
-  <section class="section parallax-section" id="entertainment-banner" style="background-image: url('assets/images/entertainment-banner.jpg');">
-    <div class="parallax-overlay"></div>
-    <div class="container">
-      <div class="parallax-content fade-up">
-        <span class="section-label section-label-light">What's On</span>
-        <h2 class="parallax-heading">Live Music Every Weekend</h2>
-        <p class="parallax-text">From soulful acoustic sets to pulsating DJ nights, our curated entertainment calendar transforms every visit into an event. Check out our upcoming lineup and secure your spot for an evening you won't forget.</p>
-        <a href="events.html" class="btn btn-primary">View Events</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 8. TESTIMONIALS ========== -->
+  <!-- ========== 7. TESTIMONIALS ========== -->
   <section class="section-alt" id="testimonials">
     <div class="container">
       <div class="section-header fade-up">
@@ -319,26 +486,8 @@
     </div>
   </section>
 
-  <!-- ========== 9. RESERVATION CTA ========== -->
-  <section class="section parallax-section" id="reservation-cta" style="background-image: url('assets/images/reservation-ambiance.jpg');">
-    <div class="parallax-overlay"></div>
-    <div class="container">
-      <div class="parallax-content fade-up">
-        <span class="section-label section-label-light">Book Now</span>
-        <h2 class="parallax-heading">Reserve Your Evening</h2>
-        <p class="parallax-text">Whether it's a quiet night for two or a celebration with friends, our team will ensure every detail is perfect. Secure your table today and let us set the mood for an unforgettable experience.</p>
-        <div class="reservation-cta-actions">
-          <a href="reservations.html" class="btn btn-primary">Book a Table</a>
-          <a href="tel:+15551234567" class="reservation-phone">
-            <i class="fa-solid fa-phone"></i> +1 (555) 123-4567
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 10. FAQ SECTION ========== -->
-  <section class="section-alt" id="faq">
+  <!-- ========== 8. FAQ SECTION ========== -->
+  <section class="section" id="faq">
     <div class="container">
       <div class="section-header fade-up">
         <span class="section-label">Support</span>
@@ -409,8 +558,8 @@
     </div>
   </section>
 
-  <!-- ========== 11. INSTAGRAM / SOCIAL FEED ========== -->
-  <section class="section" id="social-feed">
+  <!-- ========== 9. INSTAGRAM / SOCIAL FEED ========== -->
+  <section class="section section-alt" id="social-feed">
     <div class="container">
       <div class="section-header fade-up">
         <span class="section-label">Stay Connected</span>
@@ -445,6 +594,42 @@
       </div>
       <div class="social-cta fade-up">
         <a href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Follow Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 10. RESERVATION & EXPERIENCE CTA ========== -->
+  <section class="cta-normal-section" id="reservation-cta">
+    <div class="container">
+      <div class="cta-normal-card fade-up">
+        <div class="cta-normal-badge">
+          <i class="fa-solid fa-crown"></i>
+          <span>VIP Reservations</span>
+        </div>
+        <h2 class="cta-normal-title">Ready for an <span class="text-gold">Unforgettable Night?</span></h2>
+        <p class="cta-normal-desc">Step into an atmosphere of seductive ambient lighting, world-class shisha blends, handcrafted cocktails, and soulful lounge beats. Secure your private booth or VIP table today.</p>
+        <div class="cta-normal-actions">
+          <a href="reservations.html" class="btn btn-primary btn-lg">
+            <i class="fa-regular fa-calendar-check"></i> Book a Table
+          </a>
+          <a href="tel:+15551234567" class="btn btn-cta-outline btn-lg">
+            <i class="fa-solid fa-phone"></i> +1 (555) 123-4567
+          </a>
+        </div>
+        <div class="cta-normal-features">
+          <span class="cta-normal-feature-item">
+            <i class="fa-solid fa-gem"></i> Premium Organic Blends
+          </span>
+          <span class="cta-normal-feature-item">
+            <i class="fa-solid fa-champagne-glasses"></i> VIP Bottle Service
+          </span>
+          <span class="cta-normal-feature-item">
+            <i class="fa-solid fa-martini-glass-citrus"></i> Handcrafted Cocktails
+          </span>
+          <span class="cta-normal-feature-item">
+            <i class="fa-solid fa-music"></i> Live Weekend DJs
+          </span>
+        </div>
       </div>
     </div>
   </section>

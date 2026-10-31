@@ -7,7 +7,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 
@@ -27,18 +27,18 @@
       gap: 8px;
       padding: 8px 20px;
       border-radius: 30px;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.8rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: var(--primary, #C2185B);
-      border: 1px solid var(--primary, #C2185B);
+      color: var(--primary, #D4AF37);
+      border: 1px solid var(--primary, #D4AF37);
       margin-bottom: 16px;
     }
 
     .section-heading {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Syne', sans-serif;
       font-size: clamp(2rem, 4vw, 3.2rem);
       font-weight: 600;
       margin-bottom: 16px;
@@ -48,7 +48,7 @@
     :root.dark .section-heading { color: var(--text-dark, #f0e6f6); }
 
     .section-subtext {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.05rem;
       color: var(--text-muted, #666);
       max-width: 600px;
@@ -62,101 +62,619 @@
     }
     .section-header .section-subtext { margin: 0 auto; }
 
-    /* ---------- 1. CINEMATIC HERO ---------- */
+            /* ---------- 1. CINEMATIC VIP HERO (EDITORIAL ASYMMETRIC COLLAGE) ---------- */
     .hero2-section {
       position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
+      min-height: auto;
+      padding: 3.5rem 0 5rem;
       overflow: hidden;
-      background: #0a0a15;
+      background: #090710;
     }
+
     .hero2-bg {
       position: absolute;
       inset: 0;
       background: url('assets/images/hero-premium.jpg') center/cover no-repeat;
+      opacity: 0.16;
+      filter: blur(4px);
+      transform: scale(1.05);
+      z-index: 1;
     }
+
     .hero2-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(5,5,15,0.88) 0%, rgba(15,10,30,0.72) 50%, rgba(5,5,15,0.85) 100%);
-    }
-    .hero2-content {
-      position: relative;
+      background: 
+        radial-gradient(circle at 18% 30%, rgba(212, 175, 55, 0.14) 0%, transparent 55%),
+        radial-gradient(circle at 82% 65%, rgba(212, 175, 55, 0.10) 0%, transparent 55%),
+        radial-gradient(circle at 50% 100%, rgba(20, 16, 32, 0.9) 0%, transparent 70%),
+        linear-gradient(180deg, rgba(9, 7, 16, 0.94) 0%, rgba(13, 10, 22, 0.88) 50%, rgba(9, 7, 16, 0.98) 100%);
       z-index: 2;
-      max-width: 620px;
-      padding: 0 24px;
-    }
-    .hero2-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 24px;
-      background: rgba(194, 24, 91, 0.15);
-      border: 1px solid rgba(194, 24, 91, 0.4);
-      border-radius: 40px;
-      color: #E91E63;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-    .hero2-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 6vw, 4.5rem);
-      font-weight: 600;
-      color: #fff;
-      line-height: 1.1;
-      margin-bottom: 24px;
-    }
-    .hero2-title span {
-      background: linear-gradient(135deg, #E91E63, #FF6090);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero2-desc {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.8;
-      margin-bottom: 40px;
-      max-width: 520px;
-    }
-    .hero2-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px 40px;
-      background: linear-gradient(135deg, #E91E63, #C2185B);
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 30px rgba(233, 30, 99, 0.3);
-    }
-    .hero2-cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 40px rgba(233, 30, 99, 0.5);
     }
 
-    /* Smoke canvas area */
     .hero2-particles {
       position: absolute;
       inset: 0;
-      z-index: 1;
+      z-index: 2;
       pointer-events: none;
     }
+
     .hero2-particles canvas {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
+    }
+
+    .hero2-section > .container {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+    }
+
+    /* Asymmetric 2-Column Grid */
+    .hero2-ref-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+      max-width: 1220px;
+      margin: 0 auto;
+    }
+
+    /* Left Narrative Column */
+    .hero2-ref-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Top Pill Badge */
+    .hero2-ref-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.35rem 0.5rem 0.35rem 0.9rem;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .pill-live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 10px #10B981, 0 0 4px #10B981;
+      display: inline-block;
+      animation: refPulse 2s infinite ease-in-out;
+    }
+
+    @keyframes refPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(0.85); }
+    }
+
+    .pill-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.92);
+      letter-spacing: 0.02em;
+    }
+
+    .pill-est {
+      padding: 0.2rem 0.65rem;
+      background: rgba(212, 175, 55, 0.2);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 9999px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #F5C542;
+      letter-spacing: 0.06em;
+    }
+
+    /* Editorial Headline with Harmonious Luxury Gold Accents */
+    .hero2-ref-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.5rem, 4.8vw, 4.15rem);
+      font-weight: 500;
+      line-height: 1.15;
+      color: #FFFFFF;
+      margin: 0 0 1.35rem;
+      letter-spacing: -0.015em;
+    }
+
+    .title-accent-gold {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      background: linear-gradient(135deg, #FFE89E 0%, #DFB742 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .title-accent-amber {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      background: linear-gradient(135deg, #FFE89E 0%, #D4AF37 50%, #B8860B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    /* Lead Paragraph */
+    .hero2-ref-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.74);
+      margin: 0 0 2.25rem;
+      max-width: 520px;
+    }
+
+    /* Action CTAs — Luxury Gold & Outline Glass */
+    .hero2-ref-ctas {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-ref-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.95rem 2rem;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #FFE89E 0%, #D4AF37 50%, #B8860B 100%);
+      color: #0A0A15;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-ref-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 34px rgba(212, 175, 55, 0.55);
+      background: linear-gradient(135deg, #FFF0B8 0%, #DFB742 50%, #C5981E 100%);
+      color: #0A0A15;
+    }
+
+    .btn-ref-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.95rem 1.85rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1.5px solid rgba(212, 175, 55, 0.35);
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-ref-outline:hover {
+      background: rgba(212, 175, 55, 0.15);
+      border-color: var(--primary, #D4AF37);
+      color: #FFE89E;
+      transform: translateY(-2px);
+    }
+
+    /* Right Column: Overlapping Staggered Cards Collage */
+    .hero2-ref-visual {
+      position: relative;
+    }
+
+    .ref-collage-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 530px;
+      height: 485px;
+      margin: 0 auto;
+    }
+
+    .ref-collage-card {
+      position: absolute;
+      background: linear-gradient(145deg, #181524 0%, #12101C 100%);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    /* Card 1: Top-Left */
+    .ref-card-1 {
+      top: 0;
+      left: 0;
+      width: 58%;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .ref-card-1:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.65);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    /* Card 2: Bottom-Right */
+    .ref-card-2 {
+      bottom: 0;
+      right: 0;
+      width: 61%;
+      box-shadow: 0 25px 55px rgba(0, 0, 0, 0.65);
+      z-index: 2;
+    }
+
+    .ref-card-2:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 65px rgba(0, 0, 0, 0.75);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .ref-card-img-wrap {
+      width: 100%;
+      height: 165px;
+      overflow: hidden;
+      position: relative;
+      background: #0E0C16;
+    }
+
+    .ref-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .ref-card-1:hover .ref-card-img-wrap img,
+    .ref-card-2:hover .ref-card-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .ref-card-body {
+      padding: 1.1rem 1.15rem 1.25rem;
+    }
+
+    /* Category Tag Pills */
+    .ref-tag {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .tag-gold {
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: #DFB742;
+    }
+
+    .tag-amber {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #FBBF24;
+      margin-bottom: 0;
+    }
+
+    .ref-card-head-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .ref-meta-side {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 500;
+    }
+
+    .ref-card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin: 0 0 0.35rem;
+      line-height: 1.25;
+    }
+
+    .ref-card-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.775rem;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* Floating Center Circular Stamp — 24K Royal Gold Seal */
+    .ref-circular-stamp {
+      position: absolute;
+      top: 40%;
+      left: 47%;
+      transform: translate(-50%, -50%);
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FFE89E 0%, #D4AF37 50%, #B8860B 100%);
+      border: 2.5px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 28px rgba(212, 175, 55, 0.55), 0 10px 24px rgba(0, 0, 0, 0.5);
+      z-index: 6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 2px;
+      padding: 6px;
+      animation: stampGlow 3.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes stampGlow {
+      0% {
+        box-shadow: 0 0 24px rgba(212, 175, 55, 0.45), 0 10px 24px rgba(0, 0, 0, 0.45);
+        transform: translate(-50%, -50%) scale(1);
+      }
+      100% {
+        box-shadow: 0 0 36px rgba(212, 175, 55, 0.75), 0 12px 28px rgba(0, 0, 0, 0.55);
+        transform: translate(-50%, -50%) scale(1.04);
+      }
+    }
+
+    .ref-circular-stamp i {
+      font-size: 0.875rem;
+      color: #0A0A15;
+    }
+
+    .stamp-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.52rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #0A0A15;
+      line-height: 1.15;
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 991px) {
+      .hero2-ref-grid {
+        grid-template-columns: 1fr;
+        gap: 3.25rem;
+        text-align: center;
+      }
+      .hero2-ref-badge {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero2-ref-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero2-ref-ctas {
+        justify-content: center;
+      }
+      .ref-collage-wrap {
+        height: 460px;
+        max-width: 500px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .hero2-section {
+        padding: 2.5rem 0 3.75rem;
+      }
+      .hero2-ref-title {
+        font-size: 2.25rem;
+      }
+      .hero2-ref-ctas {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-ref-primary,
+      .btn-ref-outline {
+        width: 100%;
+        justify-content: center;
+      }
+      .ref-collage-wrap {
+        height: 400px;
+      }
+      .ref-card-1 {
+        width: 66%;
+      }
+      .ref-card-2 {
+        width: 68%;
+      }
+      .ref-card-img-wrap {
+        height: 135px;
+      }
+      .ref-card-title {
+        font-size: 1.05rem;
+      }
+      .ref-circular-stamp {
+        width: 72px;
+        height: 72px;
+      }
+      .ref-circular-stamp i {
+        font-size: 0.75rem;
+      }
+      .stamp-text {
+        font-size: 0.48rem;
+      }
+    }
+
+
+    /* ============================================================
+       LIGHT THEME ADAPTATION FOR HERO2 & COUNTER STRIP
+       ============================================================ */
+    :root:not(.dark) .hero2-section,
+    html:not(.dark) .hero2-section {
+      background: linear-gradient(180deg, #FBF9F5 0%, #F5F0E6 100%);
+    }
+
+    :root:not(.dark) .hero2-bg,
+    html:not(.dark) .hero2-bg {
+      opacity: 0.08;
+      filter: blur(2px);
+    }
+
+    :root:not(.dark) .hero2-overlay,
+    html:not(.dark) .hero2-overlay {
+      background: 
+        radial-gradient(circle at 18% 30%, rgba(212, 175, 55, 0.16) 0%, transparent 60%),
+        radial-gradient(circle at 82% 65%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(251, 249, 245, 0.78) 0%, rgba(245, 240, 230, 0.90) 100%);
+    }
+
+    :root:not(.dark) .hero2-ref-badge,
+    html:not(.dark) .hero2-ref-badge {
+      background: rgba(212, 175, 55, 0.14);
+      border-color: rgba(212, 175, 55, 0.45);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    :root:not(.dark) .pill-label,
+    html:not(.dark) .pill-label {
+      color: #14121E;
+    }
+
+    :root:not(.dark) .pill-est,
+    html:not(.dark) .pill-est {
+      background: rgba(212, 175, 55, 0.22);
+      border-color: rgba(212, 175, 55, 0.55);
+      color: #8C620A;
+    }
+
+    :root:not(.dark) .hero2-ref-title,
+    html:not(.dark) .hero2-ref-title {
+      color: #14121E;
+    }
+
+    :root:not(.dark) .title-accent-gold,
+    html:not(.dark) .title-accent-gold {
+      background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #996515 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    :root:not(.dark) .title-accent-amber,
+    html:not(.dark) .title-accent-amber {
+      background: linear-gradient(135deg, #C58A00 0%, #D4AF37 50%, #8C620A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    :root:not(.dark) .hero2-ref-desc,
+    html:not(.dark) .hero2-ref-desc {
+      color: #4A4A5A;
+    }
+
+    :root:not(.dark) .btn-ref-outline,
+    html:not(.dark) .btn-ref-outline {
+      background: #FFFFFF;
+      border-color: rgba(212, 175, 55, 0.6);
+      color: #14121E;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    :root:not(.dark) .btn-ref-outline:hover,
+    html:not(.dark) .btn-ref-outline:hover {
+      background: rgba(212, 175, 55, 0.14);
+      border-color: #D4AF37;
+      color: #8C620A;
+    }
+
+    :root:not(.dark) .ref-collage-card,
+    html:not(.dark) .ref-collage-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      box-shadow: 0 20px 45px rgba(26, 26, 46, 0.10), 0 4px 14px rgba(212, 175, 55, 0.08);
+    }
+
+    :root:not(.dark) .ref-card-1:hover,
+    html:not(.dark) .ref-card-1:hover,
+    :root:not(.dark) .ref-card-2:hover,
+    html:not(.dark) .ref-card-2:hover {
+      box-shadow: 0 24px 55px rgba(26, 26, 46, 0.16), 0 0 20px rgba(212, 175, 55, 0.2);
+      border-color: #D4AF37;
+    }
+
+    :root:not(.dark) .ref-card-title,
+    html:not(.dark) .ref-card-title {
+      color: #14121E;
+    }
+
+    :root:not(.dark) .ref-card-sub,
+    html:not(.dark) .ref-card-sub {
+      color: #555566;
+    }
+
+    :root:not(.dark) .ref-meta-side,
+    html:not(.dark) .ref-meta-side {
+      color: #777788;
+    }
+
+    :root:not(.dark) .tag-gold,
+    html:not(.dark) .tag-gold {
+      background: rgba(212, 175, 55, 0.16);
+      border-color: rgba(212, 175, 55, 0.45);
+      color: #8C620A;
+    }
+
+    :root:not(.dark) .tag-amber,
+    html:not(.dark) .tag-amber {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: rgba(245, 158, 11, 0.45);
+      color: #996515;
+    }
+
+    :root:not(.dark) .counter-section,
+    html:not(.dark) .counter-section {
+      background: #FFFFFF;
+      border-top: 1px solid rgba(212, 175, 55, 0.24);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.24);
+    }
+
+    :root:not(.dark) .counter-number,
+    html:not(.dark) .counter-number {
+      background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #8C620A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    :root:not(.dark) .counter-label,
+    html:not(.dark) .counter-label {
+      color: #4A4A5A;
+    }
+
+    :root:not(.dark) .counter-item:not(:last-child)::after,
+    html:not(.dark) .counter-item:not(:last-child)::after {
+      background: linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.35), transparent);
     }
 
     /* ---------- 2. VIP EXPERIENCE INTRO ---------- */
@@ -172,7 +690,7 @@
       background: rgba(255,255,255,0.6);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(194,24,91,0.12);
+      border: 1px solid rgba(212, 175, 55,0.12);
       transition: transform 0.4s, box-shadow 0.4s;
     }
     :root.dark .vip-card {
@@ -181,7 +699,7 @@
     }
     .vip-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 60px rgba(194,24,91,0.12);
+      box-shadow: 0 20px 60px rgba(212, 175, 55,0.12);
     }
     .vip-card-icon {
       width: 72px;
@@ -191,12 +709,12 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(233,30,99,0.1), rgba(194,24,91,0.05));
+      background: linear-gradient(135deg, rgba(212, 175, 55,0.1), rgba(212, 175, 55,0.05));
       font-size: 1.6rem;
-      color: var(--primary, #C2185B);
+      color: var(--primary, #D4AF37);
     }
     .vip-card h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Syne', sans-serif;
       font-size: 1.35rem;
       font-weight: 600;
       margin-bottom: 12px;
@@ -204,7 +722,7 @@
     }
     :root.dark .vip-card h3 { color: #f0e6f6; }
     .vip-card p {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
       color: var(--text-muted, #666);
       line-height: 1.7;
@@ -220,11 +738,11 @@
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: thin;
-      scrollbar-color: var(--primary, #C2185B) transparent;
+      scrollbar-color: var(--primary, #D4AF37) transparent;
     }
     .collection-scroll::-webkit-scrollbar { height: 6px; }
     .collection-scroll::-webkit-scrollbar-track { background: transparent; }
-    .collection-scroll::-webkit-scrollbar-thumb { background: var(--primary, #C2185B); border-radius: 10px; }
+    .collection-scroll::-webkit-scrollbar-thumb { background: var(--primary, #D4AF37); border-radius: 10px; }
 
     .collection-card {
       flex: 0 0 340px;
@@ -252,14 +770,14 @@
       padding: 32px;
     }
     .collection-card-overlay h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Syne', sans-serif;
       font-size: 1.5rem;
       font-weight: 600;
       color: #fff;
       margin-bottom: 8px;
     }
     .collection-card-overlay p {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
       color: rgba(255,255,255,0.7);
     }
@@ -277,13 +795,13 @@
       top: 0;
       bottom: 0;
       width: 2px;
-      background: linear-gradient(to bottom, var(--primary, #C2185B), rgba(194,24,91,0.1));
+      background: linear-gradient(to bottom, var(--primary, #D4AF37), rgba(212, 175, 55,0.1));
       transform: translateX(-50%);
     }
     .timeline-item {
       display: flex;
       align-items: center;
-      gap: 40px;
+      justify-content: space-between;
       margin-bottom: 64px;
       position: relative;
     }
@@ -293,19 +811,22 @@
     .timeline-dot {
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
+      top: 50%;
+      transform: translate(-50%, -50%);
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: var(--primary, #C2185B);
-      border: 4px solid var(--bg, #fff);
+      background: var(--primary, #D4AF37);
+      border: 4px solid var(--bg-main, #fff);
       z-index: 2;
-      box-shadow: 0 0 0 4px rgba(194,24,91,0.2);
+      box-shadow: 0 0 0 4px rgba(212, 175, 55,0.2);
     }
-    :root.dark .timeline-dot { border-color: var(--bg-dark, #0f0f1a); }
+    :root.dark .timeline-dot,
+    html.dark .timeline-dot { border-color: var(--bg-main, #0f0f1a); }
 
     .timeline-img {
       width: calc(50% - 50px);
+      height: 260px;
       flex-shrink: 0;
       border-radius: 16px;
       overflow: hidden;
@@ -321,16 +842,16 @@
       flex-shrink: 0;
     }
     .timeline-step {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.8rem;
       font-weight: 600;
-      color: var(--primary, #C2185B);
+      color: var(--primary, #D4AF37);
       text-transform: uppercase;
       letter-spacing: 3px;
       margin-bottom: 8px;
     }
     .timeline-text h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Syne', sans-serif;
       font-size: 1.5rem;
       font-weight: 600;
       color: var(--text, #1a1a2e);
@@ -338,34 +859,31 @@
     }
     :root.dark .timeline-text h3 { color: #f0e6f6; }
     .timeline-text p {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
       color: var(--text-muted, #666);
       line-height: 1.7;
     }
     :root.dark .timeline-text p { color: #aaa; }
 
-    /* ---------- 5. AMBIANCE GALLERY (Film-Strip) ---------- */
+    /* ---------- 5. AMBIANCE GALLERY (Film-Strip - Fitted 4-Card Grid) ---------- */
     .filmstrip-gallery {
       display: flex;
       gap: 16px;
-      overflow-x: auto;
-      padding: 20px 0 40px;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
+      overflow-x: hidden;
+      padding: 20px 0 44px;
     }
-    .filmstrip-gallery::-webkit-scrollbar { height: 4px; }
-    .filmstrip-gallery::-webkit-scrollbar-thumb { background: var(--primary, #C2185B); border-radius: 10px; }
+    .filmstrip-gallery::-webkit-scrollbar { display: none; }
 
     .filmstrip-item {
-      flex: 0 0 300px;
-      height: 420px;
+      flex: 1 1 0;
+      min-width: 0;
+      height: 380px;
       border-radius: 16px;
       overflow: hidden;
       position: relative;
-      scroll-snap-align: start;
     }
-    .filmstrip-item:nth-child(even) { margin-top: 40px; }
+    .filmstrip-item:nth-child(even) { margin-top: 36px; }
     .filmstrip-item img {
       width: 100%;
       height: 100%;
@@ -385,7 +903,7 @@
     }
     .filmstrip-item:hover .filmstrip-caption { transform: translateY(0); }
     .filmstrip-caption span {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
       font-weight: 500;
       color: #fff;
@@ -407,7 +925,7 @@
     :root.dark .blend-card { background: var(--card-bg-dark, #1a1a2e); box-shadow: 0 8px 40px rgba(0,0,0,0.3); }
     .blend-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 16px 50px rgba(194,24,91,0.15);
+      box-shadow: 0 16px 50px rgba(212, 175, 55,0.15);
     }
     .blend-card-img {
       position: relative;
@@ -425,7 +943,7 @@
       padding: 28px;
     }
     .blend-card-body h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Syne', sans-serif;
       font-size: 1.4rem;
       font-weight: 600;
       color: var(--text, #1a1a2e);
@@ -433,7 +951,7 @@
     }
     :root.dark .blend-card-body h3 { color: #f0e6f6; }
     .blend-card-body p {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.92rem;
       color: var(--text-muted, #666);
       line-height: 1.6;
@@ -446,19 +964,19 @@
       justify-content: space-between;
     }
     .blend-price {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Syne', sans-serif;
       font-size: 1.3rem;
       font-weight: 600;
-      color: var(--primary, #C2185B);
+      color: var(--primary, #D4AF37);
     }
     .blend-order-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 10px 24px;
-      background: linear-gradient(135deg, #E91E63, #C2185B);
+      background: linear-gradient(135deg, #DFB742, #D4AF37);
       color: #fff;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
@@ -469,7 +987,7 @@
     }
     .blend-order-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(233,30,99,0.3);
+      box-shadow: 0 6px 20px rgba(212, 175, 55,0.3);
     }
 
     /* ---------- 7. EVENTS PREVIEW ---------- */
@@ -502,14 +1020,16 @@
     .event-card:hover .event-card-img img { transform: scale(1.06); }
     .event-date-badge {
       position: absolute;
-      top: 16px;
+      top: auto;
+      bottom: 16px;
       right: 16px;
-      background: linear-gradient(135deg, #E91E63, #C2185B);
-      color: #fff;
+      background: linear-gradient(135deg, #DFB742, #D4AF37);
+      color: #0F0F1F;
+      font-weight: 700;
       padding: 10px 14px;
       border-radius: 12px;
       text-align: center;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       line-height: 1.2;
       z-index: 2;
     }
@@ -529,7 +1049,7 @@
       padding: 24px;
     }
     .event-card-body h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Syne', sans-serif;
       font-size: 1.25rem;
       font-weight: 600;
       color: var(--text, #1a1a2e);
@@ -537,7 +1057,7 @@
     }
     :root.dark .event-card-body h3 { color: #f0e6f6; }
     .event-card-body p {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
       color: var(--text-muted, #666);
       line-height: 1.6;
@@ -548,10 +1068,12 @@
       margin-top: 48px;
     }
 
-    /* ---------- 8. COUNTER / STATS SECTION ---------- */
+    /* ---------- 1B. COMPACT COUNTER / STATS STRIP (AFTER HERO) ---------- */
     .counter-section {
-      padding: 80px 0;
-      background: linear-gradient(135deg, #0a0a15 0%, #1a1a2e 100%);
+      padding: 30px 0;
+      background: linear-gradient(180deg, #07060C 0%, #0D0A16 50%, #07060C 100%);
+      border-top: 1px solid rgba(212, 175, 55, 0.16);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.16);
       position: relative;
       overflow: hidden;
     }
@@ -559,36 +1081,73 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='%23C2185B' fill-opacity='0.03'/%3E%3C/svg%3E") repeat;
-      opacity: 0.5;
+      background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+      pointer-events: none;
     }
     .counter-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
+      gap: 20px;
       position: relative;
       z-index: 1;
     }
     .counter-item {
       text-align: center;
+      position: relative;
+      padding: 4px 12px;
+    }
+    .counter-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.25), transparent);
     }
     .counter-number {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 8px;
-      background: linear-gradient(135deg, #E91E63, #FF6090);
+      font-family: var(--font-heading, 'Syne', sans-serif);
+      font-size: clamp(2rem, 3.8vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 4px;
+      background: linear-gradient(135deg, #FFE89E 0%, #D4AF37 50%, #B8860B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
     .counter-label {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      font-weight: 400;
-      color: rgba(255,255,255,0.6);
-      letter-spacing: 1px;
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.72);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 991px) {
+      .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+      .counter-item:nth-child(2)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .counter-section {
+        padding: 24px 0;
+      }
+      .counter-number {
+        font-size: 1.85rem;
+      }
+      .counter-label {
+        font-size: 0.72rem;
+      }
+      .counter-item::after {
+        display: none;
+      }
     }
 
     /* ---------- 9. GUEST REVIEWS (2×2 Magazine) ---------- */
@@ -610,14 +1169,14 @@
     .review-quote-mark {
       font-size: 4rem;
       line-height: 1;
-      color: var(--primary, #C2185B);
+      color: var(--primary, #D4AF37);
       opacity: 0.2;
       position: absolute;
       top: 20px;
       left: 32px;
     }
     .review-text {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1rem;
       color: var(--text-muted, #555);
       line-height: 1.8;
@@ -626,13 +1185,28 @@
       font-style: italic;
     }
     :root.dark .review-text { color: #bbb; }
+    .review-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 2px solid rgba(212, 175, 55, 0.4);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+    .review-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .review-author {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
     .review-author-info h4 {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
       font-weight: 600;
       color: var(--text, #1a1a2e);
@@ -643,15 +1217,15 @@
       display: inline-block;
       padding: 3px 12px;
       border-radius: 20px;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.72rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
     .review-badge.vip {
-      background: linear-gradient(135deg, rgba(233,30,99,0.12), rgba(194,24,91,0.08));
-      color: var(--primary, #C2185B);
+      background: linear-gradient(135deg, rgba(212, 175, 55,0.12), rgba(212, 175, 55,0.08));
+      color: var(--primary, #D4AF37);
     }
     .review-badge.regular {
       background: rgba(100,100,100,0.1);
@@ -659,84 +1233,284 @@
     }
     :root.dark .review-badge.regular { background: rgba(255,255,255,0.06); color: #aaa; }
 
-    /* ---------- 10. NEWSLETTER / MEMBERSHIP ---------- */
+    /* ---------- 10. NEWSLETTER / MEMBERSHIP (LUXURY FLOATING CARD) ---------- */
     .membership-section {
+      padding: 90px 0;
       position: relative;
-      padding: 100px 0;
+      background: var(--bg-main, #FFFFFF);
+    }
+    html.dark .membership-section,
+    :root.dark .membership-section {
+      background: var(--bg-main, #0F0F1F);
+    }
+
+    .membership-card {
+      position: relative;
+      background: linear-gradient(145deg, #18162b 0%, #0d0c18 100%);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 28px;
+      padding: 56px 52px;
       overflow: hidden;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45), 0 0 50px rgba(212, 175, 55, 0.08);
     }
-    .membership-bg {
+
+    .membership-card::before {
+      content: '';
       position: absolute;
-      inset: 0;
-      background: url('assets/images/membership-bg.jpg') center/cover no-repeat;
+      top: -80px;
+      left: -80px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .membership-overlay {
+
+    .membership-card::after {
+      content: '';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(5,5,15,0.9), rgba(26,26,46,0.88));
+      bottom: -100px;
+      right: -100px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(166, 124, 30, 0.12) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .membership-content {
+
+    .membership-grid {
       position: relative;
       z-index: 2;
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
     }
-    .membership-content .section-heading { color: #fff; }
-    .membership-content .section-subtext { color: rgba(255,255,255,0.7); margin: 0 auto 36px; }
-    .membership-form {
-      display: flex;
-      gap: 12px;
-      max-width: 480px;
-      margin: 0 auto 40px;
-    }
-    .membership-form input {
-      flex: 1;
-      padding: 14px 24px;
-      border-radius: 50px;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.08);
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.3s;
-    }
-    .membership-form input::placeholder { color: rgba(255,255,255,0.4); }
-    .membership-form input:focus { border-color: var(--primary, #C2185B); }
-    .membership-form button {
-      padding: 14px 32px;
-      background: linear-gradient(135deg, #E91E63, #C2185B);
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-      white-space: nowrap;
-    }
-    .membership-form button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(233,30,99,0.4);
-    }
-    .membership-benefits {
-      display: flex;
-      justify-content: center;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-    .benefit-badge {
-      display: flex;
+
+    .membership-badge {
+      display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: rgba(255,255,255,0.8);
-      font-family: 'Poppins', sans-serif;
+      padding: 7px 18px;
+      border-radius: 50px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: #DFB742;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .membership-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    .membership-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
+
+    .membership-form-wrap {
+      max-width: 520px;
+      margin-bottom: 2rem;
+    }
+
+    .membership-form {
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1.5px solid rgba(212, 175, 55, 0.25);
+      border-radius: 50px;
+      padding: 6px 8px 6px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .membership-form:focus-within {
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .membership-form input {
+      flex: 1;
+      min-width: 0;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      padding: 8px 0;
+    }
+
+    .membership-form input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .membership-form button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 26px;
+      background: linear-gradient(135deg, #DFB742 0%, #D4AF37 100%);
+      color: #0F0F1F;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+    }
+
+    .membership-form button:hover {
+      background: linear-gradient(135deg, #F3D279 0%, #DFB742 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.5);
+    }
+
+    .membership-privacy {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 8px;
+      padding-left: 12px;
+    }
+
+    .membership-perks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .perk-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .perk-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #DFB742;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .perk-text h5 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin: 0 0 2px;
+    }
+
+    .perk-text p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.55);
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    .membership-visual {
+      position: relative;
+      height: 100%;
+      min-height: 380px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .membership-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .membership-card:hover .membership-visual img {
+      transform: scale(1.04);
+    }
+
+    .membership-visual-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14, 13, 24, 0.85) 0%, rgba(14, 13, 24, 0.2) 60%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .membership-floating-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      padding: 14px 18px;
+      background: rgba(18, 16, 32, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .badge-glow-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #DFB742, #D4AF37);
+      color: #0F0F1F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    }
+
+    .badge-info h6 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin: 0 0 2px;
+    }
+
+    .badge-info p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: #DFB742;
+      margin: 0;
       font-weight: 500;
     }
-    .benefit-badge i { color: #E91E63; font-size: 1rem; }
+
+    [dir="rtl"] .membership-grid { direction: rtl; }
+    [dir="rtl"] .membership-privacy { padding-left: 0; padding-right: 12px; }
 
     /* ---------- 11. LOCATION & HOURS ---------- */
     .location-grid {
@@ -762,7 +1536,7 @@
       padding-top: 8px;
     }
     .location-info h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Syne', sans-serif;
       font-size: 1.6rem;
       font-weight: 600;
       color: var(--text, #1a1a2e);
@@ -783,12 +1557,12 @@
       align-items: center;
       justify-content: center;
       border-radius: 12px;
-      background: linear-gradient(135deg, rgba(233,30,99,0.1), rgba(194,24,91,0.05));
-      color: var(--primary, #C2185B);
+      background: linear-gradient(135deg, rgba(212, 175, 55,0.1), rgba(212, 175, 55,0.05));
+      color: var(--primary, #D4AF37);
       font-size: 1rem;
     }
     .location-detail-text h4 {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.85rem;
       font-weight: 600;
       color: var(--text, #1a1a2e);
@@ -798,7 +1572,7 @@
     }
     :root.dark .location-detail-text h4 { color: #f0e6f6; }
     .location-detail-text p {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
       color: var(--text-muted, #666);
       line-height: 1.6;
@@ -810,9 +1584,9 @@
       gap: 10px;
       padding: 14px 32px;
       margin-top: 12px;
-      background: linear-gradient(135deg, #E91E63, #C2185B);
+      background: linear-gradient(135deg, #DFB742, #D4AF37);
       color: #fff;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
       font-weight: 600;
       text-decoration: none;
@@ -821,7 +1595,7 @@
     }
     .location-directions-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(233,30,99,0.3);
+      box-shadow: 0 6px 20px rgba(212, 175, 55,0.3);
     }
 
     /* ---------- GENERAL UTILITIES ---------- */
@@ -831,9 +1605,9 @@
       gap: 10px;
       padding: 14px 36px;
       background: transparent;
-      border: 2px solid var(--primary, #C2185B);
-      color: var(--primary, #C2185B);
-      font-family: 'Poppins', sans-serif;
+      border: 2px solid var(--primary, #D4AF37);
+      color: var(--primary, #D4AF37);
+      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
       font-weight: 600;
       text-decoration: none;
@@ -841,8 +1615,8 @@
       transition: all 0.3s;
     }
     .btn-primary-outline:hover {
-      background: var(--primary, #C2185B);
-      color: #fff;
+      background: var(--primary, #D4AF37);
+      color: #0F0F1F;
     }
 
     /* ---------- RESPONSIVE ---------- */
@@ -869,9 +1643,10 @@
       .timeline-item,
       .timeline-item:nth-child(even) {
         flex-direction: column;
+        justify-content: flex-start;
         gap: 20px;
       }
-      .timeline-dot { left: 24px; top: 0; }
+      .timeline-dot { left: 24px; top: 0; transform: translateX(-50%); }
       .timeline-img,
       .timeline-text {
         width: 100%;
@@ -885,8 +1660,34 @@
       .location-grid { grid-template-columns: 1fr; }
       .location-map { height: 280px; }
 
-      .membership-form { flex-direction: column; }
-      .membership-benefits { flex-direction: column; align-items: center; gap: 16px; }
+      .membership-card { padding: 40px 28px; }
+      .membership-grid { grid-template-columns: 1fr; gap: 36px; }
+      .membership-visual { min-height: 280px; max-height: 320px; }
+      .membership-perks { grid-template-columns: 1fr; gap: 14px; }
+    @media (max-width: 520px) {
+      .membership-card { padding: 32px 18px; border-radius: 20px; }
+      .membership-form {
+        flex-direction: column;
+        padding: 14px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .membership-form input {
+        width: 100%;
+        padding: 8px 4px;
+      }
+      .membership-form button {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+      }
+      .membership-floating-badge {
+        padding: 10px 14px;
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+      }
+    }
     }
 
     @media (max-width: 480px) {
@@ -902,22 +1703,120 @@
     <header id="navbar"></header>
   </div>
 
-  <!-- ============================================================
-       1. CINEMATIC HERO
+      <!-- ============================================================
+       1. CINEMATIC VIP HERO (EDITORIAL ASYMMETRIC COLLAGE)
        ============================================================ -->
-  <section class="hero2-section hero-particles">
+  <section class="hero2-section hero-particles" id="hero2">
     <div class="hero2-bg"></div>
     <div class="hero2-overlay"></div>
     <div class="hero2-particles" id="hero2-canvas-area"></div>
-    <div class="container hero2-content fade-up">
-      <div class="hero2-badge">
-        <i class="fa-solid fa-star"></i> VIP Experience
+    
+    <div class="container">
+      <div class="hero2-ref-grid">
+        
+        <!-- Left Column: Narrative & Action CTAs -->
+        <div class="hero2-ref-content fade-up">
+          <!-- Top Live Pill Badge -->
+          <div class="hero2-ref-badge">
+            <span class="pill-live-dot"></span>
+            <span class="pill-label">Artisanal Shisha &amp; Botanical Craft</span>
+            <span class="pill-est">EST. 2018</span>
+          </div>
+
+          <!-- Editorial Headline with Dual Accents -->
+          <h1 class="hero2-ref-title">
+            Where Silky <span class="title-accent-gold">Smoke</span><br>
+            Meets Golden <span class="title-accent-amber">Opulence</span>
+          </h1>
+
+          <!-- Lead Paragraph -->
+          <p class="hero2-ref-desc">
+            Experience the sensory theater of handcrafted single-origin tobacco blends and artisanal botanical mixology — served fresh in bohemian crystal with organic coconut coals and pure Madagascar vanilla fruit essences.
+          </p>
+
+          <!-- Dual Pill Action CTAs -->
+          <div class="hero2-ref-ctas">
+            <a href="menu.html" class="btn-ref-primary">
+              <span>Explore 50+ Blends</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="reservations.html" class="btn-ref-outline">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Reserve a Suite</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Staggered Visual Collage with Circular Stamp -->
+        <div class="hero2-ref-visual fade-up">
+          <div class="ref-collage-wrap">
+            
+            <!-- Card 1: Top-Left Card -->
+            <div class="ref-collage-card ref-card-1">
+              <div class="ref-card-img-wrap">
+                <img src="assets/images/vip-experience.jpg" alt="Artisanal Shisha Reserve" loading="eager" />
+              </div>
+              <div class="ref-card-body">
+                <span class="ref-tag tag-gold">Artisanal Shisha</span>
+                <h3 class="ref-card-title">Strawberry Cloud Reserve</h3>
+                <p class="ref-card-sub">Delicate smoke fold &bull; Madagascar vanilla cream</p>
+              </div>
+            </div>
+
+            <!-- Floating Circular Stamp (Center Overlap) — 24K Royal Gold Seal -->
+            <div class="ref-circular-stamp" aria-hidden="true">
+              <i class="fa-solid fa-crown"></i>
+              <div class="stamp-text">
+                <span>CRAFTED FRESH</span>
+                <span>TO ORDER</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Bottom-Right Card -->
+            <div class="ref-collage-card ref-card-2">
+              <div class="ref-card-img-wrap">
+                <img src="assets/images/hookah-traditional.jpg" alt="Botanical Craft" loading="eager" />
+              </div>
+              <div class="ref-card-body">
+                <div class="ref-card-head-row">
+                  <span class="ref-tag tag-amber">Botanical Craft</span>
+                  <span class="ref-meta-side">Crisp &amp; Caramelized</span>
+                </div>
+                <h3 class="ref-card-title">Royal Berry Crown</h3>
+                <p class="ref-card-sub">Cast-iron infused &bull; Hand-pressed botanical nectar</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
-      <h1 class="hero2-title">Indulge in <span>Luxurious Smoke</span></h1>
-      <p class="hero2-desc">Step into a world of opulence where hand-crafted hookah blends meet an atmosphere of refined elegance. Every visit is a masterpiece of flavor, ambiance, and unparalleled service.</p>
-      <a href="reservations.html" class="hero2-cta">
-        Book VIP Suite <i class="fa-solid fa-arrow-right"></i>
-      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       1B. LOUNGE STATS / COUNTER STRIP
+       ============================================================ -->
+  <section class="counter-section">
+    <div class="container">
+      <div class="counter-grid fade-up">
+        <div class="counter-item">
+          <div class="counter-number" data-target="50">0</div>
+          <div class="counter-label">Premium Flavors</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number" data-target="10000" data-suffix="+">0</div>
+          <div class="counter-label">Happy Guests</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number" data-target="8">0</div>
+          <div class="counter-label">Years of Excellence</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number" data-target="25">0</div>
+          <div class="counter-label">Signature Mixes</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -981,13 +1880,6 @@
           <div class="collection-card-overlay">
             <h3>Sultan's Choice</h3>
             <p>Premium multi-hose with gold-plated accents</p>
-          </div>
-        </div>
-        <div class="collection-card">
-          <img src="assets/images/vip-experience.jpg" alt="VIP Experience Hookah" loading="lazy" />
-          <div class="collection-card-overlay">
-            <h3>Crystal Majesty</h3>
-            <p>Bohemian crystal vase with diamond-cut patterns</p>
           </div>
         </div>
       </div>
@@ -1077,20 +1969,12 @@
           <div class="filmstrip-caption"><span>Friends & Flavors</span></div>
         </div>
         <div class="filmstrip-item">
-          <img src="assets/images/gallery-2.jpg" alt="Ambient Lighting" loading="lazy" />
+          <img src="assets/images/hero-premium.jpg" alt="Ambient Lighting" loading="lazy" />
           <div class="filmstrip-caption"><span>Moody Ambiance</span></div>
         </div>
         <div class="filmstrip-item">
-          <img src="assets/images/gallery-3.jpg" alt="VIP Corner" loading="lazy" />
+          <img src="assets/images/hookah-traditional.jpg" alt="VIP Corner" loading="lazy" />
           <div class="filmstrip-caption"><span>VIP Corner</span></div>
-        </div>
-        <div class="filmstrip-item">
-          <img src="assets/images/gallery-5.jpg" alt="Bar Area" loading="lazy" />
-          <div class="filmstrip-caption"><span>The Bar</span></div>
-        </div>
-        <div class="filmstrip-item">
-          <img src="assets/images/gallery-6.jpg" alt="Outdoor Terrace" loading="lazy" />
-          <div class="filmstrip-caption"><span>Rooftop Terrace</span></div>
         </div>
       </div>
     </div>
@@ -1207,33 +2091,7 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       8. LOUNGE STATS / COUNTER SECTION
-       ============================================================ -->
-  <section class="counter-section">
-    <div class="container">
-      <div class="counter-grid fade-up">
-        <div class="counter-item">
-          <div class="counter-number" data-target="50">0</div>
-          <div class="counter-label">Premium Flavors</div>
-        </div>
-        <div class="counter-item">
-          <div class="counter-number" data-target="10000" data-suffix="+">0</div>
-          <div class="counter-label">Happy Guests</div>
-        </div>
-        <div class="counter-item">
-          <div class="counter-number" data-target="8">0</div>
-          <div class="counter-label">Years of Excellence</div>
-        </div>
-        <div class="counter-item">
-          <div class="counter-number" data-target="25">0</div>
-          <div class="counter-label">Signature Mixes</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+<!-- ============================================================
        9. GUEST REVIEWS (2×2 Magazine Layout)
        ============================================================ -->
   <section class="section-alt">
@@ -1248,6 +2106,9 @@
           <div class="review-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
           <p class="review-text">"The ambiance at Velvet Lounge is simply unmatched. From the moment you walk in, you're enveloped in luxury. The Midnight Rose blend is my absolute favorite — it's like inhaling a garden at dusk."</p>
           <div class="review-author">
+            <div class="review-avatar">
+              <img src="assets/images/team-member-1.jpg" alt="Sophia Martinez" loading="lazy">
+            </div>
             <div class="review-author-info">
               <h4>Sophia Martinez</h4>
               <span class="review-badge vip">VIP Member</span>
@@ -1258,6 +2119,9 @@
           <div class="review-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
           <p class="review-text">"I've visited hookah lounges across Europe and the Middle East, and Velvet Lounge stands among the best. The private suites, impeccable service, and premium tobacco — pure class."</p>
           <div class="review-author">
+            <div class="review-avatar">
+              <img src="assets/images/team-member-2.jpg" alt="James Richardson" loading="lazy">
+            </div>
             <div class="review-author-info">
               <h4>James Richardson</h4>
               <span class="review-badge vip">VIP Member</span>
@@ -1268,6 +2132,9 @@
           <div class="review-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
           <p class="review-text">"My friends and I come here every weekend. The cocktail pairings are genius — they actually enhance the hookah flavors. The DJ nights are legendary. Five stars, every single time."</p>
           <div class="review-author">
+            <div class="review-avatar">
+              <img src="assets/images/team-member-3.jpg" alt="Aisha Patel" loading="lazy">
+            </div>
             <div class="review-author-info">
               <h4>Aisha Patel</h4>
               <span class="review-badge regular">Regular Guest</span>
@@ -1278,6 +2145,9 @@
           <div class="review-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
           <p class="review-text">"Hosted my birthday here and it was unforgettable. The staff went above and beyond — custom decorations, reserved the best suite, and even created a special hookah blend for the occasion."</p>
           <div class="review-author">
+            <div class="review-avatar">
+              <img src="assets/images/vip-experience.jpg" alt="Daniel Kim" loading="lazy">
+            </div>
             <div class="review-author-info">
               <h4>Daniel Kim</h4>
               <span class="review-badge regular">Regular Guest</span>
@@ -1289,74 +2159,71 @@
   </section>
 
   <!-- ============================================================
-       10. NEWSLETTER / MEMBERSHIP
+       10. NEWSLETTER / MEMBERSHIP (LUXURY FLOATING CARD)
        ============================================================ -->
   <section class="membership-section">
-    <div class="membership-bg"></div>
-    <div class="membership-overlay"></div>
-    <div class="container membership-content fade-up">
-      <span class="section-badge" style="color:#fff;border-color:rgba(255,255,255,0.3);"><i class="fa-solid fa-gem"></i> Members</span>
-      <h2 class="section-heading">Join the Velvet Circle</h2>
-      <p class="section-subtext">Become an insider and unlock exclusive perks — early access to events, members-only blends, priority VIP booking, and special discounts all year round.</p>
-      <form class="membership-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; this.querySelector('button').disabled=true;">
-        <input type="email" placeholder="Enter your email address" required aria-label="Email address" />
-        <button type="submit">Subscribe</button>
-      </form>
-      <div class="membership-benefits">
-        <div class="benefit-badge"><i class="fa-solid fa-calendar-days"></i> Exclusive Events</div>
-        <div class="benefit-badge"><i class="fa-solid fa-crown"></i> Priority Booking</div>
-        <div class="benefit-badge"><i class="fa-solid fa-gift"></i> Member Discounts</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       11. LOCATION & HOURS
-       ============================================================ -->
-  <section class="section-alt">
     <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-badge"><i class="fa-solid fa-map-pin"></i> Location</span>
-        <h2 class="section-heading">Visit Us</h2>
-      </div>
-      <div class="location-grid fade-up">
-        <div class="location-map">
-          <i class="fa-solid fa-map-location-dot"></i>
-        </div>
-        <div class="location-info">
-          <h3>Find Your Way to Velvet</h3>
-          <div class="location-detail">
-            <div class="location-detail-icon"><i class="fa-solid fa-map-pin"></i></div>
-            <div class="location-detail-text">
-              <h4>Address</h4>
-              <p>123 Smoke Avenue, Downtown District</p>
+      <div class="membership-card fade-up">
+        <div class="membership-grid">
+          <!-- Left: Content & Form -->
+          <div class="membership-content-col">
+            <div class="membership-badge">
+              <i class="fa-solid fa-crown"></i> The Velvet Circle &bull; VIP Membership
+            </div>
+            <h2 class="membership-title">Join the Velvet Circle</h2>
+            <p class="membership-desc">
+              Become an esteemed insider to unlock private lounge invitations, secret flavor tastings, guaranteed priority booking on weekends, and members-only privileges all year round.
+            </p>
+
+            <div class="membership-form-wrap">
+              <form class="membership-form" onsubmit="event.preventDefault(); const b=this.querySelector('button'); b.innerHTML='&check; Subscribed!'; b.disabled=true;">
+                <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+                <button type="submit">Join the Circle <i class="fa-solid fa-arrow-right"></i></button>
+              </form>
+              <div class="membership-privacy">
+                <i class="fa-solid fa-shield-halved"></i> Member confidentiality guaranteed. Unsubscribe anytime.
+              </div>
+            </div>
+
+            <div class="membership-perks">
+              <div class="perk-item">
+                <div class="perk-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                <div class="perk-text">
+                  <h5>Secret Tastings</h5>
+                  <p>Early access to artisan blends</p>
+                </div>
+              </div>
+              <div class="perk-item">
+                <div class="perk-icon"><i class="fa-solid fa-gem"></i></div>
+                <div class="perk-text">
+                  <h5>Priority VIP Suites</h5>
+                  <p>Never wait for prime seating</p>
+                </div>
+              </div>
+              <div class="perk-item">
+                <div class="perk-icon"><i class="fa-solid fa-gift"></i></div>
+                <div class="perk-text">
+                  <h5>15% Privileges</h5>
+                  <p>On craft drinks &amp; hookahs</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="location-detail">
-            <div class="location-detail-icon"><i class="fa-solid fa-phone"></i></div>
-            <div class="location-detail-text">
-              <h4>Phone</h4>
-              <p>+1 (555) 123-4567</p>
+
+          <!-- Right: Visual Frame -->
+          <div class="membership-visual-col">
+            <div class="membership-visual">
+              <img src="assets/images/lounge-interior.jpg" alt="Velvet Lounge VIP Interior">
+              <div class="membership-visual-overlay"></div>
+              <div class="membership-floating-badge">
+                <div class="badge-glow-icon"><i class="fa-solid fa-award"></i></div>
+                <div class="badge-info">
+                  <h6>1,400+ Active Members</h6>
+                  <p>&#9733; &#9733; &#9733; &#9733; &#9733; Elite Shisha Society</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="location-detail">
-            <div class="location-detail-icon"><i class="fa-solid fa-clock"></i></div>
-            <div class="location-detail-text">
-              <h4>Hours</h4>
-              <p>Sun – Thu: 4:00 PM – 1:00 AM</p>
-              <p>Fri – Sat: 4:00 PM – 3:00 AM</p>
-            </div>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon"><i class="fa-solid fa-envelope"></i></div>
-            <div class="location-detail-text">
-              <h4>Email</h4>
-              <p>hello@velvetlounge.com</p>
-            </div>
-          </div>
-          <a href="#" class="location-directions-btn">
-            Get Directions <i class="fa-solid fa-arrow-right"></i>
-          </a>
         </div>
       </div>
     </div>

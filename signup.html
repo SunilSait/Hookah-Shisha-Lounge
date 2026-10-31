@@ -3,119 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Create your Velvet Lounge account — join the Velvet Circle for exclusive rewards, priority reservations, and member-only events.">
-  <title>Create Account — Velvet Lounge</title>
+  <meta name="description" content="Create your Velvet Lounge account — join the VIP rewards program, reserve private cabanas, and unlock perks.">
+  <title>Sign Up — Velvet Lounge</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="components.js" defer></script>
 </head>
 <body class="auth-page" onload="initAuthPage()">
 
-  <!-- Top-right Theme & Direction Controls -->
-  <div class="auth-corner-icons">
-    <button onclick="toggleDir(event)" class="nav-icon-btn" title="Toggle Direction" aria-label="Toggle direction">
-      <span class="dir-label" style="font-size:0.625rem;font-weight:600;">RTL</span>
-    </button>
-    <button onclick="toggleTheme(event)" class="nav-icon-btn" title="Toggle Theme" aria-label="Toggle dark mode">
-      <span class="theme-icon-wrap"><i class="fa-solid fa-moon"></i></span>
-    </button>
-  </div>
-
-  <div class="auth-container">
-    <div class="auth-card">
-      <!-- Logo linking to home -->
-      <div class="auth-logo">
-        <a href="index.html" aria-label="Velvet Lounge Home">
-          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 100 100" fill="none">
-            <defs>
-              <linearGradient id="lgBrandAuth" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#E91E63"/>
-                <stop offset="100%" stop-color="#C2185B"/>
-              </linearGradient>
-            </defs>
-            <path d="M50 8 C44 16, 56 20, 50 28 C44 36, 42 30, 46 22 C50 14, 56 10, 50 8Z" fill="url(#lgBrandAuth)" opacity="0.5"/>
-            <path d="M40 34 L42 30 C44 28, 56 28, 58 30 L60 34 C60 38, 40 38, 40 34Z" fill="url(#lgBrandAuth)"/>
-            <rect x="47" y="38" width="6" height="22" rx="2" fill="url(#lgBrandAuth)"/>
-            <path d="M32 72 C32 58, 38 56, 44 58 L44 60 L56 60 L56 58 C62 56, 68 58, 68 72 C68 82, 60 90, 50 90 C40 90, 32 82, 32 72Z" fill="url(#lgBrandAuth)"/>
-            <path d="M36 76 C40 72, 60 72, 64 76 C64 82, 58 88, 50 88 C42 88, 36 82, 36 76Z" fill="#1A1A2E" opacity="0.35"/>
-            <line x1="38" y1="60" x2="26" y2="50" stroke="url(#lgBrandAuth)" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="24" cy="48" r="4" fill="url(#lgBrandAuth)" opacity="0.6"/>
-          </svg>
-        </a>
-      </div>
-
-      <h1 class="auth-title">Join Velvet Lounge</h1>
-      <p class="auth-subtitle">Create your account and become a member</p>
-
-      <form onsubmit="event.preventDefault(); alert('Account created successfully! Welcome to Velvet Lounge.'); window.location.href='index.html';">
-        <div class="auth-input-group">
-          <label for="signup-fname">First Name</label>
-          <input type="text" id="signup-fname" class="auth-input" placeholder="John" required>
-        </div>
-
-        <div class="auth-input-group">
-          <label for="signup-lname">Last Name</label>
-          <input type="text" id="signup-lname" class="auth-input" placeholder="Doe" required>
-        </div>
-
-        <div class="auth-input-group">
-          <label for="signup-email">Email Address</label>
-          <input type="email" id="signup-email" class="auth-input" placeholder="your@email.com" required>
-        </div>
-
-        <div class="auth-input-group">
-          <label for="signup-phone">Phone Number</label>
-          <input type="tel" id="signup-phone" class="auth-input" placeholder="+1 (555) 000-0000">
-        </div>
-
-        <div class="auth-input-group">
-          <label for="signup-password">Password</label>
-          <input type="password" id="signup-password" class="auth-input" placeholder="Create a strong password" required style="padding-right: 44px;">
-          <button type="button" class="pw-toggle-btn" onclick="togglePasswordVisibility('signup-password', this)" aria-label="Toggle password visibility">
-            <span class="pw-icon"><i class="fa-solid fa-eye"></i></span>
-          </button>
-        </div>
-
-        <div class="auth-input-group">
-          <label for="signup-confirm">Confirm Password</label>
-          <input type="password" id="signup-confirm" class="auth-input" placeholder="Confirm your password" required style="padding-right: 44px;">
-          <button type="button" class="pw-toggle-btn" onclick="togglePasswordVisibility('signup-confirm', this)" aria-label="Toggle password visibility">
-            <span class="pw-icon"><i class="fa-solid fa-eye"></i></span>
-          </button>
-        </div>
-
-        <div class="auth-row" style="margin-bottom: 20px;">
-          <label><input type="checkbox" required> I agree to the <a href="coming-soon.html">Terms of Service</a></label>
-        </div>
-
-        <button type="submit" class="auth-btn">Create Account</button>
-      </form>
-
-      <div class="auth-divider">or sign up with</div>
-
-      <div class="auth-social-btns">
-        <button type="button" class="auth-social-btn" onclick="alert('Google sign-up coming soon!')">
-          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-          Sign up with Google
-        </button>
-        <button type="button" class="auth-social-btn" onclick="alert('Apple sign-up coming soon!')">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-          Sign up with Apple
-        </button>
-        <button type="button" class="auth-social-btn" onclick="alert('Facebook sign-up coming soon!')">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          Sign up with Facebook
-        </button>
-      </div>
-
-      <p class="auth-switch">Already have an account? <a href="login.html">Sign In</a></p>
+  <!-- Top Bar -->
+  <div class="auth-topbar">
+    <div style="display:flex;gap:0.5rem;">
+      <button onclick="toggleDir(event)" class="auth-toggle-btn" title="Toggle Direction" aria-label="Toggle direction">
+        <span class="dir-label" style="font-size:0.625rem;font-weight:600;">LTR</span>
+      </button>
+      <button onclick="toggleTheme(event)" class="auth-toggle-btn" title="Toggle Theme" aria-label="Toggle dark mode">
+        <span class="theme-icon-wrap"><i class="fa-solid fa-moon"></i></span>
+      </button>
     </div>
   </div>
 
+  <!-- Card -->
+  <main style="flex:1;display:flex;align-items:center;justify-content:center;padding:1.5rem var(--section-pad-x);">
+    <div class="auth-card" style="max-width:480px;">
+      <!-- Decorative orb -->
+      <div style="position:absolute;top:-60px;left:-60px;width:140px;height:140px;background:rgba(212, 175, 55,0.08);border-radius:50%;filter:blur(30px);pointer-events:none;"></div>
+
+      <!-- Logo -->
+      <a href="index.html" class="auth-logo" aria-label="Velvet Lounge Home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 100 100" fill="none">
+          <defs>
+            <linearGradient id="vlAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFE082"/>
+              <stop offset="50%" stop-color="#D4AF37"/>
+              <stop offset="100%" stop-color="#8E6613"/>
+            </linearGradient>
+            <linearGradient id="vlGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFE082"/>
+              <stop offset="50%" stop-color="#FFD700"/>
+              <stop offset="100%" stop-color="#FFA000"/>
+            </linearGradient>
+            <linearGradient id="vlSmoke" x1="50%" y1="100%" x2="50%" y2="0%">
+              <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.8"/>
+              <stop offset="50%" stop-color="#FF80AB" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#FF80AB" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M50 16 C47 11 53 7 50 2 C47 7 53 11 50 16 Z" fill="url(#vlSmoke)"/>
+          <path d="M43 18 C39 13 44 9 42 4 C40 8 45 12 44 18 Z" fill="url(#vlSmoke)" opacity="0.6"/>
+          <path d="M57 18 C61 13 56 9 58 4 C60 8 55 12 56 18 Z" fill="url(#vlSmoke)" opacity="0.6"/>
+          <path d="M43 18 L57 18 L55 22 L45 22 Z" fill="url(#vlGold)"/>
+          <circle cx="50" cy="18" r="1.5" fill="#FFE082"/>
+          <ellipse cx="50" cy="23" rx="18" ry="2.5" fill="url(#vlGold)"/>
+          <path d="M33 23 C33 23 41 25.5 50 25.5 C59 25.5 67 23 67 23 C66 26.5 58 28 50 28 C42 28 34 26.5 33 23 Z" fill="url(#vlAmber)"/>
+          <rect x="48.5" y="27" width="3" height="30" rx="1.5" fill="url(#vlAmber)"/>
+          <circle cx="50" cy="34" r="4.5" fill="url(#vlAmber)"/>
+          <circle cx="50" cy="34" r="2.2" fill="url(#vlGold)"/>
+          <rect x="46" y="41" width="8" height="1.8" rx="0.9" fill="url(#vlGold)"/>
+          <circle cx="50" cy="48" r="4" fill="url(#vlAmber)"/>
+          <circle cx="50" cy="48" r="2" fill="url(#vlGold)"/>
+          <path d="M43 57 L57 57 L55 60 L45 60 Z" fill="url(#vlGold)"/>
+          <path d="M45 60 C45 60 31 70 31 81 C31 88 38 93 50 93 C62 93 69 88 69 81 C69 70 55 60 55 60 Z" fill="url(#vlAmber)"/>
+          <path d="M36 80 C36 86 42 90 50 90 C58 90 64 86 64 80 C64 74 58 68 50 68 C42 68 36 74 36 80 Z" fill="#FFF" opacity="0.18"/>
+          <path d="M38 82 C41 85.5 45 87 50 87 C55 87 59 85.5 62 82 C59 84 55 85 50 85 C45 85 41 84 38 82 Z" fill="url(#vlGold)" opacity="0.6"/>
+          <circle cx="46" cy="78" r="1.5" fill="#FFF" opacity="0.9"/>
+          <circle cx="53" cy="74" r="1.2" fill="#FFF" opacity="0.9"/>
+          <circle cx="54" cy="80" r="1.3" fill="#FFF" opacity="0.75"/>
+          <circle cx="48" cy="83" r="0.9" fill="#FFF" opacity="0.65"/>
+          <path d="M44 58.5 C34 60 21 68 23 80 C24 86 30 87 32 82 C32 76 26 72 38 65" fill="none" stroke="url(#vlAmber)" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M56 58.5 C66 60 79 68 77 80 C76 86 70 87 68 82 C68 76 74 72 62 65" fill="none" stroke="url(#vlAmber)" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="23" y1="80" x2="18" y2="70" stroke="url(#vlGold)" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="17.5" cy="69" r="1.5" fill="url(#vlGold)"/>
+          <line x1="77" y1="80" x2="82" y2="70" stroke="url(#vlGold)" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="82.5" cy="69" r="1.5" fill="url(#vlGold)"/>
+        </svg>
+        <div class="auth-logo-text">
+          <span class="brand-top">VELVET</span>
+          <span class="brand-bottom">LOUNGE</span>
+        </div>
+      </a>
+
+      <!-- Header -->
+      <div style="text-align:center;margin-bottom:1.75rem;">
+        <h1 style="font-size:1.5rem;margin-bottom:0.375rem;font-family:var(--font-heading);">Create Account</h1>
+        <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0;">Join the Velvet Lounge community</p>
+      </div>
+
+      <!-- Social Signup -->
+      <div class="social-login-grid">
+        <button type="button" class="social-btn" title="Sign up with Google" onclick="alert('Google sign-up coming soon!')">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </button>
+        <button type="button" class="social-btn" title="Sign up with Apple" onclick="alert('Apple sign-up coming soon!')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+        </button>
+        <button type="button" class="social-btn" title="Sign up with Facebook" onclick="alert('Facebook sign-up coming soon!')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </button>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider">or sign up with email</div>
+
+      <!-- Form -->
+      <form onsubmit="event.preventDefault(); alert('Account created successfully! Welcome to Velvet Lounge.'); window.location.href='index.html';" id="signup-form">
+        <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1rem;">
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="signup-fname" style="display:block;font-size:0.82rem;font-weight:600;margin-bottom:0.375rem;color:var(--text-primary);">First Name</label>
+            <input type="text" id="signup-fname" class="form-input auth-input" placeholder="First name" required>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="signup-lname" style="display:block;font-size:0.82rem;font-weight:600;margin-bottom:0.375rem;color:var(--text-primary);">Last Name</label>
+            <input type="text" id="signup-lname" class="form-input auth-input" placeholder="Last name" required>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label class="form-label" for="signup-email" style="display:block;font-size:0.82rem;font-weight:600;margin-bottom:0.375rem;color:var(--text-primary);">Email Address</label>
+          <input type="email" id="signup-email" class="form-input auth-input" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label class="form-label" for="signup-phone" style="display:block;font-size:0.82rem;font-weight:600;margin-bottom:0.375rem;color:var(--text-primary);">Phone Number</label>
+          <input type="tel" id="signup-phone" class="form-input auth-input" placeholder="+1 (555) 000-0000" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label class="form-label" for="signup-password" style="display:block;font-size:0.82rem;font-weight:600;margin-bottom:0.375rem;color:var(--text-primary);">Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="signup-password" class="form-input auth-input" placeholder="Create a password" required minlength="8">
+            <button type="button" class="password-toggle" onclick="togglePasswordVisibility('signup-password', this)" aria-label="Toggle password visibility">
+              <span class="pw-icon"><i class="fa-solid fa-eye"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label class="form-label" for="signup-confirm" style="display:block;font-size:0.82rem;font-weight:600;margin-bottom:0.375rem;color:var(--text-primary);">Confirm Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="signup-confirm" class="form-input auth-input" placeholder="Confirm your password" required minlength="8">
+            <button type="button" class="password-toggle" onclick="togglePasswordVisibility('signup-confirm', this)" aria-label="Toggle password visibility">
+              <span class="pw-icon"><i class="fa-solid fa-eye"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="checkbox-wrapper" style="margin-bottom:1.5rem;">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">I agree to the <a href="coming-soon.html" class="link-primary">Terms of Service</a> and <a href="coming-soon.html" class="link-primary">Privacy Policy</a></label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Create Account</button>
+      </form>
+
+      <!-- Footer link -->
+      <p style="text-align:center;margin-top:1.75rem;font-size:0.875rem;color:var(--text-muted);margin-bottom:0;">
+        Already have an account? <a href="login.html" class="link-primary">Sign In</a>
+      </p>
+    </div>
+  </main>
+
 </body>
 </html>
-

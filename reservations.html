@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,7 +19,8 @@
   <!-- ========== 1. PAGE BANNER ========== -->
   <section class="page-banner" style="background-image: url('assets/images/reservation-ambiance.jpg');">
     <div class="hero-overlay"></div>
-    <div class="page-banner-content fade-up">
+    <div class="container">
+      <div class="page-banner-content fade-up">
       <span class="hero-badge">✦ Book Your Visit</span>
       <h1 class="hero-title">Make a Reservation</h1>
       <p class="hero-text">Secure your table and let us prepare the perfect hookah experience for your evening.</p>
@@ -27,124 +28,192 @@
         <a href="index.html">Home</a><span>/</span><span>Reservations</span>
       </div>
     </div>
+    </div>
   </section>
 
-  <!-- ========== 2. RESERVATION FORM ========== -->
+  <!-- ========== 2. LUXURY RESERVATION PORTAL ========== -->
   <section class="section" id="reservation-form-section">
     <div class="container">
-      <div class="reservation-form-container fade-up">
-        <div class="reservation-info">
-          <h3>Why Reserve?</h3>
-          <p>Walk-ins are always welcome, but reservations guarantee your preferred seating, hookah setup, and ensure our team is ready to deliver a tailored experience from the moment you arrive.</p>
-          <div class="reservation-detail-item">
-            <div class="reservation-detail-icon"><i class="fa-solid fa-map-pin"></i></div>
-            <div class="reservation-detail-text">
-              <h4>Location</h4>
-              <p>123 Smoke Avenue, Downtown District</p>
-            </div>
-          </div>
-          <div class="reservation-detail-item">
-            <div class="reservation-detail-icon"><i class="fa-solid fa-phone"></i></div>
-            <div class="reservation-detail-text">
-              <h4>Phone</h4>
-              <p>+1 (555) 123-4567</p>
-            </div>
-          </div>
-          <div class="reservation-detail-item">
-            <div class="reservation-detail-icon"><i class="fa-solid fa-clock"></i></div>
-            <div class="reservation-detail-text">
-              <h4>Operating Hours</h4>
-              <p>Sun–Thu: 4 PM – 1 AM<br>Fri–Sat: 4 PM – 3 AM</p>
-            </div>
-          </div>
-          <div class="reservation-detail-item">
-            <div class="reservation-detail-icon"><i class="fa-solid fa-envelope"></i></div>
-            <div class="reservation-detail-text">
-              <h4>Email</h4>
-              <p>reservations@velvetlounge.com</p>
-            </div>
-          </div>
-          <div class="reservation-detail-item">
-            <div class="reservation-detail-icon"><i class="fa-solid fa-users"></i></div>
-            <div class="reservation-detail-text">
-              <h4>Group Bookings</h4>
-              <p>For parties of 10+ guests, please call us directly for special arrangements.</p>
-            </div>
-          </div>
-        </div>
+      
+      <div class="luxury-booking-portal fade-up">
+        <div class="res-portal-grid">
+          
+          <!-- Left Column: Sanctuary Privileges & Concierge -->
+          <div class="res-experience-hub">
+            <div>
+              <div class="res-gold-badge">
+                <i class="fa-solid fa-crown"></i>
+                <span>Exclusive Concierge Access</span>
+              </div>
+              <h2 class="res-hub-heading">
+                Reserve Your <span class="text-gold-gradient">Sanctuary</span>
+              </h2>
+              <p class="res-hub-lead">
+                Step into an acoustic and sensory haven. Every reservation includes guaranteed lounge seating, precision coal service, and seamless five-star hospitality.
+              </p>
 
-        <div class="reservation-form">
-          <h3>Book Your Table</h3>
-          <form onsubmit="event.preventDefault(); alert('Reservation submitted successfully! We will confirm via email shortly.'); this.reset();">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="res-fname">First Name</label>
-                <input type="text" id="res-fname" placeholder="John" required>
-              </div>
-              <div class="form-group">
-                <label for="res-lname">Last Name</label>
-                <input type="text" id="res-lname" placeholder="Doe" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="res-email">Email</label>
-              <input type="email" id="res-email" placeholder="john@example.com" required>
-            </div>
-            <div class="form-group">
-              <label for="res-phone">Phone Number</label>
-              <input type="tel" id="res-phone" placeholder="+1 (555) 000-0000" required>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="res-date">Date</label>
-                <input type="date" id="res-date" required>
-              </div>
-              <div class="form-group">
-                <label for="res-time">Time</label>
-                <input type="time" id="res-time" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="res-guests">Number of Guests</label>
-                <select id="res-guests" required>
-                  <option value="">Select</option>
-                  <option>1–2 Guests</option>
-                  <option>3–4 Guests</option>
-                  <option>5–6 Guests</option>
-                  <option>7–8 Guests</option>
-                  <option>9–12 Guests</option>
-                  <option>12+ Guests</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="res-area">Seating Preference</label>
-                <select id="res-area">
-                  <option value="">No Preference</option>
-                  <option>Main Lounge</option>
-                  <option>VIP Suite</option>
-                  <option>Outdoor Terrace</option>
-                  <option>Private Room</option>
-                </select>
+              <!-- 3 Interactive VIP Privileges -->
+              <div class="res-perks-stack">
+                <div class="res-perk-item">
+                  <div class="res-perk-icon">
+                    <i class="fa-solid fa-couch"></i>
+                  </div>
+                  <div class="res-perk-content">
+                    <h4>Guaranteed Prime Seating</h4>
+                    <p>Handcrafted plush velvet booth or intimate corner table prepared prior to your arrival.</p>
+                  </div>
+                </div>
+
+                <div class="res-perk-item">
+                  <div class="res-perk-icon">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                  </div>
+                  <div class="res-perk-content">
+                    <h4>Master Coal Sommelier</h4>
+                    <p>Organic coconut coals pre-calibrated and continuously refreshed for pure velvety draws.</p>
+                  </div>
+                </div>
+
+                <div class="res-perk-item">
+                  <div class="res-perk-icon">
+                    <i class="fa-solid fa-martini-glass-citrus"></i>
+                  </div>
+                  <div class="res-perk-content">
+                    <h4>Botanical Welcome Sip</h4>
+                    <p>Complimentary house-infused rosewater or citrus mocktail elixir served upon seating.</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="form-group">
-              <label for="res-hookah">Hookah Preference</label>
-              <select id="res-hookah">
-                <option value="">Decide on Arrival</option>
-                <option>Classic Hookah ($35)</option>
-                <option>Modern Hookah ($45)</option>
-                <option>Premium VIP Hookah ($75)</option>
-              </select>
+
+            <!-- Concierge Touchpoints -->
+            <div>
+              <div class="res-concierge-strip">
+                <a href="#location" class="res-chip">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>123 Smoke Ave, Downtown</span>
+                </a>
+                <a href="tel:+15551234567" class="res-chip">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>+1 (555) 123-4567</span>
+                </a>
+                <span class="res-chip">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>4 PM – 3 AM Daily</span>
+                </span>
+              </div>
+
+              <!-- Atmospheric Showcase Frame -->
+              <div class="res-showcase-frame" style="margin-top: 14px;">
+                <img src="assets/images/vip-experience.jpg" alt="Velvet Lounge VIP Interior" loading="lazy">
+                <div class="res-showcase-badge">
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.9 / 5 Guest Satisfaction &bull; Zero Booking Fee</span>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="res-notes">Special Requests</label>
-              <textarea id="res-notes" rows="3" placeholder="Birthday setup, specific flavors, dietary requirements..."></textarea>
+
+          </div>
+
+          <!-- Right Column: Interactive Glass Booking Form -->
+          <div class="res-form-card">
+            <div>
+              <div class="res-form-header">
+                <h3>Select Your Experience</h3>
+                <div class="res-form-badge">
+                  <span class="live-dot"></span>
+                  <span>Instant Confirmation</span>
+                </div>
+              </div>
+
+              <form onsubmit="event.preventDefault(); alert('Reservation submitted successfully! We will confirm via email shortly.'); this.reset();">
+                <div class="res-form-grid">
+                  <div>
+                    <label for="res-fname" class="res-input-label"><i class="fa-solid fa-user"></i> First Name</label>
+                    <input type="text" id="res-fname" class="res-custom-input" placeholder="Alexander" required>
+                  </div>
+                  <div>
+                    <label for="res-lname" class="res-input-label"><i class="fa-regular fa-user"></i> Last Name</label>
+                    <input type="text" id="res-lname" class="res-custom-input" placeholder="Sterling" required>
+                  </div>
+
+                  <div>
+                    <label for="res-email" class="res-input-label"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <input type="email" id="res-email" class="res-custom-input" placeholder="alexander@domain.com" required>
+                  </div>
+                  <div>
+                    <label for="res-phone" class="res-input-label"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                    <input type="tel" id="res-phone" class="res-custom-input" placeholder="+1 (555) 000-0000" required>
+                  </div>
+
+                  <div>
+                    <label for="res-date" class="res-input-label"><i class="fa-solid fa-calendar-day"></i> Date</label>
+                    <input type="date" id="res-date" class="res-custom-input" required>
+                  </div>
+                  <div>
+                    <label for="res-time" class="res-input-label"><i class="fa-solid fa-clock"></i> Time</label>
+                    <input type="time" id="res-time" class="res-custom-input" required>
+                  </div>
+
+                  <div>
+                    <label for="res-guests" class="res-input-label"><i class="fa-solid fa-users"></i> Number of Guests</label>
+                    <select id="res-guests" class="res-custom-select" required>
+                      <option value="">Select party size</option>
+                      <option>1–2 Guests (Intimate Booth)</option>
+                      <option>3–4 Guests (Lounge Banquette)</option>
+                      <option>5–6 Guests (Center Salon)</option>
+                      <option>7–8 Guests (VIP Alcove)</option>
+                      <option>9–12 Guests (Private Suite)</option>
+                      <option>12+ Guests (Entire Terrace/Room)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="res-area" class="res-input-label"><i class="fa-solid fa-chair"></i> Seating Preference</label>
+                    <select id="res-area" class="res-custom-select">
+                      <option value="">No Preference (Best Available)</option>
+                      <option>Main Velvet Lounge</option>
+                      <option>VIP Gold Suite</option>
+                      <option>Starlight Outdoor Terrace</option>
+                      <option>Private Moroccan Alcove</option>
+                    </select>
+                  </div>
+
+                  <div class="res-form-full">
+                    <label for="res-hookah" class="res-input-label"><i class="fa-solid fa-fire"></i> Hookah Experience</label>
+                    <select id="res-hookah" class="res-custom-select">
+                      <option value="">Decide on Arrival with Sommelier</option>
+                      <option>Artisanal Signature Blend ($35)</option>
+                      <option>Bohemian Crystal Modern Hookah ($45)</option>
+                      <option>Gold Leaf Imperial Curation ($75)</option>
+                    </select>
+                  </div>
+
+                  <div class="res-form-full">
+                    <label for="res-notes" class="res-input-label"><i class="fa-solid fa-pen-nib"></i> Special Requests & Occasions</label>
+                    <textarea id="res-notes" class="res-custom-textarea" placeholder="Anniversary setup, preferred botanical flavors, dietary requirements..."></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-res-confirm">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <span>Confirm VIP Reservation</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </form>
             </div>
-            <button type="submit" class="btn btn-primary w-full">Confirm Reservation</button>
-          </form>
+
+            <!-- Trust Row -->
+            <div class="res-trust-row">
+              <span class="res-trust-item"><i class="fa-solid fa-shield-check"></i> Free Cancellation up to 2h</span>
+              <span class="res-trust-item"><i class="fa-solid fa-bolt"></i> Instant Digital Voucher</span>
+              <span class="res-trust-item"><i class="fa-solid fa-credit-card"></i> No Deposit Required</span>
+            </div>
+
+          </div>
+
         </div>
       </div>
+
     </div>
   </section>
 
@@ -212,7 +281,7 @@
   </section>
 
   <!-- ========== 5. GROUP PACKAGES PREVIEW ========== -->
-  <section class="section-alt">
+  <section class="section-alt" id="packages-section">
     <div class="container">
       <div class="section-header fade-up">
         <span class="section-label">Packages</span>
@@ -288,17 +357,57 @@
     </div>
   </section>
 
-  <!-- ========== 7. CTA BANNER ========== -->
-  <section class="section parallax-section" style="background-image: url('assets/images/lounge-interior.jpg');">
-    <div class="parallax-overlay"></div>
+  <!-- ========== 7. CONCIERGE & BOOKING ASSISTANCE ========== -->
+  <section class="concierge-cta-section section-alt" id="booking-help-cta">
     <div class="container">
-      <div class="parallax-content fade-up">
-        <span class="section-label section-label-light">Questions?</span>
-        <h2 class="parallax-heading">Need Help With Your Booking?</h2>
-        <p class="parallax-text">Our team is happy to assist with any special requests, large group arrangements, or event planning.</p>
-        <div class="reservation-cta-actions">
-          <a href="contact.html" class="btn btn-primary">Contact Us</a>
-          <a href="tel:+15551234567" class="reservation-phone"><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</a>
+      <div class="concierge-cta-card fade-up">
+        <div class="concierge-cta-grid">
+          <!-- Left: Narrative & Status -->
+          <div class="concierge-cta-info">
+            <div class="concierge-badge">
+              <i class="fa-solid fa-headset"></i>
+              <span>VIP Reservations Desk</span>
+            </div>
+            <h2 class="concierge-title">Need Help With <span class="text-gold">Your Booking?</span></h2>
+            <p class="concierge-desc">
+              Planning an intimate celebration, a private suite for 8+, or require bespoke shisha pairings? Our dedicated lounge hosts are here to curate every detail before you arrive.
+            </p>
+            <div class="concierge-meta-pills">
+              <span class="meta-pill"><i class="fa-solid fa-clock"></i> 2 PM – 3 AM Live Desk</span>
+              <span class="meta-pill"><i class="fa-solid fa-shield-halved"></i> Instant Confirmation</span>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Concierge Action Cards -->
+          <div class="concierge-channels">
+            <a href="tel:+15551234567" class="concierge-channel-card">
+              <div class="channel-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Direct VIP Line</span>
+                <span class="channel-value">+1 (555) 123-4567</span>
+                <span class="channel-sub">Immediate assistance & table holds</span>
+              </div>
+              <div class="channel-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </a>
+
+            <a href="contact.html" class="concierge-channel-card">
+              <div class="channel-icon">
+                <i class="fa-regular fa-paper-plane"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Special Requests & Groups</span>
+                <span class="channel-value">Send Custom Enquiry</span>
+                <span class="channel-sub">Tailored packages for parties of 8+</span>
+              </div>
+              <div class="channel-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>

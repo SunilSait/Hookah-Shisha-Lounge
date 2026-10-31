@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,13 +19,15 @@
   <!-- ========== 1. PAGE BANNER ========== -->
   <section class="page-banner" style="background-image: url('assets/images/events-live-music.jpg');">
     <div class="hero-overlay"></div>
-    <div class="page-banner-content fade-up">
+    <div class="container">
+      <div class="page-banner-content fade-up">
       <span class="hero-badge">✦ What's On</span>
       <h1 class="hero-title">Events & Entertainment</h1>
       <p class="hero-text">From soulful jazz nights to electrifying DJ sets, discover the events that make every visit to Velvet Lounge unforgettable.</p>
       <div class="breadcrumb">
         <a href="index.html">Home</a><span>/</span><span>Events</span>
       </div>
+    </div>
     </div>
   </section>
 
@@ -171,23 +173,7 @@
     </div>
   </section>
 
-  <!-- ========== 5. EVENT HOSTING CTA ========== -->
-  <section class="section parallax-section" style="background-image: url('assets/images/vip-experience.jpg');">
-    <div class="parallax-overlay"></div>
-    <div class="container">
-      <div class="parallax-content fade-up">
-        <span class="section-label section-label-light">Private Events</span>
-        <h2 class="parallax-heading">Host Your Event With Us</h2>
-        <p class="parallax-text">Birthdays, corporate gatherings, bachelor parties, or any celebration — our private lounge areas and dedicated event team will make it unforgettable.</p>
-        <div class="reservation-cta-actions">
-          <a href="contact.html" class="btn btn-primary">Enquire Now</a>
-          <a href="tel:+15551234567" class="reservation-phone"><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 6. EVENT GALLERY ========== -->
+  <!-- ========== 5. EVENT GALLERY ========== -->
   <section class="section-alt" id="event-gallery">
     <div class="container">
       <div class="section-header fade-up">
@@ -195,16 +181,37 @@
         <h2 class="section-heading">Event Highlights</h2>
       </div>
       <div class="gallery-bento fade-up">
-        <div class="gallery-item gallery-item-wide"><img src="assets/images/gallery-1.jpg" alt="Event highlight 1"><div class="gallery-overlay"><span>Live Music</span></div></div>
-        <div class="gallery-item"><img src="assets/images/gallery-2.jpg" alt="Event highlight 2"><div class="gallery-overlay"><span>Smoke Art</span></div></div>
-        <div class="gallery-item"><img src="assets/images/gallery-4.jpg" alt="Event highlight 3"><div class="gallery-overlay"><span>VIP Night</span></div></div>
-        <div class="gallery-item"><img src="assets/images/events-dj-night.jpg" alt="Event highlight 4"><div class="gallery-overlay"><span>DJ Set</span></div></div>
-        <div class="gallery-item gallery-item-wide"><img src="assets/images/lounge-interior.jpg" alt="Event highlight 5"><div class="gallery-overlay"><span>Lounge Vibes</span></div></div>
+        <!-- Row 1: Item 1 (Wide 2-col), Item 2 (1-col), Item 3 (1-col) -->
+        <div class="gallery-item gallery-item-wide">
+          <img src="assets/images/vip-experience.jpg" alt="Live Music & Saxophone" loading="lazy">
+          <div class="gallery-overlay"><span>Live Music &amp; Saxophone</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/hookah-traditional.jpg" alt="Artisanal Smoke Art" loading="lazy">
+          <div class="gallery-overlay"><span>Artisanal Smoke Art</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/hero-premium.jpg" alt="VIP Velvet Night" loading="lazy">
+          <div class="gallery-overlay"><span>VIP Velvet Night</span></div>
+        </div>
+        <!-- Row 2: Item 4 (1-col), Item 5 (1-col in gap), Item 6 (Wide 2-col moved right) -->
+        <div class="gallery-item">
+          <img src="assets/images/hero-premium.jpg" alt="Curated DJ Set" loading="lazy">
+          <div class="gallery-overlay"><span>Curated DJ Set</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/vip-experience.jpg" alt="Botanical Mixology" loading="lazy">
+          <div class="gallery-overlay"><span>Botanical Mixology</span></div>
+        </div>
+        <div class="gallery-item gallery-item-wide">
+          <img src="assets/images/lounge-interior.jpg" alt="Grand Lounge Vibes" loading="lazy">
+          <div class="gallery-overlay"><span>Grand Lounge Vibes</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== 7. FAQ ========== -->
+  <!-- ========== 6. FAQ ========== -->
   <section class="section" id="event-faq">
     <div class="container">
       <div class="section-header fade-up">
@@ -227,6 +234,49 @@
         <div class="faq-item">
           <button class="faq-question"><span>Is there a minimum spend for events?</span><i class="fa-solid fa-chevron-down"></i></button>
           <div class="faq-answer"><p>Minimum spend varies by day, time, and area. Weekday private bookings start at $300, while weekend exclusive bookings start at $500. Contact us for a tailored quote.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 7. PRIVATE EVENTS CTA ========== -->
+  <section class="cta-normal-section section-alt" id="event-cta">
+    <div class="container">
+      <div class="cta-normal-card cta-with-image fade-up">
+        <div class="cta-with-image-grid image-left">
+          <!-- Left: Image Showcase -->
+          <div class="cta-image-col">
+            <div class="cta-image-frame">
+              <img src="assets/images/vip-experience.jpg" alt="Velvet Lounge Private Event and VIP Celebration" />
+              <div class="cta-image-badge">
+                <div class="cta-image-badge-icon">
+                  <i class="fa-solid fa-champagne-glasses"></i>
+                </div>
+                <div>
+                  <div class="cta-image-badge-title">VIP Private Celebrations</div>
+                  <div class="cta-image-badge-sub">Suites & full venue hire for up to 80 guests</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Content & Actions -->
+          <div>
+            <div class="cta-normal-badge">
+              <i class="fa-solid fa-sparkles"></i>
+              <span>Private Events & Hire</span>
+            </div>
+            <h2 class="cta-normal-title">Host Your Event <span class="text-gold">With Us</span></h2>
+            <p class="cta-normal-desc">From milestone birthdays and VIP bachelor parties to corporate mixers, our dedicated event staff and master shisha sommeliers tailor every sound, flavor, and moment to perfection.</p>
+            <div class="cta-normal-actions">
+              <a href="contact.html" class="btn btn-primary btn-lg">
+                <i class="fa-regular fa-paper-plane"></i> Plan Your Event
+              </a>
+              <a href="tel:+15551234567" class="btn btn-cta-outline btn-lg">
+                <i class="fa-solid fa-phone"></i> +1 (555) 123-4567
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

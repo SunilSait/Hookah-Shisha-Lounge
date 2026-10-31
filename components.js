@@ -44,24 +44,68 @@ const ICONS = {
 /* ─── Brand Logo SVG ──────────────────────────────────── */
 const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 100 100" fill="none">
   <defs>
-    <linearGradient id="lgBrand" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E91E63"/>
-      <stop offset="100%" stop-color="#C2185B"/>
+    <linearGradient id="vlAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#8E6613"/>
     </linearGradient>
-    <linearGradient id="lgSmoke" x1="50" y1="0" x2="50" y2="40" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#C2185B" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#C2185B" stop-opacity="0.8"/>
+    <linearGradient id="vlGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3C4"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA000"/>
+    </linearGradient>
+    <linearGradient id="vlSmoke" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FFE082" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFE082" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <path d="M50 8 C44 16, 56 20, 50 28 C44 36, 42 30, 46 22 C50 14, 56 10, 50 8Z" fill="url(#lgSmoke)" opacity="0.6"/>
-  <path d="M58 12 C54 18, 62 22, 56 28 C52 32, 64 26, 60 20 C56 14, 62 8, 58 12Z" fill="url(#lgSmoke)" opacity="0.4"/>
-  <path d="M40 34 L42 30 C44 28, 56 28, 58 30 L60 34 C60 38, 40 38, 40 34Z" fill="url(#lgBrand)"/>
-  <rect x="47" y="38" width="6" height="22" rx="2" fill="url(#lgBrand)"/>
-  <path d="M32 72 C32 58, 38 56, 44 58 L44 60 L56 60 L56 58 C62 56, 68 58, 68 72 C68 82, 60 90, 50 90 C40 90, 32 82, 32 72Z" fill="url(#lgBrand)"/>
-  <path d="M36 76 C40 72, 60 72, 64 76 C64 82, 58 88, 50 88 C42 88, 36 82, 36 76Z" fill="#1A1A2E" opacity="0.35"/>
-  <line x1="38" y1="60" x2="26" y2="50" stroke="url(#lgBrand)" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="24" cy="48" r="4" fill="url(#lgBrand)" opacity="0.6"/>
-  <ellipse cx="50" cy="62" rx="12" ry="2" fill="url(#lgBrand)" opacity="0.5"/>
+
+  <!-- Symmetrical Royal Smoke Trails -->
+  <path d="M50 16 C47 11 53 7 50 2 C47 7 53 11 50 16 Z" fill="url(#vlSmoke)"/>
+  <path d="M43 18 C39 13 44 9 42 4 C40 8 45 12 44 18 Z" fill="url(#vlSmoke)" opacity="0.6"/>
+  <path d="M57 18 C61 13 56 9 58 4 C60 8 55 12 56 18 Z" fill="url(#vlSmoke)" opacity="0.6"/>
+
+  <!-- Charcoal Head / Crown -->
+  <path d="M43 18 L57 18 L55 22 L45 22 Z" fill="url(#vlGold)"/>
+  <circle cx="50" cy="18" r="1.5" fill="#FFE082"/>
+
+  <!-- Polished Ash Tray -->
+  <ellipse cx="50" cy="23" rx="18" ry="2.5" fill="url(#vlGold)"/>
+  <path d="M33 23 C33 23 41 25.5 50 25.5 C59 25.5 67 23 67 23 C66 26.5 58 28 50 28 C42 28 34 26.5 33 23 Z" fill="url(#vlAmber)"/>
+
+  <!-- Metallic Hookah Shaft / Stem -->
+  <rect x="48.5" y="27" width="3" height="30" rx="1.5" fill="url(#vlAmber)"/>
+  <circle cx="50" cy="34" r="4.5" fill="url(#vlAmber)"/>
+  <circle cx="50" cy="34" r="2.2" fill="url(#vlGold)"/>
+  <rect x="46" y="41" width="8" height="1.8" rx="0.9" fill="url(#vlGold)"/>
+  <circle cx="50" cy="48" r="4" fill="url(#vlAmber)"/>
+  <circle cx="50" cy="48" r="2" fill="url(#vlGold)"/>
+  
+  <!-- Base Heart / Joint Collar -->
+  <path d="M43 57 L57 57 L55 60 L45 60 Z" fill="url(#vlGold)"/>
+
+  <!-- Symmetrical Crystal Vase / Decanter Base -->
+  <path d="M45 60 C45 60 31 70 31 81 C31 88 38 93 50 93 C62 93 69 88 69 81 C69 70 55 60 55 60 Z" fill="url(#vlAmber)"/>
+
+  <!-- Crystal Facet Refraction & Water Level -->
+  <path d="M36 80 C36 86 42 90 50 90 C58 90 64 86 64 80 C64 74 58 68 50 68 C42 68 36 74 36 80 Z" fill="#FFF" opacity="0.18"/>
+  <path d="M38 82 C41 85.5 45 87 50 87 C55 87 59 85.5 62 82 C59 84 55 85 50 85 C45 85 41 84 38 82 Z" fill="url(#vlGold)" opacity="0.6"/>
+
+  <!-- Effervescence Shisha Bubbles -->
+  <circle cx="46" cy="78" r="1.5" fill="#FFF" opacity="0.9"/>
+  <circle cx="53" cy="74" r="1.2" fill="#FFF" opacity="0.9"/>
+  <circle cx="54" cy="80" r="1.3" fill="#FFF" opacity="0.75"/>
+  <circle cx="48" cy="83" r="0.9" fill="#FFF" opacity="0.65"/>
+
+  <!-- Symmetrical Dual Draped Hoses / Regal Wreath -->
+  <path d="M44 58.5 C34 60 21 68 23 80 C24 86 30 87 32 82 C32 76 26 72 38 65" fill="none" stroke="url(#vlAmber)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M56 58.5 C66 60 79 68 77 80 C76 86 70 87 68 82 C68 76 74 72 62 65" fill="none" stroke="url(#vlAmber)" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Gold Wand Mouthpieces (Flanking Base Elegantly) -->
+  <line x1="23" y1="80" x2="18" y2="70" stroke="url(#vlGold)" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="17.5" cy="69" r="1.5" fill="url(#vlGold)"/>
+  <line x1="77" y1="80" x2="82" y2="70" stroke="url(#vlGold)" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="82.5" cy="69" r="1.5" fill="url(#vlGold)"/>
 </svg>`;
 
 /* ─── Social Login SVGs ───────────────────────────────── */
@@ -140,6 +184,7 @@ function buildNavbar() {
     const links = [
         { href: 'index.html', label: 'Home' },
         { href: 'home2.html', label: 'Home 2' },
+        { href: 'about.html', label: 'About Us' },
         { href: 'menu.html', label: 'Menu' },
         { href: 'events.html', label: 'Events' },
         { href: 'reservations.html', label: 'Reservations' },
@@ -182,7 +227,7 @@ function buildNavbar() {
                 <button onclick="toggleTheme(event)" class="nav-icon-btn" title="Toggle Theme" aria-label="Toggle dark mode">
                     <span class="theme-icon-wrap">${isDark ? ICONS.sun : ICONS.moon}</span>
                 </button>
-                <a href="reservations.html" class="btn btn-primary btn-sm">Reserve Now</a>
+                <a href="login.html" class="btn btn-primary btn-sm">Sign In</a>
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu(event)" aria-label="Toggle navigation menu">
                     <span class="mobile-menu-icon">${ICONS.menu}</span>
                 </button>
@@ -194,8 +239,8 @@ function buildNavbar() {
         <div class="mobile-menu" id="mobile-menu">
             ${mobileLinksHTML}
             <div class="mob-actions">
-                <a href="reservations.html" class="btn btn-primary w-full">Reserve Now</a>
-                <a href="login.html" class="btn btn-secondary w-full">Sign In</a>
+                <a href="login.html" class="btn btn-primary w-full">Sign In</a>
+                <a href="reservations.html" class="btn btn-secondary w-full">Reserve Now</a>
             </div>
             <div class="mob-toggles">
                 <button onclick="toggleDir(event)" class="nav-icon-btn" title="Toggle Direction" aria-label="Toggle direction">
@@ -209,7 +254,7 @@ function buildNavbar() {
     </header>
     <div class="navbar-spacer"></div>`;
 
-    nav.querySelectorAll('.mob-link').forEach(link => {
+    nav.querySelectorAll('.mob-link, .mob-actions a').forEach(link => {
         link.addEventListener('click', () => {
             const menu = document.getElementById('mobile-menu');
             const backdrop = document.getElementById('mobile-backdrop');
@@ -220,7 +265,7 @@ function buildNavbar() {
         });
     });
 
-    el.replaceWith(nav);
+    el.replaceWith(...Array.from(nav.children));
 }
 
 function toggleMobileMenu(e) {
@@ -243,6 +288,7 @@ function toggleMobileMenu(e) {
     }
 }
 
+// Close mobile menu on outside click
 document.addEventListener('click', function(e) {
     const menu = document.getElementById('mobile-menu');
     const backdrop = document.getElementById('mobile-backdrop');
@@ -254,6 +300,20 @@ document.addEventListener('click', function(e) {
     if (backdrop) backdrop.classList.remove('open');
     document.body.classList.remove('nav-open');
     document.querySelectorAll('.mobile-menu-icon').forEach(icon => icon.innerHTML = ICONS.menu);
+});
+
+// Close mobile menu on window resize above 1024px
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 1024) {
+        const menu = document.getElementById('mobile-menu');
+        const backdrop = document.getElementById('mobile-backdrop');
+        if (menu && menu.classList.contains('open')) {
+            menu.classList.remove('open');
+            if (backdrop) backdrop.classList.remove('open');
+            document.body.classList.remove('nav-open');
+            document.querySelectorAll('.mobile-menu-icon').forEach(icon => icon.innerHTML = ICONS.menu);
+        }
+    }
 });
 
 /* ─── FOOTER ─────────────────────────────────────────── */
@@ -288,6 +348,7 @@ function buildFooter() {
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="home2.html">Home 2 — Premium</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="menu.html">Our Menu</a></li>
                         <li><a href="events.html">Events</a></li>
                         <li><a href="reservations.html">Reservations</a></li>
@@ -511,7 +572,7 @@ function initHeroThemeEffects() {
                 if (rand < 0.4) {
                     type = 'smoke'; color = `rgba(255,255,255,${0.3 + Math.random() * 0.4})`; size = 1.5 + Math.random() * 2.5;
                 } else if (rand < 0.65) {
-                    type = 'ember'; color = Math.random() > 0.5 ? '#F06292' : '#C2185B'; size = 1.2 + Math.random() * 1.8;
+                    type = 'ember'; color = Math.random() > 0.5 ? '#FFD54F' : '#D4AF37'; size = 1.2 + Math.random() * 1.8;
                 } else if (rand < 0.85) {
                     type = 'gold'; color = '#FFD700'; size = 1 + Math.random() * 1.5;
                 } else {
