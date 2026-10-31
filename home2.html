@@ -92,10 +92,74 @@
       z-index: 2;
     }
 
-    .hero2-particles {
+    /* Ambient Thematic Glow Auroras */
+    .hero2-ambient-aurora {
       position: absolute;
       inset: 0;
       z-index: 2;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .aurora-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(65px);
+      pointer-events: none;
+      opacity: 0.60;
+      mix-blend-mode: screen;
+      will-change: transform, opacity;
+    }
+
+    .aurora-orb-1 {
+      width: 500px;
+      height: 500px;
+      top: -12%;
+      left: 8%;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.38) 0%, rgba(139, 92, 246, 0.12) 50%, transparent 70%);
+      animation: auroraFloat1 16s ease-in-out infinite alternate;
+    }
+
+    .aurora-orb-2 {
+      width: 540px;
+      height: 540px;
+      top: 25%;
+      right: 4%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.34) 0%, rgba(245, 158, 11, 0.12) 50%, transparent 70%);
+      animation: auroraFloat2 19s ease-in-out infinite alternate;
+    }
+
+    .aurora-orb-3 {
+      width: 420px;
+      height: 420px;
+      bottom: -8%;
+      left: 32%;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.28) 0%, rgba(212, 175, 55, 0.08) 55%, transparent 70%);
+      animation: auroraFloat3 14s ease-in-out infinite alternate;
+    }
+
+    @keyframes auroraFloat1 {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.50; }
+      50% { transform: translate(45px, 35px) scale(1.14); opacity: 0.75; }
+      100% { transform: translate(-35px, 20px) scale(0.92); opacity: 0.45; }
+    }
+
+    @keyframes auroraFloat2 {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.55; }
+      50% { transform: translate(-55px, -35px) scale(1.15); opacity: 0.80; }
+      100% { transform: translate(30px, 45px) scale(0.90); opacity: 0.50; }
+    }
+
+    @keyframes auroraFloat3 {
+      0% { transform: translate(0, 0) scale(0.9); opacity: 0.40; }
+      50% { transform: translate(35px, -30px) scale(1.18); opacity: 0.70; }
+      100% { transform: translate(-40px, 15px) scale(1); opacity: 0.45; }
+    }
+
+    .hero2-particles {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
       pointer-events: none;
     }
 
@@ -104,11 +168,12 @@
       inset: 0;
       width: 100%;
       height: 100%;
+      pointer-events: none;
     }
 
     .hero2-section > .container {
       position: relative;
-      z-index: 3;
+      z-index: 4;
       width: 100%;
     }
 
@@ -532,6 +597,27 @@
     /* ============================================================
        LIGHT THEME ADAPTATION FOR HERO2 & COUNTER STRIP
        ============================================================ */
+    :root:not(.dark) .hero2-ambient-aurora,
+    html:not(.dark) .hero2-ambient-aurora {
+      opacity: 0.5;
+      mix-blend-mode: multiply;
+    }
+
+    :root:not(.dark) .aurora-orb-1,
+    html:not(.dark) .aurora-orb-1 {
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(245, 158, 11, 0.08) 55%, transparent 70%);
+    }
+
+    :root:not(.dark) .aurora-orb-2,
+    html:not(.dark) .aurora-orb-2 {
+      background: radial-gradient(circle, rgba(251, 191, 36, 0.25) 0%, rgba(212, 175, 55, 0.08) 55%, transparent 70%);
+    }
+
+    :root:not(.dark) .aurora-orb-3,
+    html:not(.dark) .aurora-orb-3 {
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, transparent 65%);
+    }
+
     :root:not(.dark) .hero2-section,
     html:not(.dark) .hero2-section {
       background: linear-gradient(180deg, #FBF9F5 0%, #F5F0E6 100%);
@@ -1709,6 +1795,12 @@
   <section class="hero2-section hero-particles" id="hero2">
     <div class="hero2-bg"></div>
     <div class="hero2-overlay"></div>
+    <!-- Ambient Thematic Glow Auroras -->
+    <div class="hero2-ambient-aurora">
+      <div class="aurora-orb aurora-orb-1"></div>
+      <div class="aurora-orb aurora-orb-2"></div>
+      <div class="aurora-orb aurora-orb-3"></div>
+    </div>
     <div class="hero2-particles" id="hero2-canvas-area"></div>
     
     <div class="container">
@@ -2283,93 +2375,297 @@
     })();
 
     /* ============================================================
-       HERO2 SMOKE PARTICLES (Cinematic variant)
+       HERO 2 THEMATIC ANIMATION: SILKY SMOKE & GOLDEN OPULENCE
        ============================================================ */
-    (function initHero2Particles() {
+    (function initHero2ThematicEffects() {
       const hero = document.querySelector('.hero2-section');
       const area = document.getElementById('hero2-canvas-area');
       if (!hero || !area) return;
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
       const canvas = document.createElement('canvas');
-      canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;';
+      canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3;';
       canvas.setAttribute('aria-hidden', 'true');
       area.appendChild(canvas);
 
       const ctx = canvas.getContext('2d');
-      let w, h, dpr, particles = [];
-      const COUNT = Math.min(45, Math.floor(window.innerWidth / 30));
+      if (!ctx) return;
+
+      let w = 0, h = 0, dpr = 1;
+      let smokePuffs = [], embers = [], stars = [];
+      let mouse = { x: -1000, y: -1000, active: false };
+
+      function isDark() {
+        return document.documentElement.classList.contains('dark');
+      }
 
       function resize() {
         dpr = Math.min(window.devicePixelRatio || 1, 2);
         const r = hero.getBoundingClientRect();
-        w = r.width; h = r.height;
-        canvas.width = w * dpr; canvas.height = h * dpr;
-        canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+        w = r.width;
+        h = r.height;
+        canvas.width = Math.floor(w * dpr);
+        canvas.height = Math.floor(h * dpr);
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       }
 
-      function create(y) {
+      /* 1. Silky Smoke Puff Generator */
+      function createSmokePuff(yInitial) {
+        const dark = isDark();
+        const baseRadius = Math.random() * 45 + 32;
         return {
-          x: Math.random() * w,
-          y: y !== undefined ? y : Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.25,
-          vy: -(Math.random() * 0.4 + 0.08),
-          size: Math.random() * 40 + 12,
-          alpha: 0,
-          maxAlpha: Math.random() * 0.06 + 0.02,
-          life: 0,
-          maxLife: Math.random() * 500 + 350,
+          x: Math.random() * (w + 120) - 60,
+          y: yInitial !== undefined ? yInitial : Math.random() * (h + 80),
+          baseRadius: baseRadius,
+          radius: baseRadius,
+          growthRate: Math.random() * 0.12 + 0.05,
+          vx: (Math.random() - 0.45) * 0.35,
+          vy: -(Math.random() * 0.45 + 0.22),
           wobble: Math.random() * Math.PI * 2,
-          wobbleSpd: Math.random() * 0.015 + 0.004,
+          wobbleSpeed: Math.random() * 0.012 + 0.005,
+          wobbleAmp: Math.random() * 0.4 + 0.2,
+          life: 0,
+          maxLife: Math.random() * 400 + 320,
+          maxAlpha: dark ? (Math.random() * 0.15 + 0.09) : (Math.random() * 0.11 + 0.06),
+          tint: Math.random()
         };
       }
 
-      function init() {
-        particles = [];
-        for (let i = 0; i < COUNT; i++) {
-          const p = create();
+      /* 2. Golden Hookah Ember (Sparks from natural coconut coals) */
+      function createEmber(yInitial) {
+        return {
+          x: Math.random() * w,
+          y: yInitial !== undefined ? yInitial : Math.random() * h,
+          radius: Math.random() * 2.2 + 1.1,
+          vx: (Math.random() - 0.5) * 0.38,
+          vy: -(Math.random() * 0.65 + 0.32),
+          flicker: Math.random() * Math.PI * 2,
+          flickerSpeed: Math.random() * 0.06 + 0.03,
+          life: 0,
+          maxLife: Math.random() * 320 + 220,
+          baseAlpha: Math.random() * 0.45 + 0.5,
+          color: Math.random() > 0.4 ? '#FFE89E' : (Math.random() > 0.5 ? '#FFD700' : '#F59E0B')
+        };
+      }
+
+      /* 3. Golden Opulence Sparkle Star */
+      function createStar() {
+        return {
+          x: Math.random() * w,
+          y: Math.random() * h,
+          size: Math.random() * 4 + 2.5,
+          rot: Math.random() * Math.PI * 2,
+          rotSpeed: (Math.random() - 0.5) * 0.015,
+          phase: Math.random() * Math.PI * 2,
+          pulseSpeed: Math.random() * 0.025 + 0.015,
+          color: '#FFE89E'
+        };
+      }
+
+      function initParticles() {
+        smokePuffs = [];
+        embers = [];
+        stars = [];
+        
+        const smokeCount = w < 768 ? 22 : 36;
+        for (let i = 0; i < smokeCount; i++) {
+          const p = createSmokePuff();
           p.life = Math.random() * p.maxLife;
-          particles.push(p);
+          smokePuffs.push(p);
+        }
+
+        const emberCount = w < 768 ? 25 : 45;
+        for (let i = 0; i < emberCount; i++) {
+          const e = createEmber();
+          e.life = Math.random() * e.maxLife;
+          embers.push(e);
+        }
+
+        const starCount = w < 768 ? 8 : 16;
+        for (let i = 0; i < starCount; i++) {
+          stars.push(createStar());
         }
       }
 
-      let vis = true;
-      const vObs = new IntersectionObserver(e => { vis = e[0].isIntersecting; }, { threshold: 0.05 });
-      vObs.observe(hero);
+      function drawDiamondStar(x, y, r, rot, alpha, color) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rot);
+        ctx.globalAlpha = alpha;
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(0, -r);
+        ctx.quadraticCurveTo(0, 0, r * 0.3, 0);
+        ctx.quadraticCurveTo(0, 0, 0, r);
+        ctx.quadraticCurveTo(0, 0, -r * 0.3, 0);
+        ctx.quadraticCurveTo(0, 0, 0, -r);
+        ctx.fill();
 
-      function loop() {
-        requestAnimationFrame(loop);
-        if (!vis) return;
+        ctx.beginPath();
+        ctx.moveTo(-r, 0);
+        ctx.quadraticCurveTo(0, 0, 0, r * 0.3);
+        ctx.quadraticCurveTo(0, 0, r, 0);
+        ctx.quadraticCurveTo(0, 0, 0, -r * 0.3);
+        ctx.quadraticCurveTo(0, 0, -r, 0);
+        ctx.fill();
+        ctx.restore();
+      }
+
+      hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+        mouse.active = true;
+      });
+
+      hero.addEventListener('mouseleave', () => {
+        mouse.active = false;
+      });
+
+      let isVisible = true;
+      const obs = new IntersectionObserver((entries) => {
+        isVisible = entries[0].isIntersecting;
+      }, { threshold: 0.05 });
+      obs.observe(hero);
+
+      function render() {
+        requestAnimationFrame(render);
+        if (!isVisible) return;
+
         ctx.clearRect(0, 0, w, h);
-        for (let i = particles.length - 1; i >= 0; i--) {
-          const p = particles[i];
-          p.life++;
-          const fi = Math.min(p.life / 50, 1);
-          const fo = Math.max(1 - p.life / p.maxLife, 0);
-          p.alpha = p.maxAlpha * fi * fo;
-          p.wobble += p.wobbleSpd;
-          p.x += p.vx + Math.sin(p.wobble) * 0.25;
-          p.y += p.vy;
-          if (p.life >= p.maxLife || p.y < -p.size) { particles[i] = create(h + p.size); continue; }
-          if (p.alpha <= 0.001) continue;
-          ctx.globalAlpha = p.alpha;
-          const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size);
-          g.addColorStop(0, 'rgba(255,255,255,0.5)');
-          g.addColorStop(0.5, 'rgba(255,255,255,0.15)');
-          g.addColorStop(1, 'rgba(255,255,255,0)');
-          ctx.fillStyle = g;
+        const dark = isDark();
+
+        if (mouse.active) {
+          const mouseGlow = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 140);
+          mouseGlow.addColorStop(0, dark ? 'rgba(212, 175, 55, 0.12)' : 'rgba(212, 175, 55, 0.08)');
+          mouseGlow.addColorStop(0.5, dark ? 'rgba(168, 85, 247, 0.05)' : 'rgba(245, 158, 11, 0.04)');
+          mouseGlow.addColorStop(1, 'transparent');
+          ctx.fillStyle = mouseGlow;
           ctx.beginPath();
-          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.arc(mouse.x, mouse.y, 140, 0, Math.PI * 2);
           ctx.fill();
         }
-        ctx.globalAlpha = 1;
+
+        /* 1. RENDER SILKY SHISHA SMOKE PUFFS */
+        for (let i = 0; i < smokePuffs.length; i++) {
+          const p = smokePuffs[i];
+          p.life++;
+          p.radius += p.growthRate;
+          p.wobble += p.wobbleSpeed;
+          p.x += p.vx + Math.sin(p.wobble) * p.wobbleAmp;
+          p.y += p.vy;
+
+          if (mouse.active) {
+            const dx = p.x - mouse.x;
+            const dy = p.y - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120 && dist > 0) {
+              const force = (120 - dist) / 120 * 0.45;
+              p.x += (dx / dist) * force;
+              p.y += (dy / dist) * force;
+            }
+          }
+
+          const fadeIn = Math.min(p.life / (p.maxLife * 0.18), 1);
+          const fadeOut = Math.max(1 - (p.life - p.maxLife * 0.6) / (p.maxLife * 0.4), 0);
+          const alpha = p.maxAlpha * fadeIn * Math.min(fadeOut, 1);
+
+          if (p.life >= p.maxLife || p.y < -p.radius * 2) {
+            smokePuffs[i] = createSmokePuff(h + p.baseRadius);
+            continue;
+          }
+
+          if (alpha <= 0.002) continue;
+
+          ctx.save();
+          ctx.globalAlpha = alpha;
+          const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
+          if (dark) {
+            if (p.tint > 0.5) {
+              grad.addColorStop(0, 'rgba(255, 248, 230, 0.68)');
+              grad.addColorStop(0.35, 'rgba(212, 175, 55, 0.30)');
+              grad.addColorStop(0.7, 'rgba(168, 85, 247, 0.14)');
+              grad.addColorStop(1, 'rgba(9, 7, 16, 0)');
+            } else {
+              grad.addColorStop(0, 'rgba(240, 235, 255, 0.62)');
+              grad.addColorStop(0.4, 'rgba(186, 145, 255, 0.24)');
+              grad.addColorStop(0.75, 'rgba(212, 175, 55, 0.09)');
+              grad.addColorStop(1, 'rgba(9, 7, 16, 0)');
+            }
+          } else {
+            grad.addColorStop(0, 'rgba(255, 255, 255, 0.75)');
+            grad.addColorStop(0.4, 'rgba(212, 175, 55, 0.28)');
+            grad.addColorStop(0.75, 'rgba(245, 235, 215, 0.14)');
+            grad.addColorStop(1, 'rgba(251, 249, 245, 0)');
+          }
+
+          ctx.fillStyle = grad;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+
+        /* 2. RENDER HOOKAH COAL EMBERS */
+        for (let i = 0; i < embers.length; i++) {
+          const e = embers[i];
+          e.life++;
+          e.flicker += e.flickerSpeed;
+          e.x += e.vx + Math.sin(e.flicker) * 0.35;
+          e.y += e.vy;
+
+          const fi = Math.min(e.life / 30, 1);
+          const fo = Math.max(1 - e.life / e.maxLife, 0);
+          const flickerMod = 0.8 + Math.sin(e.flicker) * 0.2;
+          const alpha = e.baseAlpha * fi * fo * flickerMod;
+
+          if (e.life >= e.maxLife || e.y < -10) {
+            embers[i] = createEmber(h + 10);
+            continue;
+          }
+
+          if (alpha <= 0.01) continue;
+
+          ctx.save();
+          const halo = ctx.createRadialGradient(e.x, e.y, 0, e.x, e.y, e.radius * 3.8);
+          halo.addColorStop(0, e.color);
+          halo.addColorStop(0.4, 'rgba(212, 175, 55, 0.45)');
+          halo.addColorStop(1, 'transparent');
+          ctx.globalAlpha = alpha * 0.85;
+          ctx.fillStyle = halo;
+          ctx.beginPath();
+          ctx.arc(e.x, e.y, e.radius * 3.8, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.globalAlpha = alpha;
+          ctx.fillStyle = '#FFFFFF';
+          ctx.beginPath();
+          ctx.arc(e.x, e.y, e.radius * 0.65, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+
+        /* 3. RENDER GOLDEN STARDUST / SPARKLES */
+        for (let i = 0; i < stars.length; i++) {
+          const s = stars[i];
+          s.rot += s.rotSpeed;
+          s.phase += s.pulseSpeed;
+          const alpha = 0.25 + (Math.sin(s.phase) + 1) * 0.35;
+
+          drawDiamondStar(s.x, s.y, s.size, s.rot, alpha, dark ? s.color : '#B8860B');
+        }
       }
 
       resize();
-      init();
-      loop();
-      window.addEventListener('resize', () => { resize(); init(); });
+      initParticles();
+      render();
+
+      window.addEventListener('resize', () => {
+        resize();
+        initParticles();
+      });
     })();
   </script>
 
